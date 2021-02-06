@@ -1,22 +1,12 @@
 pipelines:
   branches:
     master:
-      - parallel:
-         - step:
-            name: Deploying on 178.128.43.46 nginx
-            script:
-              - pipe: atlassian/ssh-run:0.2.6
-                variables:
-                  SSH_USER: "root"
-                  SERVER: "178.128.43.46"
-                  COMMAND: "/root/clone.sh"
-                  MODE: "command"
-         - step:
-            name: Deploying on 178.128.43.46 litespeed
-            script:
-              - pipe: atlassian/ssh-run:0.2.6
-                variables:
-                  SSH_USER: "root"
-                  SERVER: "178.128.43.46"
-                  COMMAND: "/root/clone.litespeed.sh"
-                  MODE: "command"
+      - step:
+         name: Deploying on 134.209.183.27 nginx
+         script:
+           - pipe: atlassian/ssh-run:0.2.6
+             variables:
+               SSH_USER: "root"
+               SERVER: "134.209.183.27"
+               COMMAND: "/root/clone.sh"
+               MODE: "command"
