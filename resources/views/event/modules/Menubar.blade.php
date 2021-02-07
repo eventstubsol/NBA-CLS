@@ -67,11 +67,17 @@
                 </a>
             </li>
             <li class="booth-menu hidden">
+                <a href="javascript:void(0);" data-modal="description-two-modal-" class="modal-toggle booth_description">
+                    <i class="mdi mdi-note-text" style="font-size: 22px;"></i>
+                    Lawfirm Members
+                </a>
+            </li>
+            <!-- <li class="booth-menu hidden">
                 <a href="javascript:void(0);" data-modal="videolist-modal-" class="modal-toggle booth_videos">
                     <i class="mdi mdi-play" style="font-size: 22px;"></i>
                     Videos
                 </a>
-            </li>
+            </li> -->
             <li class="booth-menu hidden">
                 <a href="javascript:void(0);" data-modal="resourcelist-modal-" class="modal-toggle booth_resources">
                     <i class="mdi mdi-file-pdf" style="font-size: 22px;"></i>

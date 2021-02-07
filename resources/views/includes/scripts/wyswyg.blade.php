@@ -12,4 +12,16 @@ $('#summernote-basic').summernote({
         }
     }
 });
+$('#summernote-basic-2').summernote({
+    placeholder: 'Write something...',
+    height: 230,
+    maximumImageFileSize: 500*1024, // 500 KB
+    callbacks: {
+        // fix broken checkbox on link modal
+        onInit: function onInit(e) {
+            var editor = $(e.editor);
+            editor.find('.custom-control-description').addClass('custom-control-label').parent().removeAttr('for');
+        }
+    }
+});
 </script>

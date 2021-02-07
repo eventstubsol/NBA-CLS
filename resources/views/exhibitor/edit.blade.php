@@ -174,6 +174,8 @@
                             <input type="url" id="url" name="url" class="form-control" value="{{ $booth->url }}">
                         </div>
 
+                            <label for="summernote-basic-2">Lawfirm Members</label>
+                            <textarea id="summernote-basic-2" name="description_two">{{$booth->description_two}}</textarea>
                         <div>
                             <button class="btn btn-primary">Save</button>
                         </div>
@@ -182,7 +184,7 @@
 
                 <!-- Card 3 Videos  -->
 
-                <div class="card">
+                <!-- <div class="card">
                     <div class="card-body">
                         <h4 class="header-title mb-3">Videos</h4>
                         <div class="video-sections row">
@@ -207,7 +209,7 @@
                             <button class="btn btn-primary" id="add-video">Add Video</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Card 4 Resources  -->
 
                 <div class="card">

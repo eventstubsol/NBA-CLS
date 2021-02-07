@@ -214,16 +214,16 @@ class BoothController extends Controller
 
     //uploading videos
     Video::where("owner", $booth->id)->delete();
-    if ($request->has("boothvideos")  && is_array($request->boothvideos)) {
-      foreach ($request->boothvideos as $id => $boothvideo) {
-        if (!empty(trim($boothvideo))) {
-          $booth->videos()->create([
-            "url" => $boothvideo,
-            "title" => $request->videotitles[$id],
-          ]);
-        }
-      }
-    }
+    // if ($request->has("boothvideos")  && is_array($request->boothvideos)) {
+    //   foreach ($request->boothvideos as $id => $boothvideo) {
+    //     if (!empty(trim($boothvideo))) {
+    //       $booth->videos()->create([
+    //         "url" => $boothvideo,
+    //         "title" => $request->videotitles[$id],
+    //       ]);
+    //     }
+    //   }
+    // }
     if ($request->has("brandvideos") && is_array($request->brandvideos)) {
       foreach ($request->brandvideos as $i => $brandvideo) {
         if (!empty(trim($brandvideo))) {
@@ -270,8 +270,10 @@ class BoothController extends Controller
       }
     }
     //booth description update
+    // if(isset($request->description)&& isset($request->description_two))
     $booth->update([
       "description" => $request->description,
+      "description_two" => $request->description_two,
       "url" => $request->url,   //Booth Website
     ]);
 

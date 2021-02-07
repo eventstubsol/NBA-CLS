@@ -557,7 +557,7 @@ class EventController extends Controller
 
     public function getBoothDetails(Booth $booth)
     {
-        return $booth->description;
+        return [$booth->description,$booth->description_two];
     }
 
     public function getDelegatesList()

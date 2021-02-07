@@ -194,6 +194,21 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<div class="modal fade" id="description-two-modal-{{$booth->id}}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog  modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myLargeModalLabel">Lawfirm Members</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="tab-pane show active">
+                    <div id="description-two-{{ $booth->id }}"></div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <div class="modal fade" id="resourcelist-modal-{{$booth->id}}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">

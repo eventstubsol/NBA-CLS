@@ -326,7 +326,9 @@ function initApp(){
                 $.ajax({
                     url: window.config.boothDetails.replace("BID", id),
                     success: function(html){
-                        $("#description-"+id).html(html);
+                        $("#description-"+id).html(html[0]);
+                        $("#description-two-"+id).html(html[1]);
+                        console.log(html);
                     }
                 });
                 setTimeout(function(){
