@@ -71,11 +71,16 @@ class EventSession extends Model
         'zoom_webinar_id',
         'zoom_password',
         'past_video',
+        "room_id"
     ];
 
     protected $dates = ["start_time", "end_time"];
 
     public $incrementing = false;
+
+    public function parentroom(){
+        return $this->belongsTo("\App\sessionRooms","room_id");
+    }
 
     public function speakers(){
         return $this->hasMany("\App\SessionSpeaker", "session_id")->select(["speaker_id", "session_id"]);

@@ -8,6 +8,7 @@ function initApp(){
     let pages = $(".page");
     let navs = $('.navs,.hide-on-exterior');
     let currentresbtns = null;
+    let active_session_list = null;
     //Wait for all three main video loads before removing loader
     if(isMobile()){
         loader.fadeOut();
@@ -559,6 +560,33 @@ function initApp(){
             workshopModal.unbind().on("hide.bs.modal", function(){
                 clearContentTicker();
                 $("#workshop-content").empty();
+            });
+            recordPageView("workshop/"+room, room+" Room");
+        },
+        'sessions-list/:roomgroup': function(roomgroup){
+            pageChangeActions();
+            console.log(roomgroup);
+            $("#session-list-"+roomgroup).modal();
+            recordPageView("#session-list-"+roomgroup, "Session List "+roomgroup);
+            active_session_list = $("#session-list-"+roomgroup);
+        },
+        'sessionroom/:room': function(room) {
+            pages.hide().filter("#sessionroom-"+room).show();
+            if(active_session_list)active_session_list.modal("hide");
+            trackEvent({
+                type: room+"_visit"
+            });
+            pageChangeActions();
+            // const loadContent = () => {
+                $("#session-content-"+room).empty().append(`<iframe frameborder="0"  class="positioned fill" src="${window.config.auditoriumEmbed}?type=${room}"></iframe>`);
+                $(".cc1-chat-win-inpt-wrap input").unbind("mousedown").on("mousedown", function(e){ e.preventDefault(); e.stopImmediatePropagation(); $(e.target).focus() });
+            // };
+            let sessionModal = $("#session-modal-"+room);
+            console.log(room);
+            
+            $("#play-session-"+room).unbind().on("click", function(){
+                console.log("opened")
+                sessionModal.modal();
             });
             recordPageView("workshop/"+room, room+" Room");
         },

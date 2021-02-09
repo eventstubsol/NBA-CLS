@@ -88,12 +88,12 @@
     </div>
 </li>
 
-<li>
+{{--<li>
     <a href="{{ route("eventSession.manage") }}">
         <i data-feather="calendar"></i>
         <span>Event Sessions</span>
     </a>
-</li>
+</li>--}}
 
 
 {{--<li>--}}
@@ -136,6 +136,38 @@
             </li>
             <li>
                 <a href="{{ route("faq.create") }}">Create</a>
+            </li>
+        </ul>
+    </div>
+</li>
+<li>
+    <a href="#sessionRooms" data-toggle="collapse">
+        <i data-feather="home"></i>
+        <span> Session Rooms</span>
+    </a>
+    <div class="collapse" id="sessionRooms">
+        <ul class="nav-second-level">
+            <li>
+                <a href="{{ route("sessionrooms.index") }}">Manage</a>
+            </li>
+            <li>
+                <a href="{{ route("sessionrooms.create") }}">Create</a>
+            </li>
+        </ul>
+    </div>
+</li>
+<li>
+    <a href="#sessions" data-toggle="collapse">
+        <i data-feather="play-circle"></i>
+        <span> Sessions</span>
+    </a>
+    <div class="collapse" id="sessions">
+        <ul class="nav-second-level">
+            <li>
+                <a href="{{ route("sessions.index") }}">Manage</a>
+            </li>
+            <li>
+                <a href="{{ route("sessions.create") }}">Create</a>
             </li>
         </ul>
     </div>

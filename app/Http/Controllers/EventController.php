@@ -27,6 +27,8 @@ use App\Room;
 use Illuminate\Mail\Message;
 use Mail;
 use Sichikawa\LaravelSendgridDriver\Transport\SendgridTransport;
+use App\sessionRooms;
+
 
 class EventController extends Controller
 {
@@ -52,6 +54,10 @@ class EventController extends Controller
         $prizes = Prize::with("images")->orderBy("criteria_low")->get();
         $schedule = getSchedule();
         $user = Auth::user();
+        $sessionrooms = sessionRooms::all()->groupBy("master_room");
+        $sessions = EventSession::all()->load(["parentroom"]);
+        
+        
         $user->load("subscriptions");
         $subscriptions = [];
         foreach ($user->subscriptions as $subscription) {
@@ -68,6 +74,8 @@ class EventController extends Controller
                     "schedule",
                     "subscriptions",
                     "prizes",
+                    "sessions",
+                    "sessionrooms",
                 ])
             );
     }
@@ -443,17 +451,19 @@ class EventController extends Controller
             if(in_array($type, WORKSHOP_ROOMS)){
                 $videoId = getField((str_replace(" ","_", $type))."_Stream");
                 return view("event.vimeoEmbed")->with(compact("videoId"));
-            }else{
-                createField("Auditorium_Stream", "text", "Streams");
-                $videoId = getField("Auditorium_Stream");
-                return view("event.vimeoEmbed")->with(compact("videoId"));
             }
+            // else{
+            //     createField("Auditorium_Stream", "text", "Streams");
+            //     $videoId = getField("Auditorium_Stream");
+            //     dd("hello");
+            //     return view("event.vimeoEmbed")->with(compact("videoId"));
+            // }
+            // dd($type);
 
             $session = $this->getCurrentRunningSession($type);
             if (!$session) {
                 return view("event.noSession");
             }
-            //            return redirect("https://zoom.us/j/".$session->zoom_webinar_id);
             if ($type === "caucus" || $type === "workshop") {
                 if (strlen($session->zoom_webinar_id)) {
                     return redirect(route("webinar", getZoomParameters($session->zoom_webinar_id, $session->zoom_password && strlen($session->zoom_password) ? $session->zoom_password : "")));
@@ -463,8 +473,13 @@ class EventController extends Controller
             if ($session && $session->vimeo_url) {
                 $videoId = $session->vimeo_url;
             }
+
+            if($session->type == "ZOOM_URL"){
+                return redirect("https://zoom.us/j/".$session->zoom_webinar_id);
+            }
             //Setup for normal days
-            if (strlen($session->zoom_webinar_id) && $user->type === USER_TYPE_DELEGATE) {
+            //To make it visible only for delegates add && $user->type === USER_TYPE_DELEGATE
+            if (strlen($session->zoom_webinar_id) ) { 
                 return redirect(route("webinar", getZoomParameters($session->zoom_webinar_id, $session->zoom_password && strlen($session->zoom_password) ? $session->zoom_password : "")));
             }
             //Setup for first two days - To be removed later

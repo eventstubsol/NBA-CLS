@@ -82,6 +82,8 @@ Route::middleware(["auth"])->group(function () { //All Routes here would need au
             "user" => "UserController",
             "report" => "ReportController",
             "prize" => "PrizeController",
+            "sessionrooms" => "SessionRoomController",
+            "sessions" => "SessionController"
             //            "provisional" => "ProvisionalController",
         ]);
 
@@ -114,8 +116,8 @@ Route::middleware(["auth"])->group(function () { //All Routes here would need au
         /**
          * Event Sessions Routes start
          */
-        Route::get("/sessions", "EventSessionsController@index")->name("eventSession.manage");
-        Route::post("/sessions", "EventSessionsController@save")->name("eventSession.save");
+        // Route::get("/sessions", "EventSessionsController@index")->name("eventSession.manage");
+        // Route::post("/sessions", "EventSessionsController@save")->name("eventSession.save");
         Route::get("/session/video-archive", "EventSessionsController@pastSessionVideosArchive")->name("eventSession.videoArchive");
         Route::post("/session/video-archive", "EventSessionsController@savePastSessionVideosArchive")->name("eventSession.saveVideoArchive");
         /**

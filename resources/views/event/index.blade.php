@@ -405,6 +405,8 @@ $user = Auth::user();
 
     @include("event.modules.Booths.ExpoHall")
 
+    @include("event.modules.Sessions")
+
     @include("event.modules.Booths.SingleBooth")
 
     @include("event.modules.Leaderboard")
