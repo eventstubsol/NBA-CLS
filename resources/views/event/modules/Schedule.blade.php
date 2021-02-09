@@ -42,7 +42,7 @@
                             $j++;
                         @endphp
                         <li class="nav-item">
-                            <a href="#sch-{{ $i }}-{{ $j }}" data-toggle="tab" aria-expanded="{{ $j === 1 ? 'true' : 'false' }}" class="nav-link @if($j === 1) active @endif">{{ $room=='AUDITORIUM' ? 'Main Hall' : WORKSHOP_ROOM_NAMES[str_replace("_"," ",$room)] }}</a>
+                            <a href="#sch-{{ $i }}-{{ $j }}" data-toggle="tab" aria-expanded="{{ $j === 1 ? 'true' : 'false' }}" class="nav-link @if($j === 1) active @endif">{{ $room=='AUDITORIUM' ? 'Main Hall' : str_replace("_"," ",$room) }}</a>
                         </li>
                     @endforeach
                 </ul>

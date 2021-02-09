@@ -5,9 +5,9 @@ define("LOBBY_AREAS", [
          "link" => "room/ca9d92bd-e5a1-4392-9659-b65d9c857310",
          "area" => [ 54, 29.5, 9.5, 13 ], //In Percentage
      ],
-     "Workshops" => [
-         "title" => "Workshop List",
-         "link" => "workshop-list",
+     "Special_Courses" => [
+         "title" => "Special List",
+         "link" => "sessions-list/special_courses",
          "area" => [ 54, 60.5, 9.5, 13 ], //In Percentage
      ],
 //    "Welcome Video" => [
