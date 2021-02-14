@@ -40,6 +40,26 @@ function initApp(){
         }, 750);
     });
 
+
+    
+    $("#agenda").on("click",function(){
+        $.ajax({
+            url: window.config.subscription_raw,
+            method: "GET",
+            data: {
+                _token: window.config.token,
+            },
+            success: function(data){
+                // alert("done");
+                console.log(data)
+                $("#agenda-modal").html(data);
+            },
+            error: function(){
+                showMessage("Error occurred while subscribing to session. Please try again later or refresh page.", "error");
+            }
+        })
+    });
+
     //Listen for PDF Views and give points for them
     $("body").on("click", function(e){
         let target = $(e.target);
@@ -70,6 +90,7 @@ function initApp(){
     });
 
     $(".subscribe-to-event").on("click", function(e){
+        console.log("hello")
         e.preventDefault();
         let t = $(this);
         t.prop("disabled", true);
@@ -200,6 +221,7 @@ function initApp(){
         $("#audi-modal").modal("hide");
         $("#caucus-modal").modal("hide");
         $("#workshop-modal").modal("hide");
+        // $("#workshop-modal").modal("hide");
         $("body").removeClass("right-bar-enabled"); //Hide Chat modal
         $("#chat-toggle").show();
         window.scrollTo(0, 0);
@@ -245,6 +267,18 @@ function initApp(){
             window.history.back();
         }
     });
+    $("#session-list-peek_behind_corporate_veil").unbind().on("hide.bs.modal", function(){
+        if(window.location.hash === "#sessions-list/peek_behind_corporate_veil"){
+            window.history.back();
+        }
+    });
+    $("#session-list-fireside_chat").unbind().on("hide.bs.modal", function(){
+        if(window.location.hash === "#sessions-list/fireside_chat"){
+            window.history.back();
+        }
+    });
+
+
 
     routie({
         'lobby': function() {
@@ -564,9 +598,15 @@ function initApp(){
             recordPageView("workshop/"+room, room+" Room");
         },
         'sessions-list/:roomgroup': function(roomgroup){
+
             pageChangeActions();
-            console.log(roomgroup);
             $("#session-list-"+roomgroup).modal();
+            // $("#session-list-"+roomgroup).unbind().on("hide.bs.modal", function(){
+            //     console.log(roomgroup);
+            //     if(window.location.hash === "#sessions-list/"+roomgroup){
+            //         window.history.back();
+            //     }
+            // });
             recordPageView("#session-list-"+roomgroup, "Session List "+roomgroup);
             active_session_list = $("#session-list-"+roomgroup);
         },
@@ -871,6 +911,7 @@ const [
             listeningObjects[key].push(callback);
         });
     };
+
 
     const refreshContents = () => {
         let now = Date.now();

@@ -24,7 +24,7 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <div class="card-body">
+            <div class="card-body {{$session->start_times}}">
                 <form action="{{ route("sessions.update",[$session->id]) }}" method="post">
                     {{ csrf_field() }}
                     @method("PUT")
@@ -87,13 +87,13 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label">Start Time</label>
-                            <input value="{{$session->start_time}}"  name="start_time" type="datetime-local" class="form-control"/>
+                            <input value="{{$session->start_times}}"  name="start_time" id="start_time" type="datetime-local" class="form-control"/>
                         </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label">End Time</label>
-                                <input value="{{$session->end_time}}"  name="end_time" type="datetime-local" class="form-control"/>
+                                <input value="{{$session->end_times}}"  name="end_time" type="datetime-local" class="form-control"/>
                             </div>
                         </div>
                     </div>
@@ -129,13 +129,13 @@
                         <label for="user">Select Speaker</label>
                         <select class="form-control select2-multiple @error('userids') is-invalid @enderror" id="speakers" name="speakers[]" data-toggle="select2" multiple="multiple" data-placeholder="Choose ...">
                             @foreach($speakers as $user)
-                                <option class="{{in_array($user->id,$session->speakers) ? 'hello' : 'world'}}" selected="{{ in_array($user->id,$session->speakers) ? true : false }}" value={{$user->id}}>{{$user->name}} ({{$user->email}}) </option>
+                                <option class="{{in_array($user->id,$session->speakers) ? 'hello' : 'world'}}"    @if(in_array($user->id,$session->speakers))   selected="true" @endif  value={{$user->id}}>{{$user->name}} ({{$user->email}}) </option>
                             @endforeach
                         </select> 
                     </div>
 
                     <div>
-                        <input class="btn btn-primary" type="submit" value="Create" />
+                        <input class="btn btn-primary" type="submit" value="Save" />
                     </div>
                 </form>
             </div>
@@ -148,4 +148,11 @@
 @include("includes.scripts.wyswyg")
 
 @include("includes.scripts.select")
+
+<script>
+// $("#start_time").datetimepicker({
+//         defaultDate : "{{$session->start_time}}"
+//     })
+    console.log("{{$session->start_times}}")
+</script>
 @endsection

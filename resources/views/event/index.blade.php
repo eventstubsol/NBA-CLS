@@ -432,6 +432,7 @@ $user = Auth::user();
     @endif
 
     @include("event.modules.SchedulePopup")
+    @include("event.modules.Personalagenda")
 
     @include("event.modules.Profile")
 
@@ -491,6 +492,7 @@ $user = Auth::user();
         trackEvent: "{{ route("trackEvent") }}",
         getswagBag:"{{ route('getSwagBag') }}",
         addtoBag: "{{ route('addToBag') }}",
+        subscription_raw: "{{ route('subscription_raw') }}",
         deletefromBag: "{{ route('deleteFromBag') }}",
         boothDetails: "{{ route('boothDetails', ["booth" => "BID"]) }}",
         delegateList: "{{ route("delegateList") }}",

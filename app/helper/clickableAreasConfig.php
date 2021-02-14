@@ -1,31 +1,41 @@
 <?php
 define("LOBBY_AREAS", [
-     "ROOM_1" => [
-         "title" => "Expo Hall",
+     "walker_hall" => [
+         "title" => "Walker Expo Hall",
          "link" => "room/ca9d92bd-e5a1-4392-9659-b65d9c857310",
+         "area" => [ 42, 19.5, 15.5, 13 ], //In Percentage
+     ],
+     "lewis_hall" => [
+         "title" => "Lewis Expo Hall",
+         "link" => "room/d4021162-16a5-43a2-aba1-005ac9507717",
+         "area" => [ 42, 65.5, 15.5, 13 ], //In Percentage
+     ],
+     "Fireside Chat" => [
+         "title" => "Fireside Chat",
+         "link" => "sessions-list/fireside_chat",
          "area" => [ 54, 29.5, 9.5, 13 ], //In Percentage
      ],
-     "Special_Courses" => [
-         "title" => "Special List",
-         "link" => "sessions-list/special_courses",
+     "Peek Behind the Corporate Veil" => [
+         "title" => "Peek Behind the Corporate Veil",
+         "link" => "sessions-list/peek_behind_corporate_veil",
          "area" => [ 54, 60.5, 9.5, 13 ], //In Percentage
      ],
-//    "Welcome Video" => [
-//        "title" => "welcome",
-//        "area" =>[ 32,44.4,12.3,11],
-//        "class" => "txt-white",
-//        "videoEmbed" => "https://vimeo.com/458843159",
-//    ],
+    // "Welcome Video" => [
+    //     "title" => "welcome",
+    //     "area" =>[ 32,44.4,12.3,11],
+    //     "class" => "txt-white",
+    //     "videoEmbed" => "https://vimeo.com/458843159",
+    // ],
 //    "Photobooth" => [
 //        "title" => "photobooth",
 //        "area" =>[ 38.5,8.4,11.3,12 ],
 //        "link" => "photo-booth",
 //    ],
-   "HallOfFame" => [
-       "title" => "HallOfFame",
-       "link" => "museum",
-       "area" => [ 39.5, 65.5, 14.5, 13] , //In Percentage
-   ],
+//    "HallOfFame" => [
+//        "title" => "HallOfFame",
+//        "link" => "museum",
+//        "area" => [ 39.5, 65.5, 14.5, 13] , //In Percentage
+//    ],
     "InfoDesk" => [
         "title" => "infodesk",
         "link"=> "infodesk",
@@ -34,7 +44,7 @@ define("LOBBY_AREAS", [
     "Lounge" => [
         "title" => "Lounge",
         "link"=> "lounge",
-        "area" =>[ 37.5,20.4,14.5,14],
+        "area" =>[ 41.5,43.4,14.5,14],
     ],
 //    "PhotoB2" => [
 //        "title" => "Photo Booth",
@@ -43,7 +53,7 @@ define("LOBBY_AREAS", [
 //    ],
     "Auditorioum" => [
         "title" => "Auditorium",
-        "link" => "auditorium",
+        "link" => "sessionroom/Auditorium",
         "area" => [ 54, 45.5, 9.5, 12] , //In Percentage
     ],
 //    "Workshop" => [

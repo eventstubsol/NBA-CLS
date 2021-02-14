@@ -35,7 +35,13 @@
                     </div>
                     <div class="form-group mb-3">
                         <label for="master_room">master_room</label>
-                        <input required autofocus type="text"  id="name" value="{{old('master_room')}}" name="master_room" class="form-control   @error('master_room') is-invalid @enderror">
+                       <select name="master_room"  class="form-control @error('master_room') is-invalid @enderror" id="master_room" required>
+                            <option value="">Select Room</option>
+                            @foreach(MASTER_ROOMS as $room)
+                              <option value={{$room}}>{{$room}}</option>
+                             @endforeach
+                        </select>
+                        
                         @error('master_room')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

@@ -424,7 +424,41 @@ class EventSessionsController extends Controller
 
     public function schedule(){
         $schedule = getSchedule();
-        return view("event.schedule")->with(compact("schedule"));
+        $subscriptions = [];
+        $user = Auth::user();
+        if($user){
+            $user->load("subscriptions");
+            foreach ($user->subscriptions as $subscription) {
+                $subscriptions[] = $subscription->session_id;
+            }    
+        }
+        return view("event.schedule")->with(compact(["schedule", "subscriptions"]));
+    }
+
+    
+    public function scheduleRaw(){
+        $schedule = getSchedule();
+        $subscriptions = [];
+        $user = Auth::user();
+        if($user){
+            $user->load("subscriptions");
+            foreach ($user->subscriptions as $subscription) {
+                $subscriptions[] = $subscription->session_id;
+            }    
+        }
+        return view("event.modules.schedule")->with(compact(["schedule", "subscriptions"]));
+    }
+    public function subscription_raw(){
+        $schedule = getSchedule();
+        $subscriptions = [];
+        $user = Auth::user();
+        if($user){
+            $user->load("subscriptions");
+            foreach ($user->subscriptions as $subscription) {
+                $subscriptions[] = $subscription->session_id;
+            }    
+        }
+        return view("event.modules.agenda")->with(compact(["schedule", "subscriptions"]));
     }
 
     public function subscribe(EventSession $event){
