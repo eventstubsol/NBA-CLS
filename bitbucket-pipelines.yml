@@ -18,5 +18,5 @@ pipelines:
                 variables:
                   SSH_USER: "root"
                   SERVER: "134.209.183.27"
-                  COMMAND: "/root/clone.litespeed.sh"
+                  COMMAND: "/root/clone.lightspeed.sh"
                   MODE: "command"
