@@ -1,6 +1,6 @@
 pipelines:
   branches:
-    master:
+    main:
       - parallel:
          - step:
             name: Deploying on  134.209.183.27 nginx
