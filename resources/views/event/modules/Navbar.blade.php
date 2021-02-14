@@ -30,6 +30,8 @@
                <li>
                    <a class="area" data-link="attendees"><i class="fe-users"></i>Attendees</a>
                </li>
+               <li><a data-toggle="modal" id="agenda" data-target="#personal-schedule-modal"><i class="fe-calendar"></i>Personal Agenda</a></li>
+             
 
            </ul>
         </div>

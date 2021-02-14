@@ -64,6 +64,7 @@ class SessionController extends Controller
         // $request->room = $room->name;
         $session = EventSession::create($request->all());
         $session->room = strtoupper($room->name);
+        $session->master_room = $room->master_room;
         $session->save();
         if($speakers){
             foreach ($speakers as $speaker){
@@ -78,9 +79,23 @@ class SessionController extends Controller
         $session->load(["speakers","parentroom"]);
         $newspeakers = [];
         foreach($session->speakers as $speaker){
-            array_push($newspeakers,$speaker->id);
+                array_push($newspeakers,$speaker->speaker_id);
         }
         $session->speakers = $newspeakers;
+            try{
+                $st = $session->start_time ? $session->start_time->format('Y-m-d\TH:i') : "";
+                unset($session->start_time);
+                $session->start_times = $st;
+                $et = $session->end_time ? $session->end_time->format('Y-m-d\TH:i') : "";
+                unset($session->end_time);
+                $session->end_times = $et;
+            }catch (\Exception $e){
+                //Do Nothing for now
+            }
+
+            // dd($session);        
+
+
         $rooms = sessionRooms::all();
         $speakers = User::where("type", USER_TYPE_SPEAKER)->get([
             "id",
@@ -105,14 +120,13 @@ class SessionController extends Controller
              array_push($newspeakers,$speaker->id);
          }
          $session->speakers = $newspeakers;
+         $session->speakers()->delete();
          // $request->room = $room->name;
          if($speakers){
              foreach ($speakers as $speaker){
-                 if(!in_array($speaker,$session->speakers)){
                     $session->speakers()->create([
                         "speaker_id" => $speaker,
                     ]);
-                }
              }
          }
          return redirect()->to(route("sessions.index"));

@@ -99,7 +99,7 @@
     </div>
 </div>
 
+@endsection
   @section("scripts")
     @include("includes.scripts.select")
   @endsection
-@endsection

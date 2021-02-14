@@ -29,13 +29,20 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <div class="modal-body">
                         <div class="position-relative">
-                            <div class="sessions-list">
-                                @foreach($rooms as $room)
-                                    <a class="area" data-link="sessionroom/{{ $room->name }}">
-                                        {{ ucfirst(str_replace("_"," ",$room->name)) }}
-                                    </a>
-                                @endforeach
-                            </div>
+                           <h4>
+                               {{ ucfirst(str_replace("_"," ",$roomgroup)) }}
+                           </h4> 
+                           <ul class="nav nav-pills navtab-bg nav-justified" style="margin: 0px -5px;">
+                                 @foreach($rooms as $room)
+                                    <li class="nav-item">
+                                        <a class="area nav-link" data-link="sessionroom/{{ $room->name }}">
+                                            {{ ucfirst(str_replace("_"," ",$room->name)) }}
+                                        </a>  
+                                    </li>
+                                @endforeach                
+                            </ul>
+                            
+                            
                         </div>
                     </div>
                 </div>

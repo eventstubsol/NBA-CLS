@@ -232,6 +232,13 @@ define("EVENT_SESSION_TYPES", [
     ZOOM_URL
 ]);
 
+
+define("MASTER_ROOMS",[
+    "peek_behind_corporate_veil",
+    "fireside_chat",
+    "auditorium"
+]);
+
 define("CREATOR_TELLER_LINKS", [
     "51b46d28-6923-444d-9ab8-e3478bb6ff07" => "d01c8491-fd30-434b-bead-f17ddbe843e4", //NNC TELLER => NNC Moderator
     "500474c9-0227-4d30-a6c5-610cc30390fd" => "9ddfb8f9-799a-4b7e-bb52-eaa59fce6d6a", //NRS TELLER => NRS Moderator
@@ -688,8 +695,11 @@ function getSchedule(){
     $schedule = [];
     $eventsLineup = EventSession::orderBy("start_time")->with("speakers.speaker")->get();
     foreach ($eventsLineup as $event){
-        if(!isset($schedule[$event->room])){
-            $schedule[$event->room] = [];
+        if(!isset($schedule[$event->master_room])){
+            $schedule[$event->master_room] = [];
+        }
+        if(!isset($schedule[$event->master_room][$event->room])){
+            $schedule[$event->master_room][$event->room] = [];
         }
         $now = Carbon::now();
         $status = 0; //Not Started
@@ -701,7 +711,7 @@ function getSchedule(){
             $status = 3; //Starting soon
         }
         if($event->start_time && $event->end_time){
-            $schedule[$event->room][$event->id] = [
+            $schedule[$event->master_room][$event->room][$event->id] = [
                 "start_time" => $event->start_time->utc()->toString(),
                 "start_date" => [
                     "m" => $event->start_time->format("l, M dS"),
@@ -719,6 +729,41 @@ function getSchedule(){
     }
     return $schedule;
 }
+// function getSchedule(){
+//     $schedule = [];
+//     $eventsLineup = EventSession::orderBy("start_time")->with("speakers.speaker")->get();
+//     foreach ($eventsLineup as $event){
+//         if(!isset($schedule[$event->room])){
+//             $schedule[$event->room] = [];
+//         }
+//         $now = Carbon::now();
+//         $status = 0; //Not Started
+//         if($now->isAfter($event->end_time)){
+//             $status = -1; //Already ended
+//         }else if($now->isBetween($event->start_time,$event->end_time)){
+//             $status = 1; //Ongoing
+//         }else if($now->clone()->add(15, "minutes")->isAfter($event->start_time)){
+//             $status = 3; //Starting soon
+//         }
+//         if($event->start_time && $event->end_time){
+//             $schedule[$event->room][$event->id] = [
+//                 "start_time" => $event->start_time->utc()->toString(),
+//                 "start_date" => [
+//                     "m" => $event->start_time->format("l, M dS"),
+//                     "dts" => $event->start_time->format("h:i A"),
+//                     "dte" => $event->end_time->format("h:i A"),
+//                 ],
+//                 "end_time" => $event->end_time->toString(),
+//                 "status" => $status,
+//                 "name" => $event->name,
+//                 "description" => $event->description,
+//                 "speakers" => $event->speakers,
+//                 "recording" => $event->past_video ? $event->past_video : false,
+//             ];
+//         }
+//     }
+//     return $schedule;
+// }
 
 function getRoomRoute($room){
     $roomRouteMap = [

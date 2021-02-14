@@ -13,8 +13,11 @@
                         if($lastDate != $event['start_date']['m']){
                             $lastDate = $event['start_date']['m'];
                         }
-                        $event['id'] = $id;
-                        $dates[$lastDate][$master_room][$room][] = $event;
+                        if(  in_array($id,  $subscriptions))
+                        {
+                            $event['id'] = $id;
+                            $dates[$lastDate][$master_room][$room][] = $event;
+                        }
                     }
                 }
             }
@@ -26,7 +29,7 @@
                 $i++;
             @endphp
             <li class="nav-item">
-                <a href="#sch-{{ $i }}" data-toggle="tab" aria-expanded="{{ $i === 1 ? 'true' : 'false' }}" class="nav-link @if($i === 1) active @endif">{{ $date }}</a>
+                <a href="#agn-{{ $i }}" data-toggle="tab" aria-expanded="{{ $i === 1 ? 'true' : 'false' }}" class="nav-link @if($i === 1) active @endif">{{ $date }}</a>
             </li>
         @endforeach
         @php
@@ -43,7 +46,7 @@
                     $i++;
                 @endphp
                 <!-- Tab for each date -->
-                <div class="tab-pane {{ $i === 1 ? "active show" : "" }}" id="sch-{{ $i }}">
+                <div class="tab-pane {{ $i === 1 ? "active show" : "" }}" id="agn-{{ $i }}">
                         @php
                             $j = 0;
                         @endphp
@@ -55,7 +58,7 @@
                                    $j++;
                                 @endphp
                                     <li class="nav-item">
-                                        <a href="#sch-{{ $i }}-{{ $j }}" data-toggle="tab" aria-expanded="{{ $j === 1 ? 'true' : 'false' }}" class="nav-link @if($j === 1) active @endif">{{ $master_room }}</a>
+                                        <a href="#agn-{{ $i }}-{{ $j }}" data-toggle="tab" aria-expanded="{{ $j === 1 ? 'true' : 'false' }}" class="nav-link @if($j === 1) active @endif">{{ $master_room }}</a>
                                     </li>
                             @endforeach
                         </ul>
@@ -75,7 +78,7 @@
                             
 
                                 <!-- Tabs for each master Room -->
-                                <div class="tab-pane {{ $j === 1 ? "active show" : "" }}" id="sch-{{ $i }}-{{ $j }}">
+                                <div class="tab-pane {{ $j === 1 ? "active show" : "" }}" id="agn-{{ $i }}-{{ $j }}">
                                     <!-- Pills for each room -->
                                     <ul class="nav nav-pills navtab-bg nav-justified" style="margin: 0px -5px;">
                                         @foreach($rooms as $room => $events)
@@ -83,7 +86,7 @@
                                                 $k++;
                                             @endphp
                                             <li class="nav-item">
-                                                <a href="#sch-{{ $i }}-{{ $j }}-{{ $k }}" data-toggle="tab" aria-expanded="{{ $k === 1 ? 'true' : 'false' }}" class="nav-link @if($j === 1) active @endif">{{ $room }}</a>
+                                                <a href="#agn-{{ $i }}-{{ $j }}-{{ $k }}" data-toggle="tab" aria-expanded="{{ $k === 1 ? 'true' : 'false' }}" class="nav-link @if($j === 1) active @endif">{{ $room }}</a>
                                             </li>
                                         @endforeach
                                     </ul>
@@ -105,7 +108,7 @@
                                                         $id = $event['id'];
                                                         $l++;
                                                     @endphp
-                                                    <div class="tab-pane {{ $l === 1 ? "active show" : "" }}" id="sch-{{ $i }}-{{ $j }}-{{ $k }}">
+                                                    <div class="tab-pane {{ $l === 1 ? "active show" : "" }}" id="agn-{{ $i }}-{{ $j }}-{{ $k }}">
                                                         <ul class="list-unstyled timeline-sm"> 
                                                             <li class="timeline-sm-item">
                                                                 <span class="timeline-sm-date">
@@ -147,7 +150,15 @@
                             @endforeach
 
                         </div>
+                        
+                       
+
+
                 </div>  
             @endforeach
         </div>
+
+
+
+
 </div>

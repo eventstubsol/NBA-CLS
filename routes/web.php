@@ -29,6 +29,8 @@ Route::get("/event/session-notifications", "EventController@sendSessionNotificat
 Route::get("privacy-policy", "HomeController@privacyPolicy")->name("privacyPolicy");
 Route::get("faq", "HomeController@faqs")->name("faq");
 Route::get("schedule", "EventSessionsController@schedule")->name("schedule");
+Route::get("schedule-raw", "EventSessionsController@scheduleRaw")->name("scheduleRaw");
+Route::get("subscriptions-raw", "EventSessionsController@subscription_raw")->name("subscription_raw");
 Route::get("/notifications/send", "NotificationController@send")->name("sendNotifications");
 Route::get("/confirm-login", "HomeController@confirmLogin")->name("confirmLogin");
 
@@ -83,7 +85,8 @@ Route::middleware(["auth"])->group(function () { //All Routes here would need au
             "report" => "ReportController",
             "prize" => "PrizeController",
             "sessionrooms" => "SessionRoomController",
-            "sessions" => "SessionController"
+            "sessions" => "SessionController",
+            "subscriptions" => "EventSubscriptionController"
             //            "provisional" => "ProvisionalController",
         ]);
 

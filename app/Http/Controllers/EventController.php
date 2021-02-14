@@ -55,6 +55,21 @@ class EventController extends Controller
         $schedule = getSchedule();
         $user = Auth::user();
         $sessionrooms = sessionRooms::all()->groupBy("master_room");
+        $sessionroomnames = [];
+        foreach($sessionrooms as $master_room=>$rooms){
+            // if(isset($sessionroomids[$master_room]))
+            // {
+            //     array_push($sessionroomids[$master_room],[$room]);
+            // }else{
+                $roomnames = [];
+                foreach($rooms as $room ){
+                    array_push($roomnames,$room->name);
+                }
+                $sessionroomnames[$master_room] = $roomnames;
+
+            // }
+        }
+        // dd($sessionroomids);
         $sessions = EventSession::all()->load(["parentroom"]);
         
         
@@ -76,6 +91,7 @@ class EventController extends Controller
                     "prizes",
                     "sessions",
                     "sessionrooms",
+                    "sessionroomnames",
                 ])
             );
     }
