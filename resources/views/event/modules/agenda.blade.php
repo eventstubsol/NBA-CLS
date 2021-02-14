@@ -1,6 +1,6 @@
 <div class="mb-3" >
     <!-- List of Dates in Event -->
-    <ul class="nav nav-pills navtab-bg nav-justified" style="margin: 0px -5px;">
+    <ul class="nav nav-pills navtab-bg nav-justified test" style="margin: 0px -5px;">
         
         <!-- Calculate the Dates and order the schedule accordingly/ Group The schedule According to dates -->
         @php
