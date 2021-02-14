@@ -392,7 +392,7 @@ $user = Auth::user();
 
 {{--    @if(isOpenForPublic("photo-booth"))--}}
 {{--    @include("event.modules.Booths.PhotoBooth")--}}
-{{--    @endif--}}
+{{--    @endif  --}}
 
     @if(isOpenForPublic("library"))
     @include("event.modules.Resources")
