@@ -25,6 +25,56 @@ public function create(){
     return view("agenda.createForm")->with(compact(["users","sessions"]));
 }
 
+public function bulk_create(Request $request)
+{
+    $data = $request->except("_token");
+    $agenda =  $data["users"];
+    $subscriptions = [];
+    $email = '';
+    $newagenda = [];
+    foreach($agenda as $subscription){
+      array_push($newagenda,  (array) $subscription);
+    }
+    foreach($newagenda as $subscription){
+        foreach ($subscription as $index => $sub)
+        {
+             if($index==="email"){
+                $email = $sub;
+            }else{
+                array_push($subscriptions,$sub);
+            }
+        }
+    }
+    if($email === ''){
+        return [ "success" => FALSE, "message" => "Email Missing from CSV" , "data" => $newagenda ];
+    }
+    if(!count($subscriptions))
+        return [ "success" => FALSE, "message" => "No sessions found"];
+
+    $user = User::where('email',$email)->first();
+    if(isset($user->id)){
+        foreach($subscriptions as $subscription){
+            $session = EventSession::where("name",$subscription)->first();
+            if($session){
+                $if_exists = EventSubscription::where([
+                    "user_id"=>$user->id,
+                    "session_id"=>$session->id
+                    ])->first();
+
+                if(!isset($if_exists->id)){
+                    EventSubscription::create([
+                        "user_id"=>$user->id,
+                        "session_id"=>$session->id
+                    ]);
+                }
+           }
+        }
+    }
+
+      return ["success" => TRUE];
+}
+
+
 //Create new Faq instance
 public function store(Request $request){
     $request->validate(["userid"=>"required","sessionids"=>"required"]);

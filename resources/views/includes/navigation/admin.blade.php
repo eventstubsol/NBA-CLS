@@ -11,13 +11,30 @@
             <li>
                 <a href="{{ route("reports.leaderboard") }}">Leaderboard</a>
             </li>
-            <li>
+            <!-- <li>
                 <a href="{{ route("reports.auditorium") }}">Auditorium</a>
-            </li>
-            @foreach(WORKSHOP_ROOMS as $room)
-            <li>
-                <a href="{{ route("reports.workshop", ['name' => $room]) }}">{{ WORKSHOP_ROOM_NAMES[$room] }} Room</a>
-            </li>
+            </li> -->
+            @php
+                $session_rooms = getRooms();
+            @endphp
+            @foreach($session_rooms as $master_room => $rooms)
+                @if($master_room != "private" )
+                <li>
+                    <a href="#{{$master_room}}" data-toggle="collapse">{{ ucfirst( str_replace("_"," ", $master_room ) )  }}</a>
+            
+                    <div class="collapse" id="{{$master_room}}">
+                        <ul class="nav-sesond-level">
+                            @foreach($rooms as $room)
+                                <li>
+                                    <a href="{{ route("reports.workshop", ['name' => $room]) }}">{{ $room }}</a>
+                                </li>
+                            @endforeach
+                        
+                        </ul>
+                    </div>
+                </li>
+                @endif
+            
             @endforeach
         </ul>
     </div>
@@ -172,6 +189,24 @@
         </ul>
     </div>
 </li>
+
+<li>
+    <a href="#notification" data-toggle="collapse">
+        <i data-feather="bell"></i>
+        <span> Agenda</span>
+    </a>
+    <div class="collapse" id="notification">
+        <ul class="nav-second-level">
+            <li>
+                <a href="{{ route("subscriptions.index") }}">Manage</a>
+            </li>
+            <li>
+                <a href="{{ route("subscriptions.create") }}">Create</a>
+            </li>
+        </ul>
+    </div>
+</li>
+
 
 <li>
     <a href="#rooms" data-toggle="collapse">

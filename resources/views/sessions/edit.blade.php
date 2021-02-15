@@ -129,9 +129,15 @@
                         <label for="user">Select Speaker</label>
                         <select class="form-control select2-multiple @error('userids') is-invalid @enderror" id="speakers" name="speakers[]" data-toggle="select2" multiple="multiple" data-placeholder="Choose ...">
                             @foreach($speakers as $user)
-                                <option class="{{in_array($user->id,$session->speakers) ? 'hello' : 'world'}}"    @if(in_array($user->id,$session->speakers))   selected="true" @endif  value={{$user->id}}>{{$user->name}} ({{$user->email}}) </option>
+                                <option @if(in_array($user->id,$session->speakers))   selected="true" @endif  value={{$user->id}}>{{$user->name}} ({{$user->email}}) </option>
                             @endforeach
                         </select> 
+                    </div>
+
+                     <!-- Zoom Direct URL -->
+                     <div class="form-group">
+                        <label class="form-label">Zoom Url (In case we want an external link)</label>
+                        <input type="string" value="{{$session->zoom_url??''}}"  name="zoom_url" class="form-control"/>
                     </div>
 
                     <div>

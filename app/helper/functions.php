@@ -8,6 +8,7 @@ use App\EventSession;
 use App\SessionPoll;
 use App\ArchiveVideos;
 use App\UserConnection;
+use App\sessionRooms;
 use App\Contact;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
@@ -224,19 +225,22 @@ define('ZOOM_SESSION', "ZOOM_SESSION");
 define('AUDI_SESSION', "AUDI_SESSION");
 define('VIMEO_SESSION', "VIMEO_SESSION");
 define('ZOOM_URL', "ZOOM_URL");
+define('PRIVATE_SESSION', "PRIVATE_SESSION");
 
 define("EVENT_SESSION_TYPES", [
     ZOOM_SESSION,
     AUDI_SESSION,
     VIMEO_SESSION,
-    ZOOM_URL
+    ZOOM_URL,
+    PRIVATE_SESSION,
 ]);
 
 
 define("MASTER_ROOMS",[
     "peek_behind_corporate_veil",
     "fireside_chat",
-    "auditorium"
+    "auditorium",
+    "private"
 ]);
 
 define("CREATOR_TELLER_LINKS", [
@@ -245,6 +249,19 @@ define("CREATOR_TELLER_LINKS", [
 ]);
 
 define("BY_LAWS_TELLER_ID", "280fd217-8106-46fc-a36b-c5c38b1a3823");
+
+function getRooms(){
+    $sessionrooms = sessionRooms::all()->groupBy("master_room");
+    $sessionroomnames = [];
+    foreach($sessionrooms as $master_room=>$rooms){
+            $roomnames = [];
+            foreach($rooms as $room ){
+                array_push($roomnames,$room->name);
+            }
+            $sessionroomnames[$master_room] = $roomnames;
+     }
+     return $sessionroomnames;
+}
 
 function getAllFields()
 {
@@ -724,6 +741,9 @@ function getSchedule(){
                 "description" => $event->description,
                 "speakers" => $event->speakers,
                 "recording" => $event->past_video ? $event->past_video : false,
+                "room"=> $event->room,
+                "type" => $event->type,
+                "zoom_url"=>$event->zoom_url??'',
             ];
         }
     }

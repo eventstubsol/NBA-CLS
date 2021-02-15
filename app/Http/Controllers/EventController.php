@@ -714,7 +714,7 @@ class EventController extends Controller
     public function workshopReports($name){
         $apiRoute = route("reports.workshop.api", ['name' => $name]);
         $logsRoute = route("reports.export.workshopLogs",['name' => $name]);
-        $logName = WORKSHOP_ROOM_NAMES[$name];
+        $logName = $name;
         return view("dashboard.reports.auditorium")->with(compact([
             'apiRoute',
             'logsRoute',
