@@ -7,6 +7,7 @@
                     Live now
                 </a>
                 <div class="custom-dropdown-menu">
+                        <a class="area dropdown-item" data-link="sessionroom/Auditorium">Impact Auditorium</a>
                         <a class="area dropdown-item" data-link="sessions-list/peek_behind_corporate_veil">Peek Behind The Corporate Hall</a>
                         <a class="area dropdown-item" data-link="sessions-list/fireside_chat">Fireside Chat</a>
                 </div>
@@ -17,9 +18,12 @@
                     Expo Hall
                 </a>
                 <div class="custom-dropdown-menu">
-                        <a class="area dropdown-item" data-link="sessions-list/peek_behind_corporate_veil">Peek Behind The Corporate Hall</a>
-                        <a class="area dropdown-item" data-link="room/">Fireside Chat</a>
+                        <a class="area dropdown-item" data-link="room/ca9d92bd-e5a1-4392-9659-b65d9c857310">Walker Expo Hall</a>
+                        <a class="area dropdown-item" data-link="room/d4021162-16a5-43a2-aba1-005ac9507717">Lewis Expo Hall</a>
                 </div>
+            </li>
+            <li class="custom-dropdown not-booth-menu" >
+                <a class="area" data-link="attendees"><i class="fe-users"></i>Attendees</a>
             </li>
             <!-- <li class="custom-dropdown not-booth-menu">
                 <a  class="area" data-link="workshop-list">
