@@ -61,14 +61,17 @@ public function bulk_create(Request $request)
                            ]);
                        }
                     }else{
-                        array_push($failed,$subscription["email"]);
+                        array_push($failed,$sub." Not found");
                     }
+                }
+                else{
+                    array_push($failed,$subscription["email"]." user Not found");
                 }
             }
         }
     }
     if(count($failed)){
-        return ["success" => FALSE,"failures"=>$failed];
+        return ["success" => FALSE,"message"=>$failed];
 
     }
     return ["success" => TRUE];
