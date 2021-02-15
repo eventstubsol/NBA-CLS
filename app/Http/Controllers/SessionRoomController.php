@@ -66,8 +66,8 @@ class SessionRoomController extends Controller
         return redirect()->to(route("sessionrooms.index"));
     }
 
-    public function destroy(sessionRooms $room){
-        $room->delete();
+    public function destroy(sessionRooms $sessionroom){
+        $sessionroom->delete();
         return redirect()->to(route("sessionrooms.index"));
     }
 }

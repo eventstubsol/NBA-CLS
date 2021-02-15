@@ -154,8 +154,8 @@ class SessionController extends Controller
 
     public function destroy(EventSession $session){
         $session->delete();
-        return true;
-        // return redirect()->to(route("sessions.index"));
+        // return true;
+        return redirect()->to(route("sessions.index"));
     }
 
     public function save(Request $request){
