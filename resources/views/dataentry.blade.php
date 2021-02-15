@@ -15,12 +15,12 @@
     <div class="col-12">
         <div class="card" id="uploader-progress">
         <div class="card-body">
-            <div class="form-group mb-3">
-                <select  class="form-control"  name="toUpload" id="toupload">
-                    <option value="usertags">User Tags</option>
-                    <option value="lookingfor">Looking For tags</option>
-                </select>
-            </div>
+                <div class="form-group mb-3">
+                    <select  class="form-control"  name="toUpload" id="toupload">
+                        <option value="usertags">User Tags</option>
+                        <option value="lookingfor">Looking For tags</option>
+                    </select>
+                </div>
                 <p class="m-3">
                     <input accept=".json" type="file" hidden id="utupload">        
                     <button class="btn btn-primary" id="btnutupload"><i class="fe-upload-cloud mr-1"></i>Bulk Upload </button>

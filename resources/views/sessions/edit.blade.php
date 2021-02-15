@@ -72,7 +72,7 @@
                         <select name="room_id"  class="form-control @error('room_id') is-invalid @enderror" id="example-select" required>
                             <option value="">Select Room</option>
                             @foreach($rooms as $room)
-                              <option selected="{{$room == $session->room_id}}" value={{$room->id}}>{{$room->name}}</option>
+                              <option @if($room->id === $session->room_id) selected="true" @endif value={{$room->id}}>{{$room->name}}</option>
                              @endforeach
                         </select>
                          @error('room_id')
