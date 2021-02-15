@@ -125,7 +125,7 @@
                                                                         <span class="btn btn-sm btn-link text-muted font-14 ">
                                                                             Session Ended
                                                                         </span>
-                                                                    @else
+                                                                    @elseif($event['type']!="PRIVATE_SESSION")
                                                                         <a href="javascript: void(0);" data-id="{{ $id }}" class="btn subscribe-to-event btn-sm btn-link text-muted font-14 {{ in_array($id, $subscriptions) ? "hidden" : "" }}">
                                                                             <!-- <i class="mdi mdi-bell-ring mr-1"></i>  -->
                                                                             + Agenda
@@ -133,6 +133,11 @@
                                                                         <a href="javascript: void(0);" data-id="{{ $id }}"class="btn btn-danger unsubscribe-event btn-sm btn-link text-muted font-14  {{ in_array($id, $subscriptions) ? "" : "hidden" }}">
                                                                             <!-- <i class="mdi mdi-bell-off mr-1"></i> -->
                                                                              - Agenda
+                                                                        </a>
+                                                                    @elseif($event['type']==="PRIVATE_SESSION")
+                                                                        <a href="{{$event['zoom_url']??''}}" target="_blank" data-id="{{ $id }}" class="btn btn-sm btn-link text-muted font-14">
+                                                                            <!-- <i class="mdi mdi-bell-ring mr-1"></i>  -->
+                                                                            Attend
                                                                         </a>
                                                                     @endif
                                                                 </div>

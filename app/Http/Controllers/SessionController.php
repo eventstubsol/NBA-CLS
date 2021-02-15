@@ -113,8 +113,9 @@ class SessionController extends Controller
          $session->load("speakers");
          $room = sessionRooms::where("id",$request->room_id)->first();
          $session->update($request->all());
-         $session->room = strtoupper($room->name);
-         $session->save();
+          $session->room = strtoupper($room->name);
+            $session->master_room = $room->master_room;
+            $session->save();
          $newspeakers = [];
          foreach($session->speakers as $speaker){
              array_push($newspeakers,$speaker->id);

@@ -103,9 +103,9 @@
                             <input name="vimeo_url" type="number" class="form-control"/>
                         </div>
                  
-                    <!-- Zoom URL -->
+                    <!-- Zoom Webinar Id -->
                     <div class="form-group">
-                        <label class="form-label">Zoom Webinar Id / Zoom Url (In case we want an external link)</label>
+                        <label class="form-label">Zoom Webinar Id</label>
                         <input type="number"  name="zoom_webinar_id" class="form-control"/>
                     </div>
 
@@ -130,6 +130,13 @@
                             <option value={{$user->id}}>{{$user->name}} ({{$user->email}}) </option>
                             @endforeach
                         </select> 
+                    </div>
+
+
+                     <!-- Zoom Direct URL -->
+                     <div class="form-group">
+                        <label class="form-label">Zoom Url (In case we want an external link)</label>
+                        <input type="string"  name="zoom_url" class="form-control"/>
                     </div>
 
                     <div>

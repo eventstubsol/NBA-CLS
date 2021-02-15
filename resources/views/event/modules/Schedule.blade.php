@@ -13,8 +13,10 @@
                         if($lastDate != $event['start_date']['m']){
                             $lastDate = $event['start_date']['m'];
                         }
-                        $event['id'] = $id;
-                        $dates[$lastDate][$master_room][$room][] = $event;
+                        if($event['type']!=="PRIVATE_SESSION"){
+                            $event['id'] = $id;
+                            $dates[$lastDate][$master_room][$room][] = $event;
+                        }
                     }
                 }
             }
@@ -114,6 +116,8 @@
                                                                 <div class="border border-heavy p-2 mb-3 bg-white hover-shadow "> 
                                                                     <h5 class="mt-0 mb-1">{{ $event['name'] }}</h5>
                                                                     <p class="text-dark mt-2">{!! $event['description'] !!}</p>
+                                                                    <a href="javascript: void(0);" class="area btn btn-sm btn-link text-muted font-14 " data-link="sessionroom/{{ $event['room']}}"> Visit {{ $event['room'] }}</a>
+
                                                                     @if($event['status'] === 1 || $event['status'] === 3)
                                                                         <span class="btn btn-sm btn-link text-muted font-14 ">
                                                                             <i class="mdi mdi-clock mr-1"></i>{{ $event['status'] === 1 ? "Ongoing" : "Starting soon" }}

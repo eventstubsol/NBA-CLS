@@ -111,6 +111,7 @@ Route::middleware(["auth"])->group(function () { //All Routes here would need au
         //        Route::get("/prizes/distribute", "PrizeController@distributePrize")->name("distribute_prizes");
 
         Route::post("/user-bulk-upload", "UserController@bulk_create")->name("users.bulk_upload");
+        Route::post("/subscriptions-bulk-upload", "EventSubscriptionController@bulk_create")->name("subscriptions.bulk_upload");
 
         Route::post("/booth/{booth}/publish", "BoothController@publish")->name("booth.publish");
         Route::post("/booth/{booth}/unpublish", "BoothController@unpublish")->name("booth.unpublish");
