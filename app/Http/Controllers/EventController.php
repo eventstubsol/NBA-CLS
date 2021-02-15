@@ -78,6 +78,7 @@ class EventController extends Controller
         foreach ($user->subscriptions as $subscription) {
             $subscriptions[] = $subscription->session_id;
         }
+        // dd($schedule);
         return view("event.index")
             ->with(
                 compact([
