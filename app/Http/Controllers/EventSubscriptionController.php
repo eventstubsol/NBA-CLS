@@ -32,6 +32,7 @@ public function bulk_create(Request $request)
     $agenda =  $data["users"];
     $subscriptions = [];
     $email = '';
+    $failed = [];
     foreach($agenda as $subscription){
          foreach ($subscription as $index => $sub)
         {
@@ -59,10 +60,16 @@ public function bulk_create(Request $request)
                                "session_id"=>$session->id
                            ]);
                        }
+                    }else{
+                        array_push($failed,$subscription["email"]);
                     }
                 }
             }
         }
+    }
+    if(count($failed)){
+        return ["success" => FALSE,"failures"=>$failed];
+
     }
     return ["success" => TRUE];
 }
