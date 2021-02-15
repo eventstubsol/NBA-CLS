@@ -56,7 +56,7 @@
                         <label for="example-select-1">Type</label>
                         <select name="type" class="form-control @error('type') is-invalid @enderror" id="example-select-1"  required>
                             @foreach(EVENT_SESSION_TYPES as $type)
-                              <option  selected="{{$type == $session->type}}"  value={{$type}} onselect="{{$selected_type = $type}}" >{{ str_replace('_'," ",$type)}}</option>
+                              <option  @if($type === $session->type) selected="true" @endif  value={{$type}} onselect="{{$selected_type = $type}}" >{{ str_replace('_'," ",$type)}}</option>
                              @endforeach
                         </select>
                          @error('type')
