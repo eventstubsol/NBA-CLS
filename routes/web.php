@@ -1,6 +1,7 @@
 <?php
 
 use Carbon\Carbon;
+use Composer\DependencyResolver\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Sichikawa\LaravelSendgridDriver\Transport\SendgridTransport;
@@ -98,7 +99,9 @@ Route::middleware(["auth"])->group(function () { //All Routes here would need au
         /**
          * CHAT USER END
          */
-
+        Route::get("/data-entry",function (){
+            return view("dataentry");
+        })->name("dataentry")  ;
         Route::get("/options", "CMSController@optionsList")->name("options");
         Route::post("/options/update", "CMSController@optionsUpdate")->name("cms.updateContent");
         Route::get("SortRooms", "RoomController@sort")->name("room.sort");
@@ -181,6 +184,8 @@ Route::middleware(["auth"])->group(function () { //All Routes here would need au
     //Add Profile Image
     Route::post("/save-profile-image", "EventController@saveprofile")->name("saveprofile");
     Route::post("/saveprofile", "EventController@updateProfile")->name("updateProfile");
+    Route::post("/savetags", "EventController@saveTags")->name("savetags");
+    Route::post("/saveLookingfor", "EventController@saveLookingfor")->name("saveLookingfor");
     Route::middleware(["checkAccess:exhibiter"])->group(function () {
         Route::get("/changepassword", "UserController@changePassword")->name("changePassword");
         Route::post("/updatepassword", "UserController@updatePassword")->name("updatePassword");

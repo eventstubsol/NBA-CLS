@@ -24,7 +24,7 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <div class="card-body {{$session->start_times}}">
+            <div class="card-body">
                 <form action="{{ route("sessions.update",[$session->id]) }}" method="post">
                     {{ csrf_field() }}
                     @method("PUT")

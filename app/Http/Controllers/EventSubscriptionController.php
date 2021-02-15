@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\EventSubscription;
 use App\User;
 use App\EventSession;
+use Dotenv\Result\Success;
 
 class EventSubscriptionController extends Controller
 {
@@ -31,47 +32,39 @@ public function bulk_create(Request $request)
     $agenda =  $data["users"];
     $subscriptions = [];
     $email = '';
-    $newagenda = [];
     foreach($agenda as $subscription){
-      array_push($newagenda,  (array) $subscription);
-    }
-    foreach($newagenda as $subscription){
-        foreach ($subscription as $index => $sub)
+         foreach ($subscription as $index => $sub)
         {
-             if($index==="email"){
-                $email = $sub;
-            }else{
-                array_push($subscriptions,$sub);
+            if($index==="email"){
+               continue;
+             }else{
+                $email = $subscription['email'];
+                if($email === ''){
+                    return [ "success" => true];
+                }
+                
+                $user = User::where('email',$email)->first();
+  
+                if(isset($user->id)){
+                    $session = EventSession::where("name",$sub)->first();
+                   if($session){
+                       $if_exists = EventSubscription::where([
+                           "user_id"=>$user->id,
+                           "session_id"=>$session->id
+                           ])->first();
+       
+                       if(!isset($if_exists->id)){
+                           EventSubscription::create([
+                               "user_id"=>$user->id,
+                               "session_id"=>$session->id
+                           ]);
+                       }
+                    }
+                }
             }
         }
     }
-    if($email === ''){
-        return [ "success" => FALSE, "message" => "Email Missing from CSV" , "data" => $newagenda ];
-    }
-    if(!count($subscriptions))
-        return [ "success" => FALSE, "message" => "No sessions found"];
-
-    $user = User::where('email',$email)->first();
-    if(isset($user->id)){
-        foreach($subscriptions as $subscription){
-            $session = EventSession::where("name",$subscription)->first();
-            if($session){
-                $if_exists = EventSubscription::where([
-                    "user_id"=>$user->id,
-                    "session_id"=>$session->id
-                    ])->first();
-
-                if(!isset($if_exists->id)){
-                    EventSubscription::create([
-                        "user_id"=>$user->id,
-                        "session_id"=>$session->id
-                    ]);
-                }
-           }
-        }
-    }
-
-      return ["success" => TRUE];
+    return ["success" => TRUE];
 }
 
 

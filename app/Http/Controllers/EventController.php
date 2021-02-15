@@ -216,6 +216,69 @@ class EventController extends Controller
             "success" => true,
         ];
     }
+    public function saveLookingfor(Request $request){
+        $data = $request->except("_token");
+        $taglist =  $data["data"];
+        $subscriptions = [];
+        $email = '';
+        foreach($taglist as $tags){
+             foreach ($tags as $index => $tag)
+            {
+                if($index==="email"){
+                   continue;
+                 }else{
+                    $email = $tags['email'];
+                    $user = User::where('email',$email)->first();
+                    if(isset($user->id)){
+                        $existingTag = UserTag::where("tag", "like", $tag)->first();
+                        if (!$existingTag) {
+                            $user->tags()->create([
+                                "tag" => $tag
+                            ]);
+                        } else {
+                            UserTagLinks::create([
+                                'tag_id' => $existingTag->id,
+                                'user_id' => $user->id
+                            ]);
+                        }
+                    }
+                }
+            }
+        }
+        return ['success'=> True ];
+    }
+    public function saveTags(Request $request){
+        $data = $request->except("_token");
+        $taglist =  $data["data"];
+        $subscriptions = [];
+        $email = '';
+        foreach($taglist as $tags){
+             foreach ($tags as $index => $tag)
+            {
+                if($index==="email"){
+                   continue;
+                 }else{
+                    $email = $tags['email'];
+                    $user = User::where('email',$email)->first();
+                    if(isset($user->id)){
+                        $existingTag = UserTag::where("tag", "like", $tag)->first();
+                        if (!$existingTag) {
+                            $user->looking_for_tags()->create([
+                                "tag" => $tag
+                            ]);
+                        } else {
+                            UserLookingTagLinks::create([
+                                'tag_id' => $existingTag->id,
+                                'user_id' => $user->id
+                            ]);
+                        }
+                    }
+                }
+            }
+        }
+        return ['success'=>True];
+    }
+
 
     public function updateProfile(Request $request)
     {

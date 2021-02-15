@@ -683,28 +683,29 @@ function getContact($user, $currentUser = false){
 }
 
 function getSuggestedTags(){
-    $toSend = [
-        "Clinical Oncology",
-        "Radiation Oncology",
-        "Medical Oncology",
-        "Radiology",
-        "Gynecology",
-        "Surgical Oncology",
-        "Pathology",
-        "Clinical Pathology",
-        "Clinical Pharmacy",
-        "Physics",
-        "Radiotherapist",
-        "Biochemistry",
-        "Community",
-        "Immunology",
-        "Medical Statistics",
-        "Palliative Care"
-    ];
-//    $tags = \App\UserTag::get("tag");
-//    foreach ($tags as $tag) {
-//        $toSend[] = $tag->tag;
-//    }
+    // $toSend = [
+    //     "Clinical Oncology",
+    //     "Radiation Oncology",
+    //     "Medical Oncology",
+    //     "Radiology",
+    //     "Gynecology",
+    //     "Surgical Oncology",
+    //     "Pathology",
+    //     "Clinical Pathology",
+    //     "Clinical Pharmacy",
+    //     "Physics",
+    //     "Radiotherapist",
+    //     "Biochemistry",
+    //     "Community",
+    //     "Immunology",
+    //     "Medical Statistics",
+    //     "Palliative Care"
+    // ];
+    $toSend = [];
+   $tags = \App\UserTag::get("tag");
+   foreach ($tags as $tag) {
+       $toSend[] = $tag->tag;
+   }
     return $toSend;
 }
 
