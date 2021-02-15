@@ -209,7 +209,6 @@
 
                 if (flag) {
                     $("#uploader-progress").append("<h3>All Done</h3>")
-                    location.reload(true)
                 } else {
                     $("#btnFileUpload").html('<i class="ti-face-sad mr-1"></i> Error')
 
