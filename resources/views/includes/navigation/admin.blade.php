@@ -39,7 +39,9 @@
         </ul>
     </div>
 </li>
+
 <li>
+
     <a href="#booth-reports" data-toggle="collapse">
         <i class="mdi mdi-file-multiple"></i>
         <span>Booth Reports <span class="badge  badge-success" >NEW</span> </span>
@@ -72,7 +74,13 @@
     </div>
 </li>
 <li>
-    <a href="#notification" data-toggle="collapse">
+    <a href="{{ route('dataentry') }}"  class="nav-second-level">
+        <i data-feather="users"></i>
+        <span> Data Entry</span>
+    </a>
+</li>
+<li>
+    <a href="#notification" data-toggle="collapse" >
         <i data-feather="bell"></i>
         <span> Notifications</span>
     </a>
