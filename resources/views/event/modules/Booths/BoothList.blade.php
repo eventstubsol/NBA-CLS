@@ -36,7 +36,7 @@
         <img src="{{ assetUrl(getField("lewis_hall_image")) }}" class="positioned booth-bg" alt="">
         <div title="Holland_Knight" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 69%;  left: 85%" data-link="booth/75dbc6f7-08e5-48a9-9f9b-fafe126d1148">
         </div>
-        <div title="JacksonLewis" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 69%;  left: 75%;" data-link="booth/f917bba1-6396-4d99-8be3-82a2de3e9eff">
+        <div title="JacksonLewis" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 69%;  left: 75%" data-link="booth/f917bba1-6396-4d99-8be3-82a2de3e9eff">
         </div>
          {!! getScavengerItems("room1") !!} 
      </div> 
