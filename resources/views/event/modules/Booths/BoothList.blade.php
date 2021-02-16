@@ -22,6 +22,8 @@
         <img src="{{ assetUrl(getField("walker_hall_image")) }}" class="positioned booth-bg" alt="">
             <div title="Booth Name" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 43%;  left: 70%;" data-link="booth/930a272a-62e9-467a-8a4d-7db23f51a628">
             </div>
+            <div title="Holland_Knight" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 50%;  left: 80%; color:yellow" data-link="booth/75dbc6f7-08e5-48a9-9f9b-fafe126d1148">
+            </div>
 
     {!! getScavengerItems("room0") !!}
     </div>
