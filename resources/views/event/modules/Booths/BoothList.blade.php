@@ -34,9 +34,11 @@
  <div class="page booths pb-0" id="room-d4021162-16a5-43a2-aba1-005ac9507717"> 
      <div class="booths position-relative" style="height: 100vh">
         <img src="{{ assetUrl(getField("lewis_hall_image")) }}" class="positioned booth-bg" alt="">
-        <div title="Holland_Knight" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 69%;  left: 85%" data-link="booth/75dbc6f7-08e5-48a9-9f9b-fafe126d1148">
+        <div title="Holland Knight" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 69%;  left: 85%" data-link="booth/75dbc6f7-08e5-48a9-9f9b-fafe126d1148">
         </div>
         <div title="JacksonLewis" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 69%;  left: 75%" data-link="booth/f917bba1-6396-4d99-8be3-82a2de3e9eff">
+        </div>
+        <div title="O'Melveny & Myers LLP" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 69%;  left: 65%" data-link="booth/ea547aa7-0b79-4b0d-9840-25d26633aa8d">
         </div>
          {!! getScavengerItems("room1") !!} 
      </div> 
