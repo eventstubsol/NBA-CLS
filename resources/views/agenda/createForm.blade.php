@@ -55,9 +55,7 @@
                         @enderror
                        </div>
 
-                    <div id="uploader-progress" style="display: none">
-                        <h3>Creating Personal Agenda</h3>
-                    </div>
+                  
 
 
 
@@ -65,6 +63,9 @@
                         <input class="btn btn-primary" type="submit" value="Create" />
                     </div>
                 </form>
+                <div id="uploader-progress" style="display: none">
+                    <h3>Creating Personal Agenda</h3>
+                </div>
             </div>
         </div>
     </div>
