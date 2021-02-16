@@ -617,16 +617,20 @@ function initApp(){
                 type: room+"_visit"
             });
             pageChangeActions();
-            // const loadContent = () => {
+            const loadContent = () => {
                 $("#session-content-"+room).empty().append(`<iframe frameborder="0"  class="positioned fill" src="${window.config.auditoriumEmbed}?type=${room}"></iframe>`);
                 $(".cc1-chat-win-inpt-wrap input").unbind("mousedown").on("mousedown", function(e){ e.preventDefault(); e.stopImmediatePropagation(); $(e.target).focus() });
-            // };
+            };
             let sessionModal = $("#session-modal-"+room);
             console.log(room);
-            
             $("#play-session-"+room).unbind().on("click", function(){
                 console.log("opened")
+                loadContent();    
                 sessionModal.modal();
+            });
+            sessionModal.unbind().on("hide.bs.modal", function(){
+                console.log("opened")
+                $("#session-content-"+room).empty();
             });
             recordPageView("workshop/"+room, room+" Room");
         },
