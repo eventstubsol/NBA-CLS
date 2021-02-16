@@ -38,19 +38,19 @@
        <div title="Fish & Richardson" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 69%;  left: 2%" data-link="booth/7e7e4d9e-f43c-4359-b9ee-7c7246067d97">
         </div>
         
-       <div title="K&L Gates" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 59%;  left: 87%" data-link="booth/0f6d6ba7-ba9c-47d4-a012-83ed8e55efe2">
+       <div title="K&L Gates" class= "area candidate-booth positioned" style="width: 8%;height: 13%; top: 55%; left: 83%;" data-link="booth/0f6d6ba7-ba9c-47d4-a012-83ed8e55efe2">
         </div>
-       <div title="McGuireWoods" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 59%;  left: 76%" data-link="booth/20ba9089-3e22-481e-80b9-9218f5361751">
+       <div title="McGuireWoods" class= "area candidate-booth positioned" style=" width: 8%;height: 13%;top: 55%;left: 71%;" data-link="booth/20ba9089-3e22-481e-80b9-9218f5361751">
         </div>
-       <div title="Bowman and Brooke LLP" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 59%;  left: 63%" data-link="booth/d07859ae-ee57-4336-b808-cfc5a54457ff">
+       <div title="Bowman and Brooke LLP" class= "area candidate-booth positioned" style="width: 7%; height: 14%; top: 55%; left: 59%;" data-link="booth/d07859ae-ee57-4336-b808-cfc5a54457ff">
         </div>
-       <div title="Bradley Arant Boult Cummings LLP" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 59%;  left: 51%" data-link="booth/a62bd00e-b182-481b-a298-b49a9c6c7de4">
+       <div title="Bradley Arant Boult Cummings LLP" class= "area candidate-booth positioned" style="width: 7%; height: 14%; top: 55%; left: 46%;" data-link="booth/a62bd00e-b182-481b-a298-b49a9c6c7de4">
         </div>
-       <div title="GreenbergTraurig" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 59%;  left: 38%" data-link="booth/45f94fcf-c355-4f36-8f0b-b91b7eb73d40">
+       <div title="GreenbergTraurig" class= "area candidate-booth positioned" style="width: 7%; height: 14%; top: 55%; left: 34%;" data-link="booth/45f94fcf-c355-4f36-8f0b-b91b7eb73d40">
         </div>
-       <div title="Hamilton, Milller & Birthisel" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 59%;  left: 28%" data-link="booth/571f902e-1c21-4559-96eb-52045a0993f3">
+       <div title="Hamilton, Milller & Birthisel" class= "area candidate-booth positioned" style="width: 7%; height: 14%; top: 55%; left: 21%;" data-link="booth/571f902e-1c21-4559-96eb-52045a0993f3">
         </div>
-       <div title="Ivie McNeill Wyatt Purcell & Diggs" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 59%;  left: 16%" data-link="booth/cc7508b6-8af5-4d3b-b3a9-81e61314aeba">
+       <div title="Ivie McNeill Wyatt Purcell & Diggs" class= "area candidate-booth positioned" style="width: 7%; height: 14%; top: 55%; left: 9%;" data-link="booth/cc7508b6-8af5-4d3b-b3a9-81e61314aeba">
         </div>
        
             
