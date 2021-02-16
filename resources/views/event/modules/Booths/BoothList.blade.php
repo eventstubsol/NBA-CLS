@@ -38,7 +38,7 @@
         </div>
         <div title="JacksonLewis" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 69%;  left: 75%" data-link="booth/f917bba1-6396-4d99-8be3-82a2de3e9eff">
         </div>
-        <div title="O'Melveny & Myers LLP" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 69%;  left: 65%" data-link="booth/ea547aa7-0b79-4b0d-9840-25d26633aa8d">
+        <div title="O'Melveny & Myers LLP" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 69%;  left: 65%" data-link="booth/ea547aa7-0b79-4b0d-9840-25d26633aa8d">
         </div>
          {!! getScavengerItems("room1") !!} 
      </div> 
