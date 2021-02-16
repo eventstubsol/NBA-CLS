@@ -51,9 +51,9 @@
         <div title="Weil, Gotshal & Manges LLP" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 69%;  left: 2%" data-link="booth/bfe09ca0-673c-40db-9874-f39ea13ab47c">
         </div>
         
-        <div title="Morgan Lewis" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 59%;  left: 85%" data-link="booth/b2f7e284-2f30-4feb-9681-2d436281b019">
+        <div title="Morgan Lewis" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 59%;  left: 87%" data-link="booth/b2f7e284-2f30-4feb-9681-2d436281b019">
         </div>
-        <div title="Perkins Coie, LLP" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 59%;  left: 75%" data-link="booth/1db921f2-8c8a-47af-abe7-f4a92b6da6f9">
+        <div title="Perkins Coie, LLP" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 59%;  left: 76%" data-link="booth/1db921f2-8c8a-47af-abe7-f4a92b6da6f9">
         </div>
         <div title="Wiley" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 59%;  left: 63%" data-link="booth/e86fe472-6106-4f73-9da5-192e7aa7766f">
         </div>
@@ -61,11 +61,11 @@
         </div>
         <div title="Mintz" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 59%;  left: 38%" data-link="booth/f89b9ab4-475c-4224-ba05-37976af265c2">
         </div>
-         <div title="Winston & Strawn LLP" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 59%;  left: 26%" data-link="booth/279e9ebc-b366-4541-8d32-c0ed1ed984ef">
+         <div title="Winston & Strawn LLP" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 59%;  left: 28%" data-link="booth/279e9ebc-b366-4541-8d32-c0ed1ed984ef">
         </div>
-        <div title="Reddock Law Group" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 59%;  left: 14%" data-link="booth/0fd80930-9701-4ef7-b252-b4a7342bcd54">
+        <div title="Reddock Law Group" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 59%;  left: 16%" data-link="booth/0fd80930-9701-4ef7-b252-b4a7342bcd54">
         </div>
-        <div title="Wilson Turner Kosmo LLP" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 59%;  left: 2%" data-link="booth/b66d4a7b-bf1f-40fd-812c-f871b8371dbd">
+        <div title="Wilson Turner Kosmo LLP" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 59%;  left: 4%" data-link="booth/b66d4a7b-bf1f-40fd-812c-f871b8371dbd">
         </div>
          {!! getScavengerItems("room1") !!} 
      </div> 
