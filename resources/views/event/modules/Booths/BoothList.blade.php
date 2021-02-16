@@ -34,7 +34,7 @@
  <div class="page booths pb-0" id="room-d4021162-16a5-43a2-aba1-005ac9507717"> 
      <div class="booths position-relative" style="height: 100vh">
         <img src="{{ assetUrl(getField("lewis_hall_image")) }}" class="positioned booth-bg" alt="">
-        <div title="Holland_Knight" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 50%;  left: 80%; color:yellow" data-link="booth/75dbc6f7-08e5-48a9-9f9b-fafe126d1148">
+        <div title="Holland_Knight" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 69%;  left: 85%" data-link="booth/75dbc6f7-08e5-48a9-9f9b-fafe126d1148">
             </div>
          {!! getScavengerItems("room1") !!} 
      </div> 
