@@ -2,7 +2,7 @@
     <div class="container-fluid row">
         <ul class="menu">
             <li class="custom-dropdown not-booth-menu">
-                <a class="area" data-link="auditorium">
+                <a class="area">
                     <i class="menu-icon live"></i>
                     Live now
                 </a>
@@ -13,7 +13,7 @@
                 </div>
             </li>
             <li class="custom-dropdown not-booth-menu">
-                <a  class="area" data-link="room/ca9d92bd-e5a1-4392-9659-b65d9c857310">
+                <a  class="area">
                     <i class="menu-icon expo"></i>
                     Expo Hall
                 </a>
@@ -36,7 +36,7 @@
                         <a class="area dropdown-item" data-link="room/{{ $id[0] }}">{{ $id[1] }}</a>
                     @endforeach
                 </div> -->
-            <!-- <li class="not-booth-menu">
+            <li class="not-booth-menu">
                 @if(isOpenForPublic("lounge"))
                     <a href="javascript:void(0);" class="area" data-link="lounge">
                         <i class="menu-icon lounge"></i>
@@ -48,7 +48,7 @@
                         Lounge
                     </a>
                 @endif
-            </li> -->
+            </li>
             <!-- <li class="not-booth-menu">
                 <a href="javascript:void(0);" class="area" data-link="museum">
                     <i class="menu-icon delegates"></i>
