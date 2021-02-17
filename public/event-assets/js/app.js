@@ -624,7 +624,6 @@ function initApp(){
             let sessionModal = $("#session-modal-"+room);
             console.log(room);
             $("#play-session-"+room).unbind().on("click", function(){
-                console.log("opened")
                 loadContent();    
                 sessionModal.modal();
             });

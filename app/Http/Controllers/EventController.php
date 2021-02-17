@@ -231,17 +231,37 @@ class EventController extends Controller
                     $email = $tags['email'];
                     $user = User::where('email',$email)->first();
                     if(isset($user->id)){
-                        $existingTag = UserTag::where("tag", "like", $tag)->first();
-                        if (!$existingTag) {
-                            $user->tags()->create([
-                                "tag" => $tag
-                            ]);
-                        } else {
-                            UserTagLinks::create([
-                                'tag_id' => $existingTag->id,
-                                'user_id' => $user->id
-                            ]);
-                        }
+                        if(strpos($tag,"*"))
+                        {
+                            $multipletags = explode(",", str_replace("*","",$tag));
+                            $multipletags = explode(",",$tag);
+                            foreach($multipletags as $innertag){
+                                $existingTag = UserTag::where("tag", "like", $innertag)->first();
+                                if (!$existingTag) {
+                                    $user->tags()->create([
+                                        "tag" => $innertag,
+                                        "tag_group" => $index
+                                    ]);
+                                } else {
+                                    UserTagLinks::create([
+                                        'tag_id' => $existingTag->id,
+                                        'user_id' => $user->id
+                                    ]);
+                                }
+                            }
+                        }else{
+                            $existingTag = UserTag::where("tag", "like", $tag)->first();
+                            if (!$existingTag) {
+                                $user->tags()->create([
+                                    "tag" => $tag
+                                ]);
+                            } else {
+                                UserTagLinks::create([
+                                    'tag_id' => $existingTag->id,
+                                    'user_id' => $user->id
+                                ]);
+                            }
+                        }  
                     }
                 }
             }
