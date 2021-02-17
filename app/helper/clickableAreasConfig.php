@@ -20,12 +20,18 @@ define("LOBBY_AREAS", [
          "link" => "sessions-list/peek_behind_corporate_veil",
          "area" => [ 54, 60.5, 9.5, 13 ], //In Percentage
      ],
-    // "Welcome Video" => [
-    //     "title" => "welcome",
-    //     "area" =>[ 32,44.4,12.3,11],
-    //     "class" => "txt-white",
-    //     "videoEmbed" => "https://vimeo.com/458843159",
-    // ],
+    "Welcome Video" => [
+        "title" => "welcome",
+        "area" =>[ 56,39,6.5,8],
+        "class" => "txt-white",
+        "videoEmbed" => "https://vimeo.com/458843159",
+    ],
+    "Welcome Video" => [
+        "title" => "welcome",
+        "area" =>[ 56,54.5,6.5,8],
+        "class" => "txt-white",
+        "videoEmbed" => "https://vimeo.com/458843159",
+    ],
 //    "Photobooth" => [
 //        "title" => "photobooth",
 //        "area" =>[ 38.5,8.4,11.3,12 ],
