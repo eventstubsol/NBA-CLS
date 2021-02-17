@@ -63,7 +63,7 @@ class SessionController extends Controller
         $room = sessionRooms::where("id",$request->room_id)->first();
         // $request->room = $room->name;
         $session = EventSession::create($request->all());
-        $session->room = strtoupper($room->name);
+        $session->room = $room->name;
         $session->master_room = $room->master_room;
         $session->save();
         if($speakers){
@@ -113,7 +113,7 @@ class SessionController extends Controller
          $session->load("speakers");
          $room = sessionRooms::where("id",$request->room_id)->first();
          $session->update($request->all());
-          $session->room = strtoupper($room->name);
+          $session->room = $room->name;
             $session->master_room = $room->master_room;
             $session->save();
          $newspeakers = [];
