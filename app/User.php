@@ -227,7 +227,7 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function tags()
     {
-        return $this->belongsToMany('\App\UserTag', 'user_tag_links', 'user_id', 'tag_id')->orderBy("tag");
+        return $this->belongsToMany('\App\UserTag', 'user_tag_links', 'user_id', 'tag_id')->orderBy("tag_group");
     }
 
     public function tagLinks()
