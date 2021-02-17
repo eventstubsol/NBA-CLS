@@ -98,6 +98,23 @@
         </div>
         <div title="Wilson Turner Kosmo LLP" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 59%;  left: 4%" data-link="booth/b66d4a7b-bf1f-40fd-812c-f871b8371dbd">
         </div>
+        
+        <div title="Lewis & Munday, PC" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 49%;  left: 87%; background-color:red" data-link="booth/8c0c0001-580d-461b-832f-93466dbc4632">
+        </div>
+        <div title="Lewis Brisbois" class= "area candidate-booth positioned" style="width: 9%;   height: 16%;   top: 49%;  left: 76%; background-color:red" data-link="booth/679e354a-ff47-4c37-bb19-b723ee920a87">
+        </div>
+        <div title="Liebler, Gonzalez & Portuondo" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 49%;  left: 63%; background-color:red" data-link="booth/c5d2e339-34e7-4f45-a61d-9c0c30a647a2">
+        </div>
+        <div title="Mayer Brown LLP" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 49%;  left: 51%; background-color:red" data-link="booth/d72ddbc7-d44e-43d6-976a-5fce6a196b1c">
+        </div>
+        <div title="Milbank" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 49%;  left: 38%; background-color:red" data-link="booth/e2e001f0-8da1-4bf2-b57a-634d907196dd">
+        </div>
+         <div title="Mitchell, Williams, Selig, Gates & Woodyard, P.L.L.C." class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 49%;  left: 28%; background-color:red" data-link="booth/68551a82-38f5-46cf-972c-b44c2e478bd7">
+        </div>
+        <div title="Parker Poe Adams & Bernstein LLP" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 49%;  left: 16%; background-color:red" data-link="booth/91b2fc2e-d4df-4a1a-a890-00b34ddc9d74">
+        </div>
+        <div title="Phelps Dunbar, LLP" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 49%;  left: 4%; background-color:red " data-link="c5fd83da-fd8b-4744-9ceb-8acd9af153e3">
+        </div>
          {!! getScavengerItems("room1") !!} 
      </div> 
  </div> 
