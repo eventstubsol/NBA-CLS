@@ -20,13 +20,13 @@ define("LOBBY_AREAS", [
          "link" => "sessions-list/peek_behind_corporate_veil",
          "area" => [ 54, 60.5, 9.5, 13 ], //In Percentage
      ],
-    "Welcome Video" => [
+    "Welcome Video 1" => [
         "title" => "welcome",
         "area" =>[ 56,39,6.5,8],
         "class" => "txt-white",
         "videoEmbed" => "https://vimeo.com/458843159",
     ],
-    "Welcome Video" => [
+    "Welcome Video 2" => [
         "title" => "welcome",
         "area" =>[ 56,54.5,6.5,8],
         "class" => "txt-white",
