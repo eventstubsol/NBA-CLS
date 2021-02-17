@@ -36,7 +36,7 @@
                                  @foreach($rooms as $room)
                                     <li class="nav-item">
                                         <a class="area nav-link" data-link="sessionroom/{{ $room->name }}">
-                                            {{ ucfirst(str_replace("_"," ",$room->name)) }}
+                                            {{  str_replace("Inc","Inc.",ucfirst(str_replace("_"," ",$room->name))) }}
                                         </a>  
                                     </li>
                                 @endforeach                

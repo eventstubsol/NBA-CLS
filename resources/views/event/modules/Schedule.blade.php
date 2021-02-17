@@ -57,7 +57,7 @@
                                    $j++;
                                 @endphp
                                     <li class="nav-item">
-                                        <a href="#sch-{{ $i }}-{{ $j }}" data-toggle="tab" aria-expanded="{{ $j === 1 ? 'true' : 'false' }}" class="nav-link @if($j === 1) active @endif">{{ $master_room }}</a>
+                                        <a href="#sch-{{ $i }}-{{ $j }}" data-toggle="tab" aria-expanded="{{ $j === 1 ? 'true' : 'false' }}" class="nav-link @if($j === 1) active @endif">{{ ucfirst(str_replace("_"," ", $master_room ))}}</a>
                                     </li>
                             @endforeach
                         </ul>
@@ -85,7 +85,7 @@
                                                 $k++;
                                             @endphp
                                             <li class="nav-item">
-                                                <a href="#sch-{{ $i }}-{{ $j }}-{{ $k }}" data-toggle="tab" aria-expanded="{{ $k === 1 ? 'true' : 'false' }}" class="nav-link @if($k === 1) active @endif">{{ $room }}</a>
+                                                <a href="#sch-{{ $i }}-{{ $j }}-{{ $k }}" data-toggle="tab" aria-expanded="{{ $k === 1 ? 'true' : 'false' }}" class="nav-link @if($k === 1) active @endif">{{  str_replace("Inc","Inc.",  ucfirst(str_replace("_"," ",$room)) ) }}</a>
                                             </li>
                                         @endforeach
                                     </ul>
