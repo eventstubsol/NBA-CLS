@@ -711,7 +711,7 @@ function getSuggestedTags(){
 
 function getSchedule(){
     $schedule = [];
-    $eventsLineup = EventSession::orderBy("start_time")->with("speakers.speaker")->get();
+    $eventsLineup = EventSession::orderBy("start_time")->with("speakers.speaker")->get()->load(["parentroom"]);
     foreach ($eventsLineup as $event){
         if(!isset($schedule[$event->master_room])){
             $schedule[$event->master_room] = [];
@@ -742,7 +742,7 @@ function getSchedule(){
                 "description" => $event->description,
                 "speakers" => $event->speakers,
                 "recording" => $event->past_video ? $event->past_video : false,
-                "room"=> $event->room,
+                "room"=> $event->parentroom->name ?? $event->room,
                 "type" => $event->type,
                 "zoom_url"=>$event->zoom_url??'',
             ];
