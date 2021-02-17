@@ -99,9 +99,9 @@
         <div title="Wilson Turner Kosmo LLP" class= "area candidate-booth positioned" style="width: 9%;  height: 16%;   top: 59%;  left: 4%" data-link="booth/b66d4a7b-bf1f-40fd-812c-f871b8371dbd">
         </div>
         
-        <div title="Lewis & Munday, PC" class= "area candidate-booth positioned" style="width: 8%;  height: 14%;   top: 40%;  left: 875%; background-color:red" data-link="booth/8c0c0001-580d-461b-832f-93466dbc4632">
+        <div title="Lewis & Munday, PC" class= "area candidate-booth positioned" style="width: 8%;  height: 14%;   top: 40%;  left: 87%; background-color:red" data-link="booth/8c0c0001-580d-461b-832f-93466dbc4632">
         </div>
-        <div title="Lewis Brisbois" class= "area candidate-booth positioned" style="width: 8%;  height: 14%;   top: 40%;  left: 764%; background-color:red" data-link="booth/679e354a-ff47-4c37-bb19-b723ee920a87">
+        <div title="Lewis Brisbois" class= "area candidate-booth positioned" style="width: 8%;  height: 14%;   top: 40%;  left: 76%; background-color:red" data-link="booth/679e354a-ff47-4c37-bb19-b723ee920a87">
         </div>
         <div title="Liebler, Gonzalez & Portuondo" class= "area candidate-booth positioned" style="width: 8%;  height: 14%;   top: 40%;  left: 64%; background-color:red" data-link="booth/c5d2e339-34e7-4f45-a61d-9c0c30a647a2">
         </div>
