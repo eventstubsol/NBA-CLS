@@ -29,7 +29,7 @@
             }
             body.auth{
                 position:relative;
-                background-image: url("{{asset('assets/images/optimized/exterior-bg.jpg')}}");
+                background-image: url("{{assetUrl(getField('login_background'))}}");
             }
             body.auth .login-container .login-header .logo {
                 display: block;
