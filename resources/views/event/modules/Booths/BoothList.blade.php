@@ -116,11 +116,11 @@
         <div title="Phelps Dunbar, LLP" class= "area candidate-booth positioned" style="width: 8%;  height: 14%;   top: 40%;  left: 10%; background-color:red " data-link="booth/c5fd83da-fd8b-4744-9ceb-8acd9af153e3">
         </div>
         
-        <div title="Procopio" class= "area candidate-booth positioned" style="width: 8%;  height: 14%;   top: 25%;  left: 29%; background-color:red" data-link="booth/9b23fffc-8b61-4d15-8fc8-605b6579d704">
+        <div title="Procopio" class= "area candidate-booth positioned" style="width: 8%;  height: 14%;   top: 25%;  left: 78%; background-color:red" data-link="booth/9b23fffc-8b61-4d15-8fc8-605b6579d704">
         </div>
-        <div title="Robinson+Cole" class= "area candidate-booth positioned" style="width: 8%;  height: 14%;   top: 25%;  left: 19%; background-color:red" data-link="booth/97b0ef6f-1d60-462f-9e8a-abe4f14924aa">
+        <div title="Robinson+Cole" class= "area candidate-booth positioned" style="width: 8%;  height: 14%;   top: 25%;  left: 21%; background-color:red" data-link="booth/97b0ef6f-1d60-462f-9e8a-abe4f14924aa">
         </div>
-        <div title="Vorys" class= "area candidate-booth positioned" style="width: 8%;  height: 14%;   top: 25%;  left: 10%; background-color:red " data-link="booth/978145a7-4647-4f2d-b972-df143024c002">
+        <div title="Vorys" class= "area candidate-booth positioned" style="width: 8%;  height: 14%;   top: 25%;  left: 12%; background-color:red " data-link="booth/978145a7-4647-4f2d-b972-df143024c002">
         </div>
          {!! getScavengerItems("room1") !!} 
      </div> 
