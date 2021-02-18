@@ -52,6 +52,74 @@
         </div>
        <div title="Ivie McNeill Wyatt Purcell & Diggs" class= "area candidate-booth positioned" style="width: 7%; height: 14%; top: 55%; left: 9%;" data-link="booth/cc7508b6-8af5-4d3b-b3a9-81e61314aeba">
         </div>
+
+
+
+        <div title="BakerHostetler" class= "area candidate-booth positioned" style="width: 7%;
+    height: 12%;
+    top: 25%;
+    left: 22%;" data-link="booth/2edd03bf-11c9-46e5-b860-81d4d5370a0b">
+        </div>
+
+        <div title="17. Beveridge & Diamond" class= "area candidate-booth positioned" style="width: 7%;
+    height: 12%;
+    top: 25%;
+    left: 71%;" data-link="booth/6504cb33-70fa-47c5-a334-1e8fa9c3c5fa">
+        </div>
+
+        <div title="18. Fee, Smith, Sharp & Vitullo LLP" class= "area candidate-booth positioned" style="width: 7%;
+    height: 12%;
+    top: 25%;
+    left: 78%;" data-link="booth/5c570b49-5842-4262-97eb-57862ad7f63c">
+        </div>
+
+        <div title="19. Finnegan" class= "area candidate-booth positioned" style="width: 7%;
+    height: 12%;
+    top: 39%;
+    left: 81%;" data-link="booth/a04a7aea-00a0-4831-8b8e-3de27cab0d87">
+        </div>
+
+        <div title="20. FisherBroyles" class= "area candidate-booth positioned" style="width: 7%;
+    height: 12%;
+    top: 39%;
+    left: 71%;" data-link="booth/c163539b-a463-4659-b16e-058bd5a06b55">
+        </div>
+
+        <div title="21. Forman Watkins & Krutz LLP" class= "area candidate-booth positioned" style="width: 7%;
+    height: 12%;
+    top: 39%;
+    left: 61%;" data-link="booth/59ed373b-8072-4ddd-986b-805d0f7b7356">
+        </div>
+
+        <div title="22. Fragomen" class= "area candidate-booth positioned" style="width: 7%;
+    height: 12%;
+    top: 39%;
+    left: 51%;" data-link="booth/2e20b15c-f0a6-4755-bf6b-4fe6243d207d">
+        </div>
+
+        <div title="23. GaffneyLewis LLC" class= "area candidate-booth positioned" style="width: 7%;
+    height: 12%;
+    top: 39%;
+    left: 41%;" data-link="booth/6aa04121-eaf6-4a34-9702-c5ee144ff936">
+        </div>
+
+        <div title="24. Garrison, Yount Forte & Mulcahy, LLC" class= "area candidate-booth positioned" style="width: 7%;
+    height: 12%;
+    top: 39%;
+    left: 31%;" data-link="booth/85f0c541-35e6-45fc-9731-f611c07258d1">
+        </div>
+
+        <div title="25. Jordan IP Law LLC" class= "area candidate-booth positioned" style="width: 7%;
+    height: 12%;
+    top: 39%;
+    left: 21%;" data-link="booth/9bcfefe6-b194-44fa-b1aa-9c305681e950">
+        </div>
+
+         <div title="26. Kean Miller LLP" class= "area candidate-booth positioned" style="width: 7%;
+    height: 12%;
+    top: 39%;
+    left: 12%;" data-link="booth/39398a0d-3924-4dbe-b4c1-6ed2385e858d">
+        </div>
        
             
 
