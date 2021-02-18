@@ -69,7 +69,7 @@
             <li class="booth-menu hidden">
                 <a href="javascript:void(0);" data-modal="description-two-modal-" class="modal-toggle booth_description">
                     <i class="mdi mdi-note-text" style="font-size: 22px;"></i>
-                    Lawfirm Members
+                    Firm Attendees
                 </a>
             </li>
             <!-- <li class="booth-menu hidden">
