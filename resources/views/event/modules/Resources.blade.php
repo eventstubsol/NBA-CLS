@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="resourceslistLabel"><span class="image-icon resources"></span> Resources</h4>
+                <h4 class="modal-title" id="resourceslistLabel"><span class="image-icon resources"></span>Library</h4>
                 <div class="form-group filters search-box">
                     <label class="search has-icon search" for="resourcesearch">
                         <input type="text" placeholder="Search items ..." name="resourcessearch" id="resourcesearch" data-action="resourcesearch">
