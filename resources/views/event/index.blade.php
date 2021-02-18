@@ -94,6 +94,10 @@ $user = Auth::user();
             color: #db5b5b;
             border: 1px solid #db5b5b;
         }
+        .nav-justified .nav-item{
+            min-width: max-content;
+            margin: 4px 0;    
+        }
         @media (max-width: 991.98px){
             .page{
                 padding:0 !important;
