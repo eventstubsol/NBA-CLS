@@ -18,6 +18,9 @@ const openChat = window.openChat;
 function ProfileInfo({ user, refresh = false, edit = false, updateStatus = false }){
     let [isUpdating, setUpdating] = useState(false);
     let [isAdding, setAdding] = useState(false);
+    let usertags = user.tags ? groupArrayOfObjects([...user.tags],"tag_group") : null;
+    let userlookingtags = user.looking_for_tags ? groupArrayOfObjects([...user.looking_for_tags],"tag_group") : null;
+ 
     useEffect(() => {
         // Update the document title using the browser API
         let tooltip = $('.show-email-tooltip');
@@ -135,6 +138,12 @@ function ProfileInfo({ user, refresh = false, edit = false, updateStatus = false
         }
         return <div><button type="button" className="btn btn-outline-primary btn-xs waves-effect mb-2 waves-light" onClick={() => updateContact(user.id, true)}>{isAdding ? "Saving" : "Save to Contact"}</button></div>;
     }
+    function groupArrayOfObjects(list, key) {
+        return list.reduce(function(rv, x) {
+          (rv[x[key]] = rv[x[key]] || []).push(x);
+          return rv;
+        }, {});
+      };
 
     const isEditable = userId === user.id && typeof edit === "function";
     return <div className="card-box text-center">
@@ -193,32 +202,58 @@ function ProfileInfo({ user, refresh = false, edit = false, updateStatus = false
             }
             <div className="mt-3">
                 {
-                    user.tags && Array.isArray(user.tags) ? <ChipSet>
-                        {user.tags.map((chip) =>
-                            <Chip
-                                id={chip.id}
-                                key={chip.id}
-                                label={chip.tag}
-                            />
-                        )}
-                    </ChipSet> : null
+                     usertags !=null ? 
+                        Object.keys(usertags).map((taggroup,i) =>
+                        {
+                            return <>
+                                <h4 className="font-13 text-uppercase mt-3 mb-2" id={i} key={taggroup}>{taggroup}</h4>
+                                <ChipSet key={i}>
+                            {
+                                usertags[taggroup].map((chip)=>
+                                     <Chip
+                                    id={chip.id}
+                                    key={chip.id}
+                                    label={chip.tag}
+                                    />
+                            )
+                            
+                        }
+                        </ChipSet>
+                            </>
+                        }
+                            )
+                        
+                        :null
                 }
+                    
             </div>
             {
                 isEditable ?
                     <>
                         <h4 className="font-13 text-uppercase mt-3 mb-2">Looking for Tags:</h4>
                         <div>
-                            {
-                                user.looking_for_tags && Array.isArray(user.looking_for_tags) ? <ChipSet>
-                                    {user.looking_for_tags.map((chip) =>
-                                        <Chip
+                            { 
+                                userlookingtags != null ? 
+                                Object.keys(userlookingtags).map((taggroup,i) =>
+                                {
+                                    return <>
+                                        <h4 className="font-13 text-uppercase mt-3 mb-2" id={i} key={taggroup}>{taggroup}</h4>
+                                        <ChipSet key={i}>
+                                    {
+                                        userlookingtags[taggroup].map((chip)=>
+                                             <Chip
                                             id={chip.id}
                                             key={chip.id}
                                             label={chip.tag}
-                                        />
-                                    )}
-                                </ChipSet> : null
+                                            />
+                                    )
+                                    
+                                }
+                                </ChipSet>
+                                    </>
+                                }
+                                    )
+                                 : null
                             }
                         </div>
                     </> : null

@@ -28,7 +28,7 @@ use Illuminate\Mail\Message;
 use Mail;
 use Sichikawa\LaravelSendgridDriver\Transport\SendgridTransport;
 use App\sessionRooms;
-
+use Dotenv\Result\Success;
 
 class EventController extends Controller
 {
@@ -217,10 +217,9 @@ class EventController extends Controller
             "success" => true,
         ];
     }
-    public function saveLookingfor(Request $request){
+    public function saveTags(Request $request){
         $data = $request->except("_token");
         $taglist =  $data["data"];
-        $subscriptions = [];
         $email = '';
         foreach($taglist as $tags){
              foreach ($tags as $index => $tag)
@@ -230,17 +229,18 @@ class EventController extends Controller
                  }else{
                     $email = $tags['email'];
                     $user = User::where('email',$email)->first();
+                    // return ["success"=>true ,"index"=>$index];
                     if(isset($user->id)){
-                        if(strpos($tag,"*"))
+                        if(strpos($index,"*"))
                         {
-                            $multipletags = explode(",", str_replace("*","",$tag));
+                            // $multipletags = explode(",", $tag);
                             $multipletags = explode(",",$tag);
                             foreach($multipletags as $innertag){
                                 $existingTag = UserTag::where("tag", "like", $innertag)->first();
                                 if (!$existingTag) {
                                     $user->tags()->create([
                                         "tag" => $innertag,
-                                        "tag_group" => $index
+                                        "tag_group" => str_replace("*","",$index) 
                                     ]);
                                 } else {
                                     UserTagLinks::create([
@@ -253,7 +253,8 @@ class EventController extends Controller
                             $existingTag = UserTag::where("tag", "like", $tag)->first();
                             if (!$existingTag) {
                                 $user->tags()->create([
-                                    "tag" => $tag
+                                    "tag" => $tag,
+                                    "tag_group" => $index
                                 ]);
                             } else {
                                 UserTagLinks::create([
@@ -268,10 +269,9 @@ class EventController extends Controller
         }
         return ['success'=> True ];
     }
-    public function saveTags(Request $request){
+    public function saveLookingfor(Request $request){
         $data = $request->except("_token");
         $taglist =  $data["data"];
-        $subscriptions = [];
         $email = '';
         foreach($taglist as $tags){
              foreach ($tags as $index => $tag)
@@ -281,23 +281,45 @@ class EventController extends Controller
                  }else{
                     $email = $tags['email'];
                     $user = User::where('email',$email)->first();
+                    // return ["success"=>true ,"index"=>$index];
                     if(isset($user->id)){
-                        $existingTag = UserTag::where("tag", "like", $tag)->first();
-                        if (!$existingTag) {
-                            $user->looking_for_tags()->create([
-                                "tag" => $tag
-                            ]);
-                        } else {
-                            UserLookingTagLinks::create([
-                                'tag_id' => $existingTag->id,
-                                'user_id' => $user->id
-                            ]);
-                        }
+                        if(strpos($index,"*"))
+                        {
+                            // $multipletags = explode(",", $tag);
+                            $multipletags = explode(",",$tag);
+                            foreach($multipletags as $innertag){
+                                $existingTag = UserTag::where("tag", "like", $innertag)->first();
+                                if (!$existingTag) {
+                                    $user->looking_for_tags()->create([
+                                        "tag" => $innertag,
+                                        "tag_group" => str_replace("*","",$index) 
+                                    ]);
+                                } else {
+                                    UserLookingTagLinks::create([
+                                        'tag_id' => $existingTag->id,
+                                        'user_id' => $user->id
+                                    ]);
+                                }
+                            }
+                        }else{
+                            $existingTag = UserTag::where("tag", "like", $tag)->first();
+                            if (!$existingTag) {
+                                $user->looking_for_tags()->create([
+                                    "tag" => $tag,
+                                    "tag_group" => $index
+                                ]);
+                            } else {
+                                UserLookingTagLinks::create([
+                                    'tag_id' => $existingTag->id,
+                                    'user_id' => $user->id
+                                ]);
+                            }
+                        }  
                     }
                 }
             }
         }
-        return ['success'=>True];
+        return ['success'=> True ];
     }
 
 

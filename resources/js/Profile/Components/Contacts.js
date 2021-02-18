@@ -358,7 +358,6 @@ class AttendeeList extends Component{
                                             <select className="custom-select" onChange={this.handleTagSelect} value={tagSelected}>
                                                 <option value="">Interest</option>
                                                 {
-                                                    tagSuggestions.map(tag => <option key={tag} value={tag}>{tag}</option>)
                                                 }
                                             </select>
                                         </div>

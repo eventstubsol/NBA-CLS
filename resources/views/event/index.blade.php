@@ -485,6 +485,7 @@ $user = Auth::user();
         </script>
 
     <script>
+        console.log( {!! json_encode(getSuggestedTags()) !!} );
         const config = {
         baseRoute: "{{ url("/") }}",
         leaderboard: "{{ route("leaderboard") }}",

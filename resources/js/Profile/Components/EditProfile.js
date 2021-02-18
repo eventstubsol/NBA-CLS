@@ -29,9 +29,8 @@ class EditProfile extends Component{
     state = {
         saving: false,
         tags: [],
-        suggestions:tagSuggestions.map(i => ({ id: i, text: i })),
+        suggestions: tagSuggestions
     };
-
     componentDidMount() {
         const {
             name = '',
@@ -223,41 +222,29 @@ class EditProfile extends Component{
                 <div className="row">
                     <div className="col-md-12">
                         <div className="form-group">
-                            <label>Select any 4 Technologies of interest</label>
-                            <ChipSet
-                                handleSelect={tags => this.updateTagsSelection("tags", tags)}
-                                selectedChipIds={tags}
-                                filter={true}
-                            >
-                                {suggestions.map((chip) =>
-                                    <Chip
-                                        id={chip.id}
-                                        key={chip.id}
-                                        label={chip.text}
-                                    />
-                                )}
-                            </ChipSet>
+                        {   
+                            Object.keys(suggestions).map((taggroup,i) =>{
+                            return <>    
+                                <label key="i">{taggroup}</label>
+                                <ChipSet
+                                    handleSelect={tags => this.updateTagsSelection("tags", tags)}
+                                    selectedChipIds={tags}
+                                    filter={true}
+                                >
+                                    {suggestions[taggroup].map((chip) =>
+                                        <Chip
+                                            id={chip.id}
+                                            key={chip.id}
+                                            label={chip.tag}
+                                        />
+                                    )}
+                                </ChipSet>
+                            </>
+                            })
+                        }
                         </div>
                     </div>
-                    <div className="col-md-12">
-                        <div className="form-group">
-                            <label>Who I am looking for?</label>
-                            <ChipSet
-                                handleSelect={tags => this.updateTagsSelection("looking_for_tags", tags)}
-                                selectedChipIds={looking_for_tags}
-                                filter={true}
-                            >
-                                {suggestions.map((chip) =>
-                                    <Chip
-                                        id={chip.id}
-                                        key={chip.id}
-                                        label={chip.text}
-                                    />
-                                )}
-                            </ChipSet>
-                        </div>
-                    </div>
-                    <div className="col-md-12">
+                    {/* <div className="col-md-12">
                         <div className="form-group">
                             <label>Select key areas of interest</label>
                             <ChipSet
@@ -274,7 +261,7 @@ class EditProfile extends Component{
                                 )}
                             </ChipSet>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
                 <h5 className="mb-3 text-uppercase bg-light p-2"><i className="mdi mdi-office-building mr-1"/> Company Info</h5>

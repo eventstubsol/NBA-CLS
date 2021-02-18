@@ -188,9 +188,10 @@
         $("#btnutupload").click(function (e) {
             $("#utupload").click()
         })
-
         $("#utupload").change(function(e) {
-            upload(e,$("toupload").value)
+            var value = document.getElementById("toupload").value;
+            console.log(value)
+            upload(e,value)
         });
 </script>
 @endsection

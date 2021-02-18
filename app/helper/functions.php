@@ -607,6 +607,10 @@ function getLoginVars(){
     ];
 }
 
+function array_group_by($array,$field){
+
+}
+
 function getProfileDetails($user = false){
     if(!$user){
         $user = Auth::user();
@@ -618,6 +622,18 @@ function getProfileDetails($user = false){
             "interests",
         ]);
     }
+    // dd($user);
+    // $newtags = [];
+    // foreach($user->tags as $tag){
+    //         $newtags[$tag->tag_group][] = $tag ;
+    // }
+    // $user->tags = $newtags;
+    // $newlookingfortags = [];
+    // foreach($user->looking_for_tags as $tag){
+    //         $newlookingfortags[$tag->tag_group][] = $tag ;
+    // }
+    // $user->looking_for_tags = $newlookingfortags;
+    // dd($newtags);
     $toSend = [
         "user" => $user,
     ];
@@ -701,12 +717,12 @@ function getSuggestedTags(){
     //     "Medical Statistics",
     //     "Palliative Care"
     // ];
-    $toSend = [];
-   $tags = \App\UserTag::get("tag");
-   foreach ($tags as $tag) {
-       $toSend[] = $tag->tag;
-   }
-    return $toSend;
+    // $toSend = [];
+   $tags = \App\UserTag::all()->groupBy("tag_group");
+//    foreach ($tags as $tag) {
+//        $toSend[] = $tag;
+//    }
+    return $tags;
 }
 
 function getSchedule(){
