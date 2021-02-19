@@ -219,9 +219,9 @@ class EditProfile extends Component{
                         </div>
                     </div>
                 </div>
-                <h5 className="mb-3 text-uppercase bg-light p-2"><i className="mdi mdi-heart mr-1"/> Interests</h5>
-                <div className="row">
-                    <div className="col-md-12">
+                {/* <h5 className="mb-3 text-uppercase bg-light p-2"><i className="mdi mdi-heart mr-1"/> Interests</h5> */}
+                {/* <div className="row"> */}
+                    {/* <div className="col-md-12">
                         <div className="form-group">
                         {   
                             Object.keys(suggestions).map((taggroup,i) =>{
@@ -244,7 +244,7 @@ class EditProfile extends Component{
                             })
                         }
                         </div>
-                    </div>
+                    </div> */}
                     {/* <div className="col-md-12">
                         <div className="form-group">
                             <label>Select key areas of interest</label>
@@ -264,10 +264,10 @@ class EditProfile extends Component{
                         </div>
                     </div> */}
 
-                </div>
+                {/* </div> */}
                 <h5 className="mb-3 text-uppercase bg-light p-2"><i className="mdi mdi-office-building mr-1"/> Company Info</h5>
                 <div className="row">
-                    <div className="col-md-6">
+                    {/* <div className="col-md-6">
                         <div className="form-group">
                             <label htmlFor="companyname">Company Name</label>
                             <input type="text" className="form-control" onChange={this.handleChange} id="companyname" name="company_name" value={company_name}
@@ -324,7 +324,7 @@ class EditProfile extends Component{
                                 <option value="1000+">1000+</option>
                             </select>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="col-md-12">
                         <div className="form-group">
                             <label htmlFor="cwebsite">Website</label>
