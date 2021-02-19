@@ -130,7 +130,7 @@
         </div>
         <div title="Mintz" class= "area candidate-booth positioned" style="width: 9%;  height: 14%;   top: 47%;  left: 38%; background-color:red" data-link="booth/f89b9ab4-475c-4224-ba05-37976af265c2">
         </div>
-         <div title="Winston & Strawn LLP" class= "area candidate-booth positioned" style="width: 9%;  height: 14%;   top: 47%;  left: 29%; background-color:red" data-link="booth/279e9ebc-b366-4541-8d32-c0ed1ed984ef">
+         <div title="Winston & Strawn LLP" class= "area candidate-booth positioned" style="width: 9%;  height: 14%;   top: 47%;  left: 28%; background-color:red" data-link="booth/279e9ebc-b366-4541-8d32-c0ed1ed984ef">
         </div>
         <div title="Reddock Law Group" class= "area candidate-booth positioned" style="width: 9%;  height: 14%;   top: 47%;  left: 18%; background-color:red" data-link="booth/0fd80930-9701-4ef7-b252-b4a7342bcd54">
         </div>
@@ -159,6 +159,9 @@
         <div title="Robinson+Cole" class= "area candidate-booth positioned" style="width: 8%;  height: 10%;   top: 21%;  left: 24%;background-color:red " data-link="booth/97b0ef6f-1d60-462f-9e8a-abe4f14924aa">
         </div>
         <div title="Vorys" class= "area candidate-booth positioned" style="width: 8%;  height: 10%;   top: 21%;  left: 14%;background-color:red " data-link="booth/978145a7-4647-4f2d-b972-df143024c002">
+        </div>
+        
+        <div title="lobby" class= "area candidate-booth positioned" style="width: 14%;  height: 14%;   top: 21%;  left: 40%;background-color:blue " data-link="booth/9b23fffc-8b61-4d15-8fc8-605b6579d704">
         </div>
          {!! getScavengerItems("room1") !!} 
      </div> 
