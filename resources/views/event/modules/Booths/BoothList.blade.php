@@ -161,8 +161,8 @@
         <div title="Vorys" class= "area candidate-booth positioned" style="width: 8%;  height: 10%;   top: 21%;  left: 14%;" data-link="booth/978145a7-4647-4f2d-b972-df143024c002">
         </div>
         
-        <div title="lobby" class= "area candidate-booth positioned" style="width: 12%;  height: 9%;   top: 12%;  left: 43%; " data-link="booth/9b23fffc-8b61-4d15-8fc8-605b6579d704">
-        </div>
+        <a data-link="lobby"><div title="lobby" class= "area candidate-booth positioned" style="width: 12%;  height: 9%;   top: 12%;  left: 43%; " data-link="booth/9b23fffc-8b61-4d15-8fc8-605b6579d704">
+        </div></a>
          {!! getScavengerItems("room1") !!} 
      </div> 
  </div> 
