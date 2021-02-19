@@ -424,19 +424,19 @@ define("SCAVENGER_HUNT", [
             "id" => 1,
             "name" => "Silver Gem",
             "area" => [ 75, 94, 2, 4, ],
-            "image" => "event-assets/images/treasurehunt/lobby1.png",
+            "image" => "event-assets/images/treasurehunt/4.png",
         ],
         [
             "id" => 2,
             "name" => "Pink Gem",
-            "area" => [ 36, 2, 2, 4],
-            "image" => "event-assets/images/treasurehunt/lobby2.png",
+            "area" => [ 32, 2, 2, 4],
+            "image" => "event-assets/images/treasurehunt/2.png",
         ],
         [
             "id" => 3,
             "name" => "Round Gem",
-            "area" => [ 34, 32, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/lobby3.png",
+            "area" => [ 32, 96, 2, 4 ],
+            "image" => "event-assets/images/treasurehunt/3.png",
         ]
     ],
     "room0" => [
@@ -444,25 +444,25 @@ define("SCAVENGER_HUNT", [
             "id" => 4,
             "name" => "Silver Gem",
             "area" => [ 58, 84, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/candidate1.png",
+            "image" => "event-assets/images/treasurehunt/5.png",
         ],
         [
             "id" => 5,
             "name" => "Pink Gem",
             "area" => [ 78, 17, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/candidate2.png",
+            "image" => "event-assets/images/treasurehunt/2.png",
         ],
         [
             "id" => 6,
             "name" => "Round Gem",
             "area" => [ 20, 85, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/candidate3.png",
+            "image" => "event-assets/images/treasurehunt/3.png",
         ],
         [
             "id" => 12,
             "name" => "Round Gem",
             "area" => [ 80, 96, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/museum3.png",
+            "image" => "event-assets/images/treasurehunt/4.png",
         ]
     ],
     "room1" => [
@@ -470,25 +470,25 @@ define("SCAVENGER_HUNT", [
             "id" => 7,
             "name" => "Silver Gem",
             "area" => [ 14, 93, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/sponser1.png",
+            "image" => "event-assets/images/treasurehunt/5.png",
         ],
         [
             "id" => 8,
             "name" => "Pink Gem",
             "area" => [ 65, 1, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/sponser2.png",
+            "image" => "event-assets/images/treasurehunt/6.png",
         ],
         [
             "id" => 9,
             "name" => "Round Gem",
             "area" => [21, 13, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/sponser3.png",
+            "image" => "event-assets/images/treasurehunt/2.png",
         ],
         [
             "id" => 11,
             "name" => "Pink Gem",
             "area" => [ 14, 2, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/museum1.png",
+            "image" => "event-assets/images/treasurehunt/3.png",
         ],
     ],
     "lounge" => [
@@ -496,26 +496,20 @@ define("SCAVENGER_HUNT", [
             "id" => 13,
             "name" => "Silver Gem",
             "area" => [ 56, 22, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/lounge1.png",
+            "image" => "event-assets/images/treasurehunt/4.png",
         ],
         [
             "id" => 14,
             "name" => "Pink Gem",
             "area" => [ 65, 16.5, 2, 2],
-            "image" => "event-assets/images/treasurehunt/lounge2.png",
+            "image" => "event-assets/images/treasurehunt/3.png",
         ],
         [
             "id" => 15,
             "name" => "Round Gem",
             "area" => [ 41, 21, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/lounge3.png",
+            "image" => "event-assets/images/treasurehunt/5.png",
         ],
-        [
-            "id" => 15,
-            "name" => "Global Forum Icon",
-            "area" => [ 61, 93, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/Global-Forum-icon.png",
-        ]
     ],
     "museum" => [
         [
@@ -548,19 +542,19 @@ define("SCAVENGER_HUNT", [
             "id" => 19,
             "name" => "Silver Gem",
             "area" => [ 25, 80, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/audi1.png",
+            "image" => "event-assets/images/treasurehunt/3.png",
         ],
         [
             "id" => 20,
             "name" => "Pink Gem",
             "area" => [ 44, 2, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/audi2.png",
+            "image" => "event-assets/images/treasurehunt/5.png",
         ],
         [
             "id" => 21,
             "name" => "Round Gem",
             "area" => [ 45, 94, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/candidate1.png",
+            "image" => "event-assets/images/treasurehunt/4.png",
         ]
     ],
 ]);
