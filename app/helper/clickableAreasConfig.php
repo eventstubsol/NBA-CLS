@@ -390,12 +390,12 @@ define("INF0_DESK_AREAS",[
     "workshop-list" => [
         "title" =>"Lewis Expo Hall",
         "link" => "room/d4021162-16a5-43a2-aba1-005ac9507717",
-        "area" =>[17,74,145.7,10],
+        "area" =>[17,74,15.7,10],
     ],
     "expo-hall" => [
-        "title" =>"Expo Hall",
-        "link" => "expo-hall",
-        "area" =>[14,10,12.5,10],
+        "title" =>"Walker Expo Hall",
+        "link" => "room/ca9d92bd-e5a1-4392-9659-b65d9c857310",
+        "area" =>[17,10.2,17.5,10],
     ]
 ]);
 
