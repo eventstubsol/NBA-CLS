@@ -393,8 +393,8 @@ define("INF0_DESK_AREAS",[
         "area" =>[17,74,15.7,10],
     ],
     "expo-hall" => [
-        "title" =>"Expo Hall",
-        "link" => "expo-hall",
+        "title" =>"Walker Expo Hall",
+        "link" => "room/ca9d92bd-e5a1-4392-9659-b65d9c857310",
         "area" =>[14,10,12.5,10],
     ]
 ]);
