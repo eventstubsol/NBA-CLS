@@ -384,7 +384,7 @@ define("INF0_DESK_AREAS",[
     ],
     "Auditorioum" => [
         "title" => "Auditorium",
-        "link" => "Auditorium",
+        "link" => "sessionroom/Auditorium",
         "area" => [ 19.5, 36, 27.5, 9] , //In Percentage
     ],
     "workshop-list" => [
