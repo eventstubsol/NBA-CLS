@@ -70,7 +70,7 @@ div.ReactTags__suggestions ul li.ReactTags__activeSuggestion {
     padding: 0;
 }
 
-#profile-app .mdc-chip-set .mdc-chip,#view-profile-modal .mdc-chip-set .mdc-chip{
+#profile-app .mdc-chip-set .mdc-chip, #view-profile-modal .mdc-chip-set .mdc-chip{
     margin-right: 10px;
     margin-bottom: 10px;
     font-size: 12px;
