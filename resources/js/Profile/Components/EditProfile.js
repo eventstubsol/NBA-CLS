@@ -127,6 +127,7 @@ class EditProfile extends Component{
     };
 
     updateTagsSelection = (tagInput, value) => {
+        
         this.setState({
             [tagInput]: value
         });
@@ -233,7 +234,7 @@ class EditProfile extends Component{
                                 >
                                     {suggestions[taggroup].map((chip) =>
                                         <Chip
-                                            id={chip.id}
+                                            id={chip.tag}
                                             key={chip.id}
                                             label={chip.tag}
                                         />

@@ -356,6 +356,18 @@ $user = Auth::user();
                 page_title
             });
         }
+        function createGroup(room){
+            $.ajax({
+                url: "{{ route('createGroup') }}",
+                data: {room},
+                success: function(response){
+                    if(response){
+                        console.log(response);
+                        console.log("Chat Created");
+                    }
+                },
+            });
+        }
     </script>
     <script>
         (function(h,o,t,j,a,r){
@@ -458,6 +470,7 @@ $user = Auth::user();
     @include("event.modules.ByLaws")
 
     <script>
+        
             (function () {
                 let deviceElem = document.querySelector('.device-orentation');
                 let deviceElemClose = document.querySelector('.device-orentation .close');
@@ -485,7 +498,7 @@ $user = Auth::user();
         </script>
 
     <script>
-        console.log( {!! json_encode(getSuggestedTags()) !!} );
+        // console.log( {!! json_encode(getSuggestedTags()) !!} );
         const config = {
         baseRoute: "{{ url("/") }}",
         leaderboard: "{{ route("leaderboard") }}",
@@ -521,6 +534,13 @@ $user = Auth::user();
         profileUpdateURL: '{{ route("updateProfile") }}',
         suggestedContactsURL: '{{ route("suggestedContacts") }}',
         attendeesURL: '{{ route("attendeesURL") }}',
+        company_sizes: {!! json_encode(getFilters("company_size")) !!},
+        geography: {!! json_encode(getFilters("Geography")) !!},
+        practice_areas: {!! json_encode(getFilters("Practice Areas")) !!},
+        cetrifications: {!! json_encode(getFilters("Cetrifications")) !!},
+        firm_size: {!! json_encode(getFilters("Firm Size")) !!},
+        ownership: {!! json_encode(getFilters("Ownership")) !!},
+        mytags: {!! json_encode(getFilters("mytags")) !!},
         sendConnectionURL: '{{ route("sendConnectionRequest") }}',
         updateConnectionURL: '{{ route("updateConnectionRequest") }}',
         addToContactURL: '{{ route("addToContacts") }}',

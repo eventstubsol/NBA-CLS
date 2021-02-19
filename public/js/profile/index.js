@@ -46289,7 +46289,14 @@ var _ref = window.config || {},
     savedContactsURL = _ref.savedContactsURL,
     tagSuggestions = _ref.tagSuggestions,
     exportContactsURL = _ref.exportContactsURL,
-    mailContactsURL = _ref.mailContactsURL;
+    mailContactsURL = _ref.mailContactsURL,
+    company_sizes = _ref.company_sizes,
+    mytags = _ref.mytags,
+    geography = _ref.geography,
+    practice_areas = _ref.practice_areas,
+    cetrifications = _ref.cetrifications,
+    firm_size = _ref.firm_size,
+    ownership = _ref.ownership;
 
 var recordEvent = window.recordEvent;
 
@@ -46385,7 +46392,14 @@ var Contacts = /*#__PURE__*/function (_Component) {
         className: "tab-pane",
         id: "attendees"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AttendeeList, {
-        url: attendeesURL
+        url: attendeesURL,
+        company_sizes: company_sizes,
+        mytags: mytags,
+        geography: geography,
+        practice_areas: practice_areas,
+        cetrifications: cetrifications,
+        firm_size: firm_size,
+        ownership: ownership
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "tab-pane",
         id: "my-contacts"
@@ -46448,6 +46462,18 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
       }
     });
 
+    _defineProperty(_assertThisInitialized(_this2), "handleTagsSelect", function (e) {
+      var input = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "tagSelected";
+
+      if (e && e.target) {
+        recordEvent("contacts_filtered_" + input, "Filter Used / " + input, "attendees_interaction");
+
+        _this2.setState(_defineProperty({}, input, e.target.value), function () {
+          return _this2.fetchAttendeesList(1);
+        });
+      }
+    });
+
     _defineProperty(_assertThisInitialized(_this2), "handleSearch", function (e) {
       if (e && e.target) {
         recordEvent("contacts_filtered_search", "Filter Used / Search", "attendees_interaction");
@@ -46480,7 +46506,13 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
           tagSelected = _this2$state.tagSelected,
           role = _this2$state.role,
           company_size = _this2$state.company_size,
-          industry = _this2$state.industry;
+          industry = _this2$state.industry,
+          MY_TAGS = _this2$state.MY_TAGS,
+          Geography = _this2$state.Geography,
+          Cetrifications = _this2$state.Cetrifications,
+          Firm_Size = _this2$state.Firm_Size,
+          Ownership = _this2$state.Ownership,
+          Practice = _this2$state.Practice;
 
       if (!isRefresh) {
         _this2.setState({
@@ -46491,7 +46523,8 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
       }
 
       var q = {
-        page: page
+        page: page,
+        tags: []
       };
 
       if (tagSelected !== "") {
@@ -46512,6 +46545,30 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
 
       if (search && search.trim().length >= 1) {
         q.search = search.trim();
+      }
+
+      if (MY_TAGS) {
+        q.tags.push(MY_TAGS);
+      }
+
+      if (Geography) {
+        q.tags.push(Geography);
+      }
+
+      if (Cetrifications) {
+        q.tags.push(Cetrifications);
+      }
+
+      if (Firm_Size) {
+        q.tags.push(Firm_Size);
+      }
+
+      if (Ownership) {
+        q.tags.push(Ownership);
+      }
+
+      if (Practice) {
+        q.tags.push(Practice);
       }
 
       requestsHelper(_this2.props.url, q).then(function (suggestions) {
@@ -46649,9 +46706,30 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
           company_size = _this$state.company_size,
           role = _this$state.role,
           _this$state$customPag = _this$state.customPage,
-          customPage = _this$state$customPag === void 0 ? "" : _this$state$customPag;
-      var _this$props$showSearc = this.props.showSearch,
-          showSearch = _this$props$showSearc === void 0 ? true : _this$props$showSearc;
+          customPage = _this$state$customPag === void 0 ? "" : _this$state$customPag,
+          MY_TAGS = _this$state.MY_TAGS,
+          Firm_Size = _this$state.Firm_Size,
+          Ownership = _this$state.Ownership,
+          Geography = _this$state.Geography,
+          Practice = _this$state.Practice,
+          Cetrifications = _this$state.Cetrifications;
+      var _this$props = this.props,
+          _this$props$showSearc = _this$props.showSearch,
+          showSearch = _this$props$showSearc === void 0 ? true : _this$props$showSearc,
+          _this$props$company_s = _this$props.company_sizes,
+          company_sizes = _this$props$company_s === void 0 ? [] : _this$props$company_s,
+          _this$props$mytags = _this$props.mytags,
+          mytags = _this$props$mytags === void 0 ? [] : _this$props$mytags,
+          _this$props$firm_size = _this$props.firm_size,
+          firm_size = _this$props$firm_size === void 0 ? [] : _this$props$firm_size,
+          _this$props$ownership = _this$props.ownership,
+          ownership = _this$props$ownership === void 0 ? [] : _this$props$ownership,
+          _this$props$practice_ = _this$props.practice_areas,
+          practice_areas = _this$props$practice_ === void 0 ? [] : _this$props$practice_,
+          _this$props$geography = _this$props.geography,
+          geography = _this$props$geography === void 0 ? [] : _this$props$geography,
+          _this$props$cetrifica = _this$props.cetrifications,
+          cetrifications = _this$props$cetrifica === void 0 ? [] : _this$props$cetrifica;
       var offset = per_page * (page - 1);
       var toShow = 5;
       var startFrom = 1;
@@ -46687,103 +46765,83 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
         className: "col-lg-6 mb-2"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group m-0"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Geography"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
         className: "custom-select",
         onChange: function onChange(e) {
-          return _this4.handleTagSelect(e, "industry");
+          return _this4.handleTagSelect(e, "Geography");
         },
-        value: industry
+        value: Geography
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: ""
-      }, "Industry"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Government"
-      }, "Government"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "BFSI"
-      }, "BFSI"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Oil & Gas"
-      }, "Oil & Gas"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Retail"
-      }, "Retail"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Transport & Logistics"
-      }, "Transport & Logistics"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Education"
-      }, "Education"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Healthcare"
-      }, "Healthcare"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Aviation"
-      }, "Aviation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "FMCG"
-      }, "FMCG"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Power and Utilities"
-      }, "Power and Utilities"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Other"
-      }, "Other")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-lg-6"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group mb-3 mb-lg-0"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-        className: "custom-select",
-        onChange: function onChange(e) {
-          return _this4.handleTagSelect(e, "company_size");
-        },
-        value: company_size
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: ""
-      }, "Company Size"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "0 - 100"
-      }, "0 - 100"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "100 - 250"
-      }, "100 - 250"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "250 - 500"
-      }, "250 - 500"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "500  - 1000"
-      }, "500  - 1000"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "1000+"
-      }, "1000+")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Geography"), geography ? geography.map(function (tag) {
+        return tag.tag ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          value: tag.tag
+        }, tag.tag) : null;
+      }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-lg-6 mb-2"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group m-0"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Cetrifications"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
         className: "custom-select",
         onChange: function onChange(e) {
-          return _this4.handleTagSelect(e, "role");
+          return _this4.handleTagSelect(e, "Cetrifications");
         },
-        value: role
+        value: Cetrifications
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: ""
-      }, "Role"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "CIO"
-      }, "CIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "CXO"
-      }, "CXO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Board Member"
-      }, "Board Member"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Manager"
-      }, "Manager"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Influencer"
-      }, "Influencer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Decision Maker"
-      }, "Decision Maker "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Finance controler"
-      }, "Finance controler"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Entry-level"
-      }, "Entry-level"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Research Professional"
-      }, "Research Professional"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Vendor"
-      }, "Vendor"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Others"
-      }, "Others")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Cetrifications"), cetrifications ? cetrifications.map(function (tag) {
+        return tag.tag ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          value: tag.tag
+        }, tag.tag) : null;
+      }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-lg-6 mb-2"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group m-0"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Firm_Size"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
         className: "custom-select",
-        onChange: this.handleTagSelect,
-        value: tagSelected
+        onChange: function onChange(e) {
+          return _this4.handleTagSelect(e, "Firm_Size");
+        },
+        value: Firm_Size
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: ""
-      }, "Interest")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Firm Size"), firm_size ? firm_size.map(function (tag) {
+        return tag.tag ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          value: tag.tag
+        }, tag.tag) : null;
+      }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-lg-6 mb-2"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group m-0"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Ownership"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+        className: "custom-select",
+        onChange: function onChange(e) {
+          return _this4.handleTagSelect(e, "Ownership");
+        },
+        value: Ownership
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: ""
+      }, "Ownership"), ownership ? ownership.map(function (tag) {
+        return tag.tag ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          value: tag.tag
+        }, tag.tag) : null;
+      }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-lg-6 mb-2"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group m-0"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Practice Areas"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+        className: "custom-select",
+        onChange: function onChange(e) {
+          return _this4.handleTagSelect(e, "Practice");
+        },
+        value: Practice
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: ""
+      }, "Practice Areas"), practice_areas ? practice_areas.map(function (tag) {
+        return tag.tag ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          value: tag.tag
+        }, tag.tag) : null;
+      }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-lg-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group  m-0"
@@ -47383,7 +47441,7 @@ var EditProfile = /*#__PURE__*/function (_Component) {
           filter: true
         }, suggestions[taggroup].map(function (chip) {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_3__["Chip"], {
-            id: chip.id,
+            id: chip.tag,
             key: chip.id,
             label: chip.tag
           });

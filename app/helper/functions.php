@@ -10,6 +10,7 @@ use App\ArchiveVideos;
 use App\UserConnection;
 use App\sessionRooms;
 use App\Contact;
+use App\UserTag;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use \SendGrid\Mail\From as From;
@@ -249,6 +250,23 @@ define("CREATOR_TELLER_LINKS", [
 ]);
 
 define("BY_LAWS_TELLER_ID", "280fd217-8106-46fc-a36b-c5c38b1a3823");
+
+
+
+function getFilters($filter)
+{
+    switch($filter){
+        case "company_size":
+          return  User::select("company_size")->distinct()->get()->toArray();
+          break;
+        case "mytags":
+            return UserTag::select("tag")->where("tag_group","MY_TAGS")->distinct()->get()->toArray();
+            break;
+        default :
+            return UserTag::select("tag")->where("tag_group",$filter)->distinct()->get()->toArray();
+            break;
+    }
+}
 
 function getRooms(){
     $sessionrooms = sessionRooms::all()->groupBy("master_room");

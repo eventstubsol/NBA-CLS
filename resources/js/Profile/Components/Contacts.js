@@ -11,6 +11,13 @@ const {
     tagSuggestions,
     exportContactsURL,
     mailContactsURL,
+    company_sizes,
+    mytags,
+    geography,
+    practice_areas,
+    cetrifications,
+    firm_size,
+    ownership,
 } = window.config || {};
 
 const recordEvent = window.recordEvent;
@@ -70,7 +77,7 @@ class Contacts extends Component{
                     <AttendeeList showSearch={false} editProfile={this.props.editProfile} url={suggestedContactsURL} />
                 </div>
                 <div className="tab-pane" id="attendees">
-                    <AttendeeList url={attendeesURL} />
+                    <AttendeeList url={attendeesURL}  company_sizes={company_sizes} mytags={mytags} geography={geography} practice_areas={practice_areas} cetrifications={cetrifications} firm_size={firm_size} ownership={ownership}/>
                 </div>
                 <div className="tab-pane" id="my-contacts">
                     <AttendeeList allowExport={true} url={savedContactsURL} showOnlyContacts={true} />
@@ -109,6 +116,14 @@ class AttendeeList extends Component{
             }, () => this.fetchAttendeesList(1));
         }
     };
+    handleTagsSelect = (e, input = "tagSelected") => {
+        if(e && e.target){
+            recordEvent("contacts_filtered_"+input,"Filter Used / "+input, "attendees_interaction");
+            this.setState({
+                [input]: e.target.value,
+            }, () => this.fetchAttendeesList(1));
+        }
+    };
 
     handleSearch = (e) => {
         if(e && e.target){
@@ -133,6 +148,12 @@ class AttendeeList extends Component{
             role,
             company_size,
             industry,
+            MY_TAGS,
+            Geography,
+            Cetrifications,
+            Firm_Size ,
+            Ownership,
+            Practice,
         } = this.state;
         if(!isRefresh){
             this.setState({
@@ -143,7 +164,8 @@ class AttendeeList extends Component{
         }
 
         let q = {
-            page
+            page,
+            tags:[]
         };
         if(tagSelected !== ""){
             q.tag = tagSelected;
@@ -159,6 +181,24 @@ class AttendeeList extends Component{
         }
         if(search && search.trim().length >= 1){
             q.search = search.trim();
+        }
+        if(MY_TAGS){
+            q.tags.push(MY_TAGS);
+        }
+        if(Geography){
+            q.tags.push(Geography);
+        }
+        if(Cetrifications){
+            q.tags.push(Cetrifications);
+        }
+        if(Firm_Size){
+            q.tags.push(Firm_Size );
+        }
+        if(Ownership){
+            q.tags.push(Ownership );
+        }
+        if(Practice){
+            q.tags.push(Practice);
         }
         requestsHelper(this.props.url, q).then(suggestions => {
             this.setState({
@@ -277,9 +317,23 @@ class AttendeeList extends Component{
             company_size,
             role,
             customPage = "",
+            MY_TAGS,
+            Firm_Size ,
+            Ownership,
+            Geography,
+            Practice,
+            Cetrifications,
+
         } = this.state;
         const {
-            showSearch = true
+            showSearch = true,
+            company_sizes = [],
+            mytags = [],
+            firm_size = [],
+            ownership = [],
+            practice_areas = [],
+            geography=[],
+            cetrifications=[]
         } = this.props;
         const offset = per_page * (page - 1);
         let toShow = 5;
@@ -305,7 +359,7 @@ class AttendeeList extends Component{
                                     <div className="col-md-12 mb-3 mb-lg-0">
                                         <label htmlFor="">Filter Results</label>
                                     </div>
-                                    <div className="col-lg-6 mb-2">
+                                    {/* <div className="col-lg-6 mb-2">
                                         <div className="form-group m-0">
                                             <select className="custom-select" onChange={e => this.handleTagSelect(e, "industry")} value={industry}>
                                                 <option value="">Industry</option>
@@ -322,20 +376,18 @@ class AttendeeList extends Component{
                                                 <option value="Other">Other</option>
                                             </select>
                                         </div>
-                                    </div>
-                                    <div className="col-lg-6">
+                                    </div> */}
+                                    {/* <div className="col-lg-6">
                                         <div className="form-group mb-3 mb-lg-0">
                                             <select className="custom-select" onChange={e => this.handleTagSelect(e, "company_size")} value={company_size}>
-                                                <option value="">Company Size</option>
-                                                <option value="0 - 100">0 - 100</option>
-                                                <option value="100 - 250">100 - 250</option>
-                                                <option value="250 - 500">250 - 500</option>
-                                                <option value="500  - 1000">500  - 1000</option>
-                                                <option value="1000+">1000+</option>
+                                                <option value="">Practise years</option>
+                                                {
+                                                company_sizes ? company_sizes.map(size=>size.company_size ? <option value={size.company_size}>{size.company_size}</option> : null)
+                                                : null }
                                             </select>
                                         </div>
-                                    </div>
-                                    <div className="col-lg-6 mb-2">
+                                    </div> */}
+                                    {/* <div className="col-lg-6 mb-2">
                                         <div className="form-group m-0">
                                             <select className="custom-select" onChange={e => this.handleTagSelect(e, "role")} value={role}>
                                                 <option value="">Role</option>
@@ -352,13 +404,63 @@ class AttendeeList extends Component{
                                                 <option value="Others">Others</option>
                                             </select>
                                         </div>
+                                    </div> */}
+                                    {/* <div className="col-lg-6 mb-2">
+                                        <div className="form-group m-0">
+                                            <select className="custom-select" onChange={e => this.handleTagSelect(e,"MY_TAGS")} value={MY_TAGS}>
+                                                <option value="">MY_TAGS</option>
+                                                {  mytags ? mytags.map(tag=>tag.tag ? <option value={tag.tag}>{tag.tag}</option> : null)
+                                                : null }
+                                            </select>
+                                        </div>
+                                    </div> */}
+                                    <div className="col-lg-6 mb-2">
+                                        <div className="form-group m-0">
+                                            <label>Geography</label>
+                                            <select className="custom-select" onChange={e => this.handleTagSelect(e,"Geography")} value={Geography}>
+                                                <option value="">Geography</option>
+                                                {  geography ? geography.map(tag=>tag.tag ? <option value={tag.tag}>{tag.tag}</option> : null)
+                                                : null }
+                                            </select>
+                                        </div>
                                     </div>
                                     <div className="col-lg-6 mb-2">
                                         <div className="form-group m-0">
-                                            <select className="custom-select" onChange={this.handleTagSelect} value={tagSelected}>
-                                                <option value="">Interest</option>
-                                                {
-                                                }
+                                            <label>Cetrifications</label>
+                                            <select className="custom-select" onChange={e => this.handleTagSelect(e,"Cetrifications")} value={Cetrifications}>
+                                                <option value="">Cetrifications</option>
+                                                {  cetrifications ? cetrifications.map(tag=>tag.tag ? <option value={tag.tag}>{tag.tag}</option> : null)
+                                                : null }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6 mb-2">
+                                        <div className="form-group m-0">
+                                            <label>Firm_Size</label>
+                                            <select className="custom-select" onChange={e => this.handleTagSelect(e,"Firm_Size")} value={Firm_Size}>
+                                                <option value="">Firm Size</option>
+                                                {  firm_size ? firm_size.map(tag=>tag.tag ? <option value={tag.tag}>{tag.tag}</option> : null)
+                                                : null }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6 mb-2">
+                                        <div className="form-group m-0">
+                                            <label>Ownership</label>
+                                            <select className="custom-select" onChange={e => this.handleTagSelect(e,"Ownership")} value={Ownership}>
+                                                <option value="">Ownership</option>
+                                                {  ownership ? ownership.map(tag=>tag.tag ? <option value={tag.tag}>{tag.tag}</option> : null)
+                                                : null }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6 mb-2">
+                                        <div className="form-group m-0">
+                                            <label>Practice Areas</label>
+                                            <select className="custom-select" onChange={e => this.handleTagSelect(e,"Practice")} value={Practice}>
+                                                <option value="">Practice Areas</option>
+                                                {  practice_areas ? practice_areas.map(tag=>tag.tag ? <option value={tag.tag}>{tag.tag}</option> : null)
+                                                : null }
                                             </select>
                                         </div>
                                     </div>

@@ -21,6 +21,7 @@ use Illuminate\Http\Request;
 use App\FAQ;
 use App\Resource;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\DB;
 use App\Swagbag;
 use App\Room;
@@ -95,6 +96,22 @@ class EventController extends Controller
                     "sessionroomnames",
                 ])
             );
+    }
+
+    public function createGroup(Request $request)
+    {
+        $room = $request->get("room");
+        Http::withHeaders([
+            "apiKey" => env("COMET_CHAT_API_KEY"),
+            "appId" => env("COMET_CHAT_APP_ID"),
+            "accept" => "application/json"
+        ])
+            ->post(env('COMET_CHAT_BASE_URL') . "/v2.0/groups", [
+                "guid" => $room,
+                "name" =>  str_replace("Inc","Inc.",ucfirst(str_replace("_"," ",$room))) ,
+                "type" => "public"
+            ]);
+            return true;
     }
 
     public function addToBag(Request $request)
