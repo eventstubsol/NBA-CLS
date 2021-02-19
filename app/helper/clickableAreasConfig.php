@@ -388,9 +388,9 @@ define("INF0_DESK_AREAS",[
         "area" => [ 19.5, 36, 27.5, 9] , //In Percentage
     ],
     "workshop-list" => [
-        "title" =>"workshop-list",
-        "link" => "workshop-list",
-        "area" =>[15,76,14.5,9],
+        "title" =>"Lewis Expo Hall",
+        "link" => "room/d4021162-16a5-43a2-aba1-005ac9507717",
+        "area" =>[17,74,145.7,10],
     ],
     "expo-hall" => [
         "title" =>"Expo Hall",
