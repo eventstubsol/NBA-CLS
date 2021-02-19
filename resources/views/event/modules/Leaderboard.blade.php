@@ -51,7 +51,7 @@
                            <div class="row">
                             <div class="col-md-12 pt-3">
                                 <p class="mb-2">Powered by</p>
-                                <img class="img-fluid mb-2" src="{{ asset("images/bgics.png") }}" alt="">
+                                <img class="img-fluid mb-2" src="https://congress2021web.fra1.digitaloceanspaces.com/uploads/uwCgMTfvSYpiTSQFyLT2caG2lUww3GOX58iA4unX.png" alt="NBA-CLS">
                             </div>
                         </div>
                     </div>
