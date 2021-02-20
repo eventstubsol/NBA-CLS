@@ -30,9 +30,9 @@
                     <div class="modal-body">
                         <div class="position-relative">
                            <h4>
-                               {{ ucfirst(str_replace("_"," ",$roomgroup)) }}
+                               {{ strtoupper(str_replace("_"," ",$roomgroup)) }}
                            </h4> 
-                           <ul class="nav nav-pills navtab-bg nav-justified" style="margin: 0px -5px;">
+                           <ul class="nav nav-pills custom-navpills navtab-bg nav-justified" style="margin: 0px -5px;">
                                  @foreach($rooms as $room)
                                     <li class="nav-item">
                                         <a class="area nav-link" data-link="sessionroom/{{ $room->name }}">

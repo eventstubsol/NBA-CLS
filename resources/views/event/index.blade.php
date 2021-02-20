@@ -248,6 +248,21 @@ $user = Auth::user();
                 font-weight: 400;
                 color: #111a348c;
                 }
+            .modal {
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+            #profile-app .mdc-chip-set .mdc-chip, #view-profile-modal .mdc-chip-set .mdc-chip{
+                background: #951e34 !important;
+            }
+            .custom-navpills .nav-link{
+                    border-width: 2px;
+                     border-style: solid;
+                     border-color: #971b23;
+                     font-weight: 800;
+                     color: #525252;
+                    background: none !important;
+            } 
 
 
         </style>

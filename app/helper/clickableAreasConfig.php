@@ -199,22 +199,8 @@ define("BOOTH_IMAGE_AREAS", [
                 "area" => [22.5,36.2,27.8,6.1],
                 "type" => "image"
             ],
-            "Slot 1" => [
-                "area" => [39.1,36.2,8.09,27],
-                "type" => "image",
-            ],
-            "Slot 2" => [
-                "area" => [39.1,56.2,8.09,27],
-                "type" => "image",
-
-            ],
-            "Slot 3" => [
-                "area" => [65,47.4,3.67,6.5],
-                "type" => "image",
-                "classes"=>"above_object"
-            ],
             "brandvideo" => [
-                "area" => [34.69,69.69,12.98,15.6],
+                "area" => [41,42,18.5,10],
                 "type" => "video",
                 "classes"=>"above_object"
             ],
