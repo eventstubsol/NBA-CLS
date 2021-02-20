@@ -443,7 +443,7 @@ define("SCAVENGER_HUNT", [
         [
             "id" => 4,
             "name" => "Silver Gem",
-            "area" => [ 58, 84, 2, 4 ],
+            "area" => [ 50, 2, 2, 4 ],
             "image" => "event-assets/images/treasurehunt/5.png",
         ],
         [
