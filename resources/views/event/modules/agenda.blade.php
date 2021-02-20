@@ -183,7 +183,7 @@ $("#unsubscribe-agenda").on("click", function(e){
                 success: function(){
                     // t.parent().find("a").prop("disabled", false).hide().filter(".subscribe-to-event").show();
                     t.parent().parent().hide();
-                    showMessage("Unsubscribed to session. ", "success");
+                    showMessage("Unsubscribed to session.", "success");
                 },
                 error: function(){
                     showMessage("Error occurred while disabling session notification. Please try again later or refresh page.", "error");
