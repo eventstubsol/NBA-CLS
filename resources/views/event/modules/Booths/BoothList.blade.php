@@ -56,9 +56,9 @@
      
        <div title="McGuireWoods" class= "area candidate-booth positioned" style="width: 7%; height: 14%; top: 47%; left: 69%;" data-link="booth/20ba9089-3e22-481e-80b9-9218f5361751">
         </div>
-       <div title="Bowman and Brooke LLP" class= "area candidate-booth positioned" style="width:7%; height:14%; top: 47%; left: 46%;" data-link="booth/d07859ae-ee57-4336-b808-cfc5a54457ff">
+       <div title="Bowman and Brooke LLP" class= "area candidate-booth positioned" style="width:7%;height:14%;top: 47%;left: 58%;" data-link="booth/d07859ae-ee57-4336-b808-cfc5a54457ff">
         </div>
-       <div title="Bradley Arant Boult Cummings LLP" class= "area candidate-booth positioned" style="width: 7%; height: 14%; top: 47%; left: 57%;" data-link="booth/a62bd00e-b182-481b-a298-b49a9c6c7de4">
+       <div title="Bradley Arant Boult Cummings LLP" class= "area candidate-booth positioned" style="width: 7%;height: 14%;top: 47%;left: 46%;" data-link="booth/a62bd00e-b182-481b-a298-b49a9c6c7de4">
         </div>
        <div title="GreenbergTraurig" class= "area candidate-booth positioned" style="width: 7%; height: 14%; top: 47%; left: 34%;" data-link="booth/45f94fcf-c355-4f36-8f0b-b91b7eb73d40">
         </div>
@@ -69,11 +69,7 @@
         </div>
 
 
-        <div title="Kuchler Polk Weiner, LLC" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 47%;left: 12%;" data-link="booth/2edd03bf-11c9-46e5-b860-81d4d5370a0b">
-        </div>
-
-
-
+        
 
 
 
