@@ -161,8 +161,8 @@
         <div title="Vorys" class= "area candidate-booth positioned" style="width: 8%;  height: 10%;   top: 21%;  left: 14%;" data-link="booth/978145a7-4647-4f2d-b972-df143024c002">
         </div>
         
-       <a class="area" data-link="lobby"><div title="lobby" class= "area candidate-booth positioned" style="width: 12%;  height: 9%;   top: 12%;  left: 43%; ">
-        </div></a>
+       <div title="lobby" data-link="lobby" class= "area candidate-booth positioned" style="width: 12%;  height: 9%;   top: 12%;  left: 43%; ">
+        </div>
         <div title="infodesk" class= "area candidate-booth positioned" style="width: 8%;  height: 10%;   top: 21%;  left: 34%; " data-link="infodesk">
         </div>
         <div title="infodesk" class= "area candidate-booth positioned" style="width: 8%;  height: 10%;   top: 21%;  left: 55%; " data-link="infodesk">
