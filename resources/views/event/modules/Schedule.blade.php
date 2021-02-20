@@ -79,31 +79,21 @@
                             
 
                                 <!-- Tabs for each master Room -->
-                                <div class="tab-pane {{ $j === 1 ? "active show" : "" }}" id="sch-{{ $i }}-{{ $j }}">
-                                    <!-- Pills for each room -->
-                                    <ul class="nav nav-pills navtab-bg nav-justified" style="margin: 0px -5px;">
-                                        @foreach($rooms as $room => $events)
-                                            @php
-                                                $k++;
-                                            @endphp
-                                            <li class="nav-item">
-                                                <a href="#sch-{{ $i }}-{{ $j }}-{{ $k }}" data-toggle="tab" aria-expanded="{{ $k === 1 ? 'true' : 'false' }}" class="nav-link @if($k === 1) active @endif">{{  str_replace("Inc","Inc.",  ucfirst(str_replace("_"," ",$room)) ) }}</a>
-                                            </li>
-                                        @endforeach
-                                    </ul>
+                             
                                     @php
                                         $k=0;
                                     @endphp
                                     <!-- Room Tab Content -->
-                                    <div class="tab-content">
+                                    <!-- <div class="tab-content"> -->
                                       <!-- Loop foreach Room   -->
+                                      <div class=" tab-pane {{ $j === 1 ? "active show" : "" }}" id="sch-{{ $i }}-{{ $j }}">
                                         @foreach($rooms as $room => $events)
                                             @php
                                                 $k++;
                                                 $l = 0;
                                             @endphp
-                                            <div class=" tab-pane {{ $k === 1 ? "active show" : "" }}" id="sch-{{ $i }}-{{ $j }}-{{ $k }}">
-                                                <!-- Tabs for each room -->
+                                            <!-- Tabs for each room -->
+                                                <!-- Print each event in schedule -->
                                                 @foreach($events as $id => $event)
                                                     @php 
                                                         $id = $event['id'];
@@ -148,7 +138,7 @@
                                                                     <span class="btn btn-sm btn-link text-muted font-14 ">
                                                                         Session Ended
                                                                     </span>
-                                                                @else
+                                                                @endif
                                                                     <a href="javascript: void(0);" data-id="{{ $id }}" class="btn subscribe-to-event btn-sm btn-link text-muted font-14 {{ in_array($id, $subscriptions) ? "hidden" : "" }}">
                                                                         <!-- <i class="mdi mdi-bell-ring mr-1"></i>  -->
                                                                         + Agenda
@@ -157,18 +147,17 @@
                                                                         <!-- <i class="mdi mdi-bell-off mr-1"></i> -->
                                                                             - Agenda
                                                                     </a>
-                                                                @endif
                                                             </div>
                                                         </li>
                                                     </ul>
                                                 @endforeach
                                           
+                                                
+                                                @endforeach
+                                                <!-- </div> -->
                                             </div>
-                                          
-                                        @endforeach
-                                    </div>
                                   
-                                </div>
+                                <!-- </div> -->
                             @endforeach
 
                         </div>

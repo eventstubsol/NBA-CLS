@@ -1,6 +1,7 @@
 <div class="mb-3" >
+   
     <!-- List of Dates in Event -->
-    <ul class="nav nav-pills navtab-bg nav-justified test" style="margin: 0px -5px;">
+    <ul class="nav nav-pills navtab-bg nav-justified" style="margin: 0px -5px;">
         
         <!-- Calculate the Dates and order the schedule accordingly/ Group The schedule According to dates -->
         @php
@@ -18,6 +19,7 @@
                             $event['id'] = $id;
                             $dates[$lastDate][$master_room][$room][] = $event;
                         }
+
                     }
                 }
             }
@@ -29,7 +31,7 @@
                 $i++;
             @endphp
             <li class="nav-item">
-                <a href="#agn-{{ $i }}" data-toggle="tab" aria-expanded="{{ $i === 1 ? 'true' : 'false' }}" class="nav-link @if($i === 1) active @endif">{{ $date }}</a>
+                <a href="#sch-{{ $i }}" data-toggle="tab" aria-expanded="{{ $i === 1 ? 'true' : 'false' }}" class="nav-link @if($i === 1) active @endif">{{ $date }}</a>
             </li>
         @endforeach
         @php
@@ -46,7 +48,7 @@
                     $i++;
                 @endphp
                 <!-- Tab for each date -->
-                <div class="tab-pane {{ $i === 1 ? "active show" : "" }}" id="agn-{{ $i }}">
+                <div class="tab-pane {{ $i === 1 ? "active show" : "" }}" id="sch-{{ $i }}">
                         @php
                             $j = 0;
                         @endphp
@@ -58,7 +60,7 @@
                                    $j++;
                                 @endphp
                                     <li class="nav-item">
-                                        <a href="#agn-{{ $i }}-{{ $j }}" data-toggle="tab" aria-expanded="{{ $j === 1 ? 'true' : 'false' }}" class="nav-link @if($j === 1) active @endif">{{ $master_room }}</a>
+                                        <a href="#sch-{{ $i }}-{{ $j }}" data-toggle="tab" aria-expanded="{{ $j === 1 ? 'true' : 'false' }}" class="nav-link @if($j === 1) active @endif">{{ ucfirst(str_replace("_"," ", $master_room ))}}</a>
                                     </li>
                             @endforeach
                         </ul>
@@ -78,92 +80,116 @@
                             
 
                                 <!-- Tabs for each master Room -->
-                                <div class="tab-pane {{ $j === 1 ? "active show" : "" }}" id="agn-{{ $i }}-{{ $j }}">
-                                    <!-- Pills for each room -->
-                                    <ul class="nav nav-pills navtab-bg nav-justified" style="margin: 0px -5px;">
-                                        @foreach($rooms as $room => $events)
-                                            @php
-                                                $k++;
-                                            @endphp
-                                            <li class="nav-item">
-                                                <a href="#agn-{{ $i }}-{{ $j }}-{{ $k }}" data-toggle="tab" aria-expanded="{{ $k === 1 ? 'true' : 'false' }}" class="nav-link @if($j === 1) active @endif">{{ $room }}</a>
-                                            </li>
-                                        @endforeach
-                                    </ul>
+                             
                                     @php
                                         $k=0;
                                     @endphp
                                     <!-- Room Tab Content -->
-                                    <div class="tab-content">
+                                    <!-- <div class="tab-content"> -->
                                       <!-- Loop foreach Room   -->
+                                      <div class=" tab-pane {{ $j === 1 ? "active show" : "" }}" id="sch-{{ $i }}-{{ $j }}">
                                         @foreach($rooms as $room => $events)
                                             @php
                                                 $k++;
                                                 $l = 0;
                                             @endphp
-                                            <div class="tab-content">
-                                                <!-- Tabs for each room -->
+                                            <!-- Tabs for each room -->
+                                                <!-- Print each event in schedule -->
                                                 @foreach($events as $id => $event)
                                                     @php 
                                                         $id = $event['id'];
                                                         $l++;
                                                     @endphp
-                                                    <div class="tab-pane {{ $l === 1 ? "active show" : "" }}" id="agn-{{ $i }}-{{ $j }}-{{ $k }}">
-                                                        <ul class="list-unstyled timeline-sm"> 
-                                                            <li class="timeline-sm-item">
-                                                                <span class="timeline-sm-date">
-                                                                    {{ $event['start_date']['dts'] }} - <br> {{ $event['start_date']['dte'] }}
-                                                                </span>
-                                                                <div class="border border-heavy p-2 mb-3 bg-white hover-shadow "> 
-                                                                    <h5 class="mt-0 mb-1">{{ $event['name'] }}</h5>
-                                                                    <p class="text-dark mt-2">{!! $event['description'] !!}</p>
-                                                                    @if($event['status'] === 1 || $event['status'] === 3)
-                                                                        <span class="btn btn-sm btn-link text-muted font-14 ">
-                                                                            <i class="mdi mdi-clock mr-1"></i>{{ $event['status'] === 1 ? "Ongoing" : "Starting soon" }}
-                                                                        </span>
-                                                                    @elseif($event['status'] === -1)
-                                                                        <span class="btn btn-sm btn-link text-muted font-14 ">
-                                                                            Session Ended
-                                                                        </span>
-                                                                    @elseif($event['type']!="PRIVATE_SESSION")
-                                                                        <a href="javascript: void(0);" data-id="{{ $id }}" class="btn subscribe-to-event btn-sm btn-link text-muted font-14 {{ in_array($id, $subscriptions) ? "hidden" : "" }}">
-                                                                            <!-- <i class="mdi mdi-bell-ring mr-1"></i>  -->
-                                                                            + Agenda
+                                                    <ul class="list-unstyled timeline-sm"> 
+                                                        <li class="timeline-sm-item">
+                                                            <span class="timeline-sm-date">
+                                                                {{ $event['start_date']['dts'] }} - <br> {{ $event['start_date']['dte'] }}
+                                                            </span>
+                                                            <div class="border border-heavy p-2 mb-3 bg-white hover-shadow "> 
+                                                                <div class="avatar-group mb-2">
+
+                                                                    @foreach($event['speakers'] as $speaker)
+
+                                                                        <a class="avatar-group-item open-profile-popup"
+
+                                                                        data-id="{{ $speaker->speaker->id ?? "" }}" data-toggle="tooltip" data-placement="top"
+                                                                        
+                                                                        title="{{ isset($speaker->speaker->name) ? $speaker->speaker->name .' '. $speaker->speaker->last_name : "" }}"
+
+                                                                        data-original-title="{{ isset($speaker->speaker->name) ?  $speaker->speaker->name .' '. $speaker->speaker->last_name: "" }}">
+
+                                                                            <img src="{{ $speaker->speaker->profileImage ? assetUrl($speaker->speaker->profileImage) : "https://congress2021web.fra1.digitaloceanspaces.com/uploads/default-profile.jpeg" }}"
+
+                                                                                class="rounded-circle avatar-sm" alt="">
+
                                                                         </a>
-                                                                        <a href="javascript: void(0);" data-id="{{ $id }}"class="btn btn-danger unsubscribe-event btn-sm btn-link text-muted font-14  {{ in_array($id, $subscriptions) ? "" : "hidden" }}">
-                                                                            <!-- <i class="mdi mdi-bell-off mr-1"></i> -->
-                                                                             - Agenda
-                                                                        </a>
-                                                                    @elseif($event['type']==="PRIVATE_SESSION")
-                                                                        <a href="{{$event['zoom_url']??''}}" target="_blank" data-id="{{ $id }}" class="btn btn-sm btn-link text-muted font-14">
-                                                                            <!-- <i class="mdi mdi-bell-ring mr-1"></i>  -->
-                                                                            Attend
-                                                                        </a>
-                                                                    @endif
+
+                                                                    @endforeach
+
                                                                 </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
+                                                                <h5 class="mt-0 mb-1">{{ $event['name'] }}</h5>
+                                                                <p class="text-dark mt-2">{!! $event['description'] !!}</p>
+                                                                <a href="javascript: void(0);" class="area btn btn-sm btn-link text-muted font-14 " data-link="sessionroom/{{ $event['room']}}"> Visit {{ $event['room'] }}</a>
+
+                                                                @if($event['status'] === 1 || $event['status'] === 3)
+                                                                    <span class="btn btn-sm btn-link text-muted font-14 ">
+                                                                        <i class="mdi mdi-clock mr-1"></i>{{ $event['status'] === 1 ? "Ongoing" : "Starting soon" }}
+                                                                    </span>
+                                                                @elseif($event['status'] === -1)
+                                                                    <span class="btn btn-sm btn-link text-muted font-14 ">
+                                                                        Session Ended
+                                                                    </span>
+                                                                @endif
+                                                                    <a href="javascript: void(0);" data-id="{{ $id }}" class="btn subscribe-to-event btn-sm btn-link text-muted font-14 {{ in_array($id, $subscriptions) ? "hidden" : "" }}">
+                                                                        <!-- <i class="mdi mdi-bell-ring mr-1"></i>  -->
+                                                                        + Agenda
+                                                                    </a>
+                                                                    <a href="javascript: void(0);" data-id="{{ $id }}" id="unsubscribe-agenda" class="btn btn-danger unsubscribe-agenda btn-sm btn-link text-muted font-14  {{ in_array($id, $subscriptions) ? "" : "hidden" }}">
+                                                                        <!-- <i class="mdi mdi-bell-off mr-1"></i> -->
+                                                                            - Agenda
+                                                                    </a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
                                                 @endforeach
                                           
+                                                
+                                                @endforeach
+                                                <!-- </div> -->
                                             </div>
-                                          
-                                        @endforeach
-                                    </div>
                                   
-                                </div>
+                                <!-- </div> -->
                             @endforeach
 
                         </div>
-                        
-                       
-
-
                 </div>  
             @endforeach
         </div>
-
-
-
-
 </div>
+<script>
+
+$("#unsubscribe-agenda").on("click", function(e){
+        console.log("Hello World")
+        e.preventDefault();
+        let t = $(this);
+        t.prop("disabled", true);
+        if(t.data("id")){
+            $.ajax({
+                url: window.config.unsubscribeToEvent.replace("EVENT_ID", t.data("id")),
+                method: "POST",
+                data: {
+                    _token: window.config.token,
+                },
+                success: function(){
+                    // t.parent().find("a").prop("disabled", false).hide().filter(".subscribe-to-event").show();
+                    t.parent().parent().hide();
+                    showMessage("Unsubscribed to session. ", "success");
+                },
+                error: function(){
+                    showMessage("Error occurred while disabling session notification. Please try again later or refresh page.", "error");
+                }
+            })
+        }
+    });
+
+</script>

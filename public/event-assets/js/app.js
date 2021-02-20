@@ -51,7 +51,7 @@ function initApp(){
             },
             success: function(data){
                 // alert("done");
-                console.log(data)
+                // console.log(data)
                 $("#agenda-modal").html(data);
             },
             error: function(){
@@ -90,7 +90,7 @@ function initApp(){
     });
 
     $(".subscribe-to-event").on("click", function(e){
-        console.log("hello")
+        // console.log("hello")
         e.preventDefault();
         let t = $(this);
         t.prop("disabled", true);
@@ -112,6 +112,7 @@ function initApp(){
         }
     });
     $(".unsubscribe-event").on("click", function(e){
+        console.log("Hello World")
         e.preventDefault();
         let t = $(this);
         t.prop("disabled", true);
@@ -131,7 +132,7 @@ function initApp(){
             })
         }
     });
-
+    
     let boothMenus = $(".booth-menu");
     let notboothMenus = $(".not-booth-menu");
     let notboothmenubutton = $("#notbooth_menu_toggle");
@@ -363,7 +364,7 @@ function initApp(){
                     success: function(html){
                         $("#description-"+id).html(html[0]);
                         $("#description-two-"+id).html(html[1]);
-                        console.log(html);
+                        // console.log(html);
                     }
                 });
                 setTimeout(function(){
@@ -623,7 +624,7 @@ function initApp(){
                 $(".cc1-chat-win-inpt-wrap input").unbind("mousedown").on("mousedown", function(e){ e.preventDefault(); e.stopImmediatePropagation(); $(e.target).focus() });
             };
             let sessionModal = $("#session-modal-"+room);
-            console.log(room);
+            // console.log(room);
             $("#play-session-"+room).unbind().on("click", function(){
                 loadContent();    
                 sessionModal.modal();
