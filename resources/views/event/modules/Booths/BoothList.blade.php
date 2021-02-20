@@ -103,17 +103,23 @@
 
 
 
-        <div title="Garrison, Yount Forte & Mulcahy, LLC" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 21%;  left: 76%;" data-link="booth/39398a0d-3924-4dbe-b4c1-6ed2385e858d">
+        <div title="Garrison, Yount Forte & Mulcahy, LLC" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 21%;  left: 76%;" data-link="booth/85f0c541-35e6-45fc-9731-f611c07258d1/">
         </div>
 
+        
+        <div title="Jordan IP Law LLC" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 21%;  left: 67%;" data-link="booth/9bcfefe6-b194-44fa-b1aa-9c305681e950">
+        </div>
+        
 
-        <div title="Jordan IP Law LLC" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 21%;  left: 67%;" data-link="booth/85f0c541-35e6-45fc-9731-f611c07258d1">
+
+
+
+        
+
+        <div title="Kean Miller LLP" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 21%;  left: 24%;" data-link="booth/39398a0d-3924-4dbe-b4c1-6ed2385e858d">
         </div>
 
-        <div title="Kean Miller LLP" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 21%;  left: 24%;" data-link="booth/9bcfefe6-b194-44fa-b1aa-9c305681e950">
-        </div>
-
-         <div title="Kuchler Polk Weiner, LLC" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 21%;  left: 16%;" data-link="booth/39398a0d-3924-4dbe-b4c1-6ed2385e858d">
+         <div title="Kuchler Polk Weiner, LLC" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 21%;  left: 16%;" data-link="booth/a4834be4-57fc-49d0-9ea4-f563aabd4d0a">
         </div>
 
          <div title="infodesk" class= "area candidate-booth positioned" style="width: 8%;  height: 10%;   top: 21%;  left: 34%; " data-link="infodesk">
