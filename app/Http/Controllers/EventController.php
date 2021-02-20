@@ -914,7 +914,7 @@ class EventController extends Controller
                 $uniqIds[] = $item->user_id;
                 if($item->user){
                     $u = $item->user->toArray();
-                    array_push($u,$item->created_at->format('Y-m-d\TH:i'));
+                    array_push($u,$item->created_at->format('j M Y H:i:s A'));
                     unset($u['id']);
                     $toSend[] = $u;
                 }
@@ -932,7 +932,7 @@ class EventController extends Controller
                     "Email" => $loginLog->user->email,
                     "Name" => $loginLog->user->name,
                     "Last Name" => $loginLog->user->last_name,
-                    "Visited At" => $loginLog->created_at->format('Y-m-d\TH:i'),
+                    "Visited At" => $loginLog->created_at->format('j M Y H:i:s A'),
                 ];
             }
         }
@@ -949,7 +949,7 @@ class EventController extends Controller
                     "Email" => $loginLog->user->email,
                     "Name" => $loginLog->user->name,
                     "Last Name" => $loginLog->user->last_name,
-                    "Visited At" => $loginLog->created_at->format('Y-m-d\TH:i'),
+                    "Visited At" => $loginLog->created_at->format('j M Y H:i:s A'),
                 ];
             }
         }

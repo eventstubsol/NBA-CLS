@@ -1,4 +1,5 @@
 <div class="mb-3" >
+   
     <!-- List of Dates in Event -->
     <ul class="nav nav-pills navtab-bg nav-justified" style="margin: 0px -5px;">
         
@@ -16,7 +17,8 @@
                         if($event['type']!=="PRIVATE_SESSION"){
                             $event['id'] = $id;
                             $dates[$lastDate][$master_room][$room][] = $event;
-                        }
+                         }
+
                     }
                 }
             }
@@ -57,7 +59,7 @@
                                    $j++;
                                 @endphp
                                     <li class="nav-item">
-                                        <a href="#sch-{{ $i }}-{{ $j }}" data-toggle="tab" aria-expanded="{{ $j === 1 ? 'true' : 'false' }}" class="nav-link @if($j === 1) active @endif">{{ $master_room }}</a>
+                                        <a href="#sch-{{ $i }}-{{ $j }}" data-toggle="tab" aria-expanded="{{ $j === 1 ? 'true' : 'false' }}" class="nav-link @if($j === 1) active @endif">{{ ucfirst(str_replace("_"," ", $master_room ))}}</a>
                                     </li>
                             @endforeach
                         </ul>
@@ -85,7 +87,7 @@
                                                 $k++;
                                             @endphp
                                             <li class="nav-item">
-                                                <a href="#sch-{{ $i }}-{{ $j }}-{{ $k }}" data-toggle="tab" aria-expanded="{{ $k === 1 ? 'true' : 'false' }}" class="nav-link @if($k === 1) active @endif">{{ $room }}</a>
+                                                <a href="#sch-{{ $i }}-{{ $j }}-{{ $k }}" data-toggle="tab" aria-expanded="{{ $k === 1 ? 'true' : 'false' }}" class="nav-link @if($k === 1) active @endif">{{  str_replace("Inc","Inc.",  ucfirst(str_replace("_"," ",$room)) ) }}</a>
                                             </li>
                                         @endforeach
                                     </ul>
@@ -113,6 +115,27 @@
                                                                 {{ $event['start_date']['dts'] }} - <br> {{ $event['start_date']['dte'] }}
                                                             </span>
                                                             <div class="border border-heavy p-2 mb-3 bg-white hover-shadow "> 
+                                                                <div class="avatar-group mb-2">
+
+                                                                    @foreach($event['speakers'] as $speaker)
+
+                                                                        <a class="avatar-group-item open-profile-popup"
+
+                                                                        data-id="{{ $speaker->speaker->id ?? "" }}" data-toggle="tooltip" data-placement="top"
+                                                                        
+                                                                        title="{{ isset($speaker->speaker->name) ? $speaker->speaker->name .' '. $speaker->speaker->last_name : "" }}"
+
+                                                                        data-original-title="{{ isset($speaker->speaker->name) ?  $speaker->speaker->name .' '. $speaker->speaker->last_name: "" }}">
+
+                                                                            <img src="{{ $speaker->speaker->profileImage ? assetUrl($speaker->speaker->profileImage) : "https://congress2021web.fra1.digitaloceanspaces.com/uploads/default-profile.jpeg" }}"
+
+                                                                                class="rounded-circle avatar-sm" alt="">
+
+                                                                        </a>
+
+                                                                    @endforeach
+
+                                                                </div>
                                                                 <h5 class="mt-0 mb-1">{{ $event['name'] }}</h5>
                                                                 <p class="text-dark mt-2">{!! $event['description'] !!}</p>
                                                                 <a href="javascript: void(0);" class="area btn btn-sm btn-link text-muted font-14 " data-link="sessionroom/{{ $event['room']}}"> Visit {{ $event['room'] }}</a>

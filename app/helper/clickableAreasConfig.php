@@ -20,12 +20,18 @@ define("LOBBY_AREAS", [
          "link" => "sessions-list/peek_behind_corporate_veil",
          "area" => [ 54, 60.5, 9.5, 13 ], //In Percentage
      ],
-    // "Welcome Video" => [
-    //     "title" => "welcome",
-    //     "area" =>[ 32,44.4,12.3,11],
-    //     "class" => "txt-white",
-    //     "videoEmbed" => "https://vimeo.com/458843159",
-    // ],
+    "Welcome Video 1" => [
+        "title" => "welcome",
+        "area" =>[ 56,39,6.5,8],
+        "class" => "txt-white",
+        "videoEmbed" => "https://vimeo.com/514564783",
+    ],
+    "Welcome Video 2" => [
+        "title" => "welcome",
+        "area" =>[ 56,54.5,6.5,8],
+        "class" => "txt-white",
+        "videoEmbed" => "https://vimeo.com/514564783",
+    ],
 //    "Photobooth" => [
 //        "title" => "photobooth",
 //        "area" =>[ 38.5,8.4,11.3,12 ],
@@ -193,22 +199,8 @@ define("BOOTH_IMAGE_AREAS", [
                 "area" => [22.5,36.2,27.8,6.1],
                 "type" => "image"
             ],
-            "Slot 1" => [
-                "area" => [39.1,36.2,8.09,27],
-                "type" => "image",
-            ],
-            "Slot 2" => [
-                "area" => [39.1,56.2,8.09,27],
-                "type" => "image",
-
-            ],
-            "Slot 3" => [
-                "area" => [65,47.4,3.67,6.5],
-                "type" => "image",
-                "classes"=>"above_object"
-            ],
             "brandvideo" => [
-                "area" => [34.69,69.69,12.98,15.6],
+                "area" => [41,42,18.5,10],
                 "type" => "video",
                 "classes"=>"above_object"
             ],
@@ -378,18 +370,18 @@ define("INF0_DESK_AREAS",[
     ],
     "Auditorioum" => [
         "title" => "Auditorium",
-        "link" => "auditorium",
-        "area" => [ 16, 39, 19.5, 9] , //In Percentage
+        "link" => "sessionroom/Auditorium",
+        "area" => [ 19.5, 36, 27.5, 9] , //In Percentage
     ],
     "workshop-list" => [
-        "title" =>"workshop-list",
-        "link" => "workshop-list",
-        "area" =>[15,76,14.5,9],
+        "title" =>"Lewis Expo Hall",
+        "link" => "room/d4021162-16a5-43a2-aba1-005ac9507717",
+        "area" =>[17,74,15.7,10],
     ],
     "expo-hall" => [
-        "title" =>"Expo Hall",
-        "link" => "expo-hall",
-        "area" =>[14,10,12.5,10],
+        "title" =>"Walker Expo Hall",
+        "link" => "room/ca9d92bd-e5a1-4392-9659-b65d9c857310",
+        "area" =>[17,10.2,17.5,10],
     ]
 ]);
 
@@ -418,45 +410,45 @@ define("SCAVENGER_HUNT", [
             "id" => 1,
             "name" => "Silver Gem",
             "area" => [ 75, 94, 2, 4, ],
-            "image" => "event-assets/images/treasurehunt/lobby1.png",
+            "image" => "event-assets/images/treasurehunt/4.png",
         ],
         [
             "id" => 2,
             "name" => "Pink Gem",
-            "area" => [ 36, 2, 2, 4],
-            "image" => "event-assets/images/treasurehunt/lobby2.png",
+            "area" => [ 32, 2, 2, 4],
+            "image" => "event-assets/images/treasurehunt/2.png",
         ],
         [
             "id" => 3,
             "name" => "Round Gem",
-            "area" => [ 34, 32, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/lobby3.png",
+            "area" => [ 32, 96, 2, 4 ],
+            "image" => "event-assets/images/treasurehunt/3.png",
         ]
     ],
     "room0" => [
         [
             "id" => 4,
             "name" => "Silver Gem",
-            "area" => [ 58, 84, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/candidate1.png",
+            "area" => [ 50, 2, 2, 4 ],
+            "image" => "event-assets/images/treasurehunt/5.png",
         ],
         [
             "id" => 5,
             "name" => "Pink Gem",
             "area" => [ 78, 17, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/candidate2.png",
+            "image" => "event-assets/images/treasurehunt/2.png",
         ],
         [
             "id" => 6,
             "name" => "Round Gem",
             "area" => [ 20, 85, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/candidate3.png",
+            "image" => "event-assets/images/treasurehunt/3.png",
         ],
         [
             "id" => 12,
             "name" => "Round Gem",
             "area" => [ 80, 96, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/museum3.png",
+            "image" => "event-assets/images/treasurehunt/4.png",
         ]
     ],
     "room1" => [
@@ -464,25 +456,25 @@ define("SCAVENGER_HUNT", [
             "id" => 7,
             "name" => "Silver Gem",
             "area" => [ 14, 93, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/sponser1.png",
+            "image" => "event-assets/images/treasurehunt/5.png",
         ],
         [
             "id" => 8,
             "name" => "Pink Gem",
             "area" => [ 65, 1, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/sponser2.png",
+            "image" => "event-assets/images/treasurehunt/6.png",
         ],
         [
             "id" => 9,
             "name" => "Round Gem",
             "area" => [21, 13, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/sponser3.png",
+            "image" => "event-assets/images/treasurehunt/2.png",
         ],
         [
             "id" => 11,
             "name" => "Pink Gem",
             "area" => [ 14, 2, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/museum1.png",
+            "image" => "event-assets/images/treasurehunt/3.png",
         ],
     ],
     "lounge" => [
@@ -490,26 +482,20 @@ define("SCAVENGER_HUNT", [
             "id" => 13,
             "name" => "Silver Gem",
             "area" => [ 56, 22, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/lounge1.png",
+            "image" => "event-assets/images/treasurehunt/4.png",
         ],
         [
             "id" => 14,
             "name" => "Pink Gem",
             "area" => [ 65, 16.5, 2, 2],
-            "image" => "event-assets/images/treasurehunt/lounge2.png",
+            "image" => "event-assets/images/treasurehunt/3.png",
         ],
         [
             "id" => 15,
             "name" => "Round Gem",
             "area" => [ 41, 21, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/lounge3.png",
+            "image" => "event-assets/images/treasurehunt/5.png",
         ],
-        [
-            "id" => 15,
-            "name" => "Global Forum Icon",
-            "area" => [ 61, 93, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/Global-Forum-icon.png",
-        ]
     ],
     "museum" => [
         [
@@ -542,19 +528,19 @@ define("SCAVENGER_HUNT", [
             "id" => 19,
             "name" => "Silver Gem",
             "area" => [ 25, 80, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/audi1.png",
+            "image" => "event-assets/images/treasurehunt/3.png",
         ],
         [
             "id" => 20,
             "name" => "Pink Gem",
             "area" => [ 44, 2, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/audi2.png",
+            "image" => "event-assets/images/treasurehunt/5.png",
         ],
         [
             "id" => 21,
             "name" => "Round Gem",
             "area" => [ 45, 94, 2, 4 ],
-            "image" => "event-assets/images/treasurehunt/candidate1.png",
+            "image" => "event-assets/images/treasurehunt/4.png",
         ]
     ],
 ]);

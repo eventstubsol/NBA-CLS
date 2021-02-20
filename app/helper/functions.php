@@ -342,18 +342,18 @@ function storageUrl($url = "")
 
 function getScavengerItems($page)
 {
-    return "";
-    // $toReturn = "";
-    // if (isset(SCAVENGER_HUNT[$page])) {
-    //     foreach (SCAVENGER_HUNT[$page] as $index => $item) {
-    //         $toReturn .= "
-    //         <div class='scavenger-item positioned' data-page='$page' data-index='$index' style='" . areaStyles($item['area']) . "' data-name='" . $item['name'] . "' title='" . $item['name'] . "' >
-    //             <img class='fill positioned' src='" . asset($item['image']) . "' style='object-fit:contain;' alt='' />
-    //         </div>
-    //         ";
-    //     }
-    // }
-    // return $toReturn;
+    // return "";
+    $toReturn = "";
+    if (isset(SCAVENGER_HUNT[$page])) {
+        foreach (SCAVENGER_HUNT[$page] as $index => $item) {
+            $toReturn .= "
+            <div class='scavenger-item positioned' data-page='$page' data-index='$index' style='" . areaStyles($item['area']) . "' data-name='" . $item['name'] . "' title='" . $item['name'] . "' >
+                <img class='fill positioned' src='" . asset($item['image']) . "' style='object-fit:contain;' alt='' />
+            </div>
+            ";
+        }
+    }
+    return $toReturn;
 }
 
 /**

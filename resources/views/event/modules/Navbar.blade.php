@@ -18,9 +18,9 @@
                @endif
                <li><a data-toggle="modal" data-target="#schedule-modal"><i class="fe-calendar"></i>Schedule</a></li>
                @if(isOpenForPublic("swagbag"))
-                   <li><a data-toggle="modal" data-target="#swagbag-modal"><i class="fe-shopping-bag"></i>Swag Bag</a></li>
+                   <li><a data-toggle="modal" data-target="#swagbag-modal"><i class="fe-shopping-bag"></i>Briefcase</a></li>
                @else
-                   <li><a data-toggle="modal" disabled><i class="fe-shopping-bag"></i>Swag Bag</a></li>
+                   <li><a data-toggle="modal" disabled><i class="fe-shopping-bag"></i>Briefcase</a></li>
                @endif
                @if(isOpenForPublic("leaderboard"))
                    <li><a class="area" data-link="leaderboard"><i class="fe-bar-chart"></i>Leaderboard</a></li>
