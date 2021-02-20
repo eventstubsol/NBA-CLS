@@ -10,6 +10,7 @@ use App\ArchiveVideos;
 use App\UserConnection;
 use App\sessionRooms;
 use App\Contact;
+use App\UserTag;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use \SendGrid\Mail\From as From;
@@ -249,6 +250,23 @@ define("CREATOR_TELLER_LINKS", [
 ]);
 
 define("BY_LAWS_TELLER_ID", "280fd217-8106-46fc-a36b-c5c38b1a3823");
+
+
+
+function getFilters($filter)
+{
+    switch($filter){
+        case "company_size":
+          return  User::select("company_size")->distinct()->get()->toArray();
+          break;
+        case "mytags":
+            return UserTag::select("tag")->where("tag_group","MY_TAGS")->distinct()->get()->toArray();
+            break;
+        default :
+            return UserTag::select("tag")->where("tag_group",$filter)->distinct()->get()->toArray();
+            break;
+    }
+}
 
 function getRooms(){
     $sessionrooms = sessionRooms::all()->groupBy("master_room");
@@ -607,6 +625,10 @@ function getLoginVars(){
     ];
 }
 
+function array_group_by($array,$field){
+
+}
+
 function getProfileDetails($user = false){
     if(!$user){
         $user = Auth::user();
@@ -618,6 +640,18 @@ function getProfileDetails($user = false){
             "interests",
         ]);
     }
+    // dd($user);
+    // $newtags = [];
+    // foreach($user->tags as $tag){
+    //         $newtags[$tag->tag_group][] = $tag ;
+    // }
+    // $user->tags = $newtags;
+    // $newlookingfortags = [];
+    // foreach($user->looking_for_tags as $tag){
+    //         $newlookingfortags[$tag->tag_group][] = $tag ;
+    // }
+    // $user->looking_for_tags = $newlookingfortags;
+    // dd($newtags);
     $toSend = [
         "user" => $user,
     ];
@@ -701,12 +735,12 @@ function getSuggestedTags(){
     //     "Medical Statistics",
     //     "Palliative Care"
     // ];
-    $toSend = [];
-   $tags = \App\UserTag::get("tag");
-   foreach ($tags as $tag) {
-       $toSend[] = $tag->tag;
-   }
-    return $toSend;
+    // $toSend = [];
+   $tags = \App\UserTag::all()->groupBy("tag_group");
+//    foreach ($tags as $tag) {
+//        $toSend[] = $tag;
+//    }
+    return $tags;
 }
 
 function getSchedule(){

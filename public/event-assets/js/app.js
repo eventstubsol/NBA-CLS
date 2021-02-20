@@ -616,6 +616,7 @@ function initApp(){
             trackEvent({
                 type: room+"_visit"
             });
+            // createGroup(room);
             pageChangeActions();
             const loadContent = () => {
                 $("#session-content-"+room).empty().append(`<iframe frameborder="0"  class="positioned fill" src="${window.config.auditoriumEmbed}?type=${room}"></iframe>`);
@@ -624,7 +625,6 @@ function initApp(){
             let sessionModal = $("#session-modal-"+room);
             console.log(room);
             $("#play-session-"+room).unbind().on("click", function(){
-                console.log("opened")
                 loadContent();    
                 sessionModal.modal();
             });

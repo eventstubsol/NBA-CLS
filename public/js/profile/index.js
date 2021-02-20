@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -189,7 +189,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../css-loader??ref--7-1!../../../postcss-loader/src??ref--7-2!./chips.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/@material/react-chips/dist/chips.css");
+var content = __webpack_require__(/*! !../../../css-loader??ref--5-1!../../../postcss-loader/src??ref--5-2!./chips.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/@material/react-chips/dist/chips.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -887,7 +887,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/@material/react-chips/dist/chips.css":
 /*!*******************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/@material/react-chips/dist/chips.css ***!
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./node_modules/@material/react-chips/dist/chips.css ***!
   \*******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -897,7 +897,7 @@ exports = module.exports = __webpack_require__(/*! ../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".mdc-chip__icon--leading {\n  color: rgba(0, 0, 0, 0.54); }\n\n.mdc-chip__icon--trailing {\n  color: rgba(0, 0, 0, 0.54); }\n  .mdc-chip__icon--trailing:hover {\n    color: rgba(0, 0, 0, 0.62); }\n  .mdc-chip__icon--trailing:focus {\n    color: rgba(0, 0, 0, 0.87); }\n\n.mdc-chip__icon.mdc-chip__icon--leading:not(.mdc-chip__icon--leading-hidden) {\n  width: 20px;\n  height: 20px;\n  font-size: 20px; }\n\n.mdc-chip__icon.mdc-chip__icon--trailing {\n  width: 18px;\n  height: 18px;\n  font-size: 18px; }\n\n.mdc-chip__icon--trailing {\n  margin: 0 -4px 0 4px; }\n\n.mdc-chip {\n  border-radius: 16px;\n  background-color: #e0e0e0;\n  color: rgba(0, 0, 0, 0.87);\n  font-family: Roboto, sans-serif;\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-font-smoothing: antialiased;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n  font-weight: 400;\n  letter-spacing: 0.01786em;\n  text-decoration: inherit;\n  text-transform: inherit;\n  height: 32px;\n  display: inline-flex;\n  position: relative;\n  align-items: center;\n  box-sizing: border-box;\n  padding: 7px 12px;\n  outline: none;\n  cursor: pointer;\n  overflow: hidden; }\n  .mdc-chip:hover {\n    color: rgba(0, 0, 0, 0.87); }\n  .mdc-chip.mdc-chip--selected .mdc-chip__checkmark,\n  .mdc-chip .mdc-chip__icon--leading:not(.mdc-chip__icon--leading-hidden) {\n    /* @noflip */\n    margin-left: -4px;\n    /* @noflip */\n    margin-right: 4px;\n    margin-top: -4px;\n    margin-bottom: -4px; }\n    [dir=\"rtl\"] .mdc-chip.mdc-chip--selected .mdc-chip__checkmark, .mdc-chip.mdc-chip--selected .mdc-chip__checkmark[dir=\"rtl\"], [dir=\"rtl\"]\n    .mdc-chip .mdc-chip__icon--leading:not(.mdc-chip__icon--leading-hidden),\n    .mdc-chip .mdc-chip__icon--leading:not(.mdc-chip__icon--leading-hidden)[dir=\"rtl\"] {\n      /* @noflip */\n      margin-left: 4px;\n      /* @noflip */\n      margin-right: -4px; }\n  .mdc-chip:hover {\n    color: #000;\n    /* @alternate */\n    color: var(--mdc-theme-on-surface, #000); }\n\n.mdc-chip--exit {\n  transition: opacity 75ms cubic-bezier(0.4, 0, 0.2, 1), width 150ms cubic-bezier(0, 0, 0.2, 1), padding 100ms linear, margin 100ms linear;\n  opacity: 0; }\n\n.mdc-chip__text {\n  white-space: nowrap; }\n\n.mdc-chip__icon {\n  border-radius: 50%;\n  outline: none;\n  vertical-align: middle; }\n\n.mdc-chip__checkmark {\n  height: 20px; }\n\n.mdc-chip__checkmark-path {\n  transition: stroke-dashoffset 150ms 50ms cubic-bezier(0.4, 0, 0.6, 1);\n  stroke-width: 2px;\n  stroke-dashoffset: 29.78334;\n  stroke-dasharray: 29.78334; }\n\n.mdc-chip--selected .mdc-chip__checkmark-path {\n  stroke-dashoffset: 0; }\n\n.mdc-chip-set--choice .mdc-chip.mdc-chip--selected {\n  color: #6200ee;\n  /* @alternate */\n  color: var(--mdc-theme-primary, #6200ee); }\n  .mdc-chip-set--choice .mdc-chip.mdc-chip--selected .mdc-chip__icon--leading {\n    color: rgba(98, 0, 238, 0.54); }\n  .mdc-chip-set--choice .mdc-chip.mdc-chip--selected:hover {\n    color: #6200ee;\n    /* @alternate */\n    color: var(--mdc-theme-primary, #6200ee); }\n\n.mdc-chip-set--choice .mdc-chip .mdc-chip__checkmark-path {\n  stroke: #6200ee;\n  /* @alternate */\n  stroke: var(--mdc-theme-primary, #6200ee); }\n\n.mdc-chip-set--choice .mdc-chip--selected {\n  background-color: #fff;\n  /* @alternate */\n  background-color: var(--mdc-theme-surface, #fff); }\n\n.mdc-chip__checkmark-svg {\n  width: 0;\n  height: 20px;\n  transition: width 150ms cubic-bezier(0.4, 0, 0.2, 1); }\n\n.mdc-chip--selected .mdc-chip__checkmark-svg {\n  width: 20px; }\n\n.mdc-chip-set--filter .mdc-chip__icon--leading {\n  transition: opacity 75ms linear;\n  transition-delay: -50ms;\n  opacity: 1; }\n  .mdc-chip-set--filter .mdc-chip__icon--leading + .mdc-chip__checkmark {\n    transition: opacity 75ms linear;\n    transition-delay: 80ms;\n    opacity: 0; }\n    .mdc-chip-set--filter .mdc-chip__icon--leading + .mdc-chip__checkmark .mdc-chip__checkmark-svg {\n      transition: width 0ms; }\n\n.mdc-chip-set--filter .mdc-chip--selected .mdc-chip__icon--leading {\n  opacity: 0; }\n  .mdc-chip-set--filter .mdc-chip--selected .mdc-chip__icon--leading + .mdc-chip__checkmark {\n    width: 0;\n    opacity: 1; }\n\n.mdc-chip-set--filter .mdc-chip__icon--leading-hidden.mdc-chip__icon--leading {\n  width: 0;\n  opacity: 0; }\n  .mdc-chip-set--filter .mdc-chip__icon--leading-hidden.mdc-chip__icon--leading + .mdc-chip__checkmark {\n    width: 20px; }\n\n@-webkit-keyframes mdc-ripple-fg-radius-in {\n  from {\n    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n    transform: translate(var(--mdc-ripple-fg-translate-start, 0)) scale(1); }\n  to {\n    transform: translate(var(--mdc-ripple-fg-translate-end, 0)) scale(var(--mdc-ripple-fg-scale, 1)); } }\n\n@keyframes mdc-ripple-fg-radius-in {\n  from {\n    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n    transform: translate(var(--mdc-ripple-fg-translate-start, 0)) scale(1); }\n  to {\n    transform: translate(var(--mdc-ripple-fg-translate-end, 0)) scale(var(--mdc-ripple-fg-scale, 1)); } }\n\n@-webkit-keyframes mdc-ripple-fg-opacity-in {\n  from {\n    -webkit-animation-timing-function: linear;\n            animation-timing-function: linear;\n    opacity: 0; }\n  to {\n    opacity: var(--mdc-ripple-fg-opacity, 0); } }\n\n@keyframes mdc-ripple-fg-opacity-in {\n  from {\n    -webkit-animation-timing-function: linear;\n            animation-timing-function: linear;\n    opacity: 0; }\n  to {\n    opacity: var(--mdc-ripple-fg-opacity, 0); } }\n\n@-webkit-keyframes mdc-ripple-fg-opacity-out {\n  from {\n    -webkit-animation-timing-function: linear;\n            animation-timing-function: linear;\n    opacity: var(--mdc-ripple-fg-opacity, 0); }\n  to {\n    opacity: 0; } }\n\n@keyframes mdc-ripple-fg-opacity-out {\n  from {\n    -webkit-animation-timing-function: linear;\n            animation-timing-function: linear;\n    opacity: var(--mdc-ripple-fg-opacity, 0); }\n  to {\n    opacity: 0; } }\n\n.mdc-ripple-surface--test-edge-var-bug {\n  --mdc-ripple-surface-test-edge-var: 1px solid #000;\n  visibility: hidden; }\n  .mdc-ripple-surface--test-edge-var-bug::before {\n    border: var(--mdc-ripple-surface-test-edge-var); }\n\n.mdc-chip {\n  --mdc-ripple-fg-size: 0;\n  --mdc-ripple-left: 0;\n  --mdc-ripple-top: 0;\n  --mdc-ripple-fg-scale: 1;\n  --mdc-ripple-fg-translate-end: 0;\n  --mdc-ripple-fg-translate-start: 0;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }\n  .mdc-chip::before, .mdc-chip::after {\n    position: absolute;\n    border-radius: 50%;\n    opacity: 0;\n    pointer-events: none;\n    content: \"\"; }\n  .mdc-chip::before {\n    transition: opacity 15ms linear, background-color 15ms linear;\n    z-index: 1; }\n  .mdc-chip.mdc-ripple-upgraded::before {\n    transform: scale(var(--mdc-ripple-fg-scale, 1)); }\n  .mdc-chip.mdc-ripple-upgraded::after {\n    top: 0;\n    /* @noflip */\n    left: 0;\n    transform: scale(0);\n    transform-origin: center center; }\n  .mdc-chip.mdc-ripple-upgraded--unbounded::after {\n    top: var(--mdc-ripple-top, 0);\n    /* @noflip */\n    left: var(--mdc-ripple-left, 0); }\n  .mdc-chip.mdc-ripple-upgraded--foreground-activation::after {\n    -webkit-animation: mdc-ripple-fg-radius-in 225ms forwards, mdc-ripple-fg-opacity-in 75ms forwards;\n            animation: mdc-ripple-fg-radius-in 225ms forwards, mdc-ripple-fg-opacity-in 75ms forwards; }\n  .mdc-chip.mdc-ripple-upgraded--foreground-deactivation::after {\n    -webkit-animation: mdc-ripple-fg-opacity-out 150ms;\n            animation: mdc-ripple-fg-opacity-out 150ms;\n    transform: translate(var(--mdc-ripple-fg-translate-end, 0)) scale(var(--mdc-ripple-fg-scale, 1)); }\n  .mdc-chip::before, .mdc-chip::after {\n    top: calc(50% - 100%);\n    /* @noflip */\n    left: calc(50% - 100%);\n    width: 200%;\n    height: 200%; }\n  .mdc-chip.mdc-ripple-upgraded::after {\n    width: var(--mdc-ripple-fg-size, 100%);\n    height: var(--mdc-ripple-fg-size, 100%); }\n  .mdc-chip::before, .mdc-chip::after {\n    background-color: rgba(0, 0, 0, 0.87); }\n  .mdc-chip:hover::before {\n    opacity: 0.04; }\n  .mdc-chip:not(.mdc-ripple-upgraded):focus::before, .mdc-chip.mdc-ripple-upgraded--background-focused::before {\n    transition-duration: 75ms;\n    opacity: 0.12; }\n  .mdc-chip:not(.mdc-ripple-upgraded)::after {\n    transition: opacity 150ms linear; }\n  .mdc-chip:not(.mdc-ripple-upgraded):active::after {\n    transition-duration: 75ms;\n    opacity: 0.12; }\n  .mdc-chip.mdc-ripple-upgraded {\n    --mdc-ripple-fg-opacity: 0.12; }\n\n.mdc-chip-set--choice .mdc-chip.mdc-chip--selected::before {\n  opacity: 0.08; }\n\n.mdc-chip-set--choice .mdc-chip.mdc-chip--selected::before, .mdc-chip-set--choice .mdc-chip.mdc-chip--selected::after {\n  background-color: #6200ee; }\n  @supports not (-ms-ime-align: auto) {\n    .mdc-chip-set--choice .mdc-chip.mdc-chip--selected::before, .mdc-chip-set--choice .mdc-chip.mdc-chip--selected::after {\n      /* @alternate */\n      background-color: var(--mdc-theme-primary, #6200ee); } }\n\n.mdc-chip-set--choice .mdc-chip.mdc-chip--selected:hover::before {\n  opacity: 0.12; }\n\n.mdc-chip-set--choice .mdc-chip.mdc-chip--selected:not(.mdc-ripple-upgraded):focus::before, .mdc-chip-set--choice .mdc-chip.mdc-chip--selected.mdc-ripple-upgraded--background-focused::before {\n  transition-duration: 75ms;\n  opacity: 0.2; }\n\n.mdc-chip-set--choice .mdc-chip.mdc-chip--selected:not(.mdc-ripple-upgraded)::after {\n  transition: opacity 150ms linear; }\n\n.mdc-chip-set--choice .mdc-chip.mdc-chip--selected:not(.mdc-ripple-upgraded):active::after {\n  transition-duration: 75ms;\n  opacity: 0.2; }\n\n.mdc-chip-set--choice .mdc-chip.mdc-chip--selected.mdc-ripple-upgraded {\n  --mdc-ripple-fg-opacity: 0.2; }\n\n@-webkit-keyframes mdc-chip-entry {\n  from {\n    transform: scale(0.8);\n    opacity: .4; }\n  to {\n    transform: scale(1);\n    opacity: 1; } }\n\n@keyframes mdc-chip-entry {\n  from {\n    transform: scale(0.8);\n    opacity: .4; }\n  to {\n    transform: scale(1);\n    opacity: 1; } }\n\n.mdc-chip-set {\n  padding: 4px;\n  display: flex;\n  flex-wrap: wrap;\n  box-sizing: border-box; }\n  .mdc-chip-set .mdc-chip {\n    margin: 4px; }\n\n.mdc-chip-set--input .mdc-chip {\n  -webkit-animation: mdc-chip-entry 100ms cubic-bezier(0, 0, 0.2, 1);\n          animation: mdc-chip-entry 100ms cubic-bezier(0, 0, 0.2, 1); }", ""]);
+exports.push([module.i, ".mdc-chip__icon--leading {\n  color: rgba(0, 0, 0, 0.54); }\n\n.mdc-chip__icon--trailing {\n  color: rgba(0, 0, 0, 0.54); }\n  .mdc-chip__icon--trailing:hover {\n    color: rgba(0, 0, 0, 0.62); }\n  .mdc-chip__icon--trailing:focus {\n    color: rgba(0, 0, 0, 0.87); }\n\n.mdc-chip__icon.mdc-chip__icon--leading:not(.mdc-chip__icon--leading-hidden) {\n  width: 20px;\n  height: 20px;\n  font-size: 20px; }\n\n.mdc-chip__icon.mdc-chip__icon--trailing {\n  width: 18px;\n  height: 18px;\n  font-size: 18px; }\n\n.mdc-chip__icon--trailing {\n  margin: 0 -4px 0 4px; }\n\n.mdc-chip {\n  border-radius: 16px;\n  background-color: #e0e0e0;\n  color: rgba(0, 0, 0, 0.87);\n  font-family: Roboto, sans-serif;\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-font-smoothing: antialiased;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n  font-weight: 400;\n  letter-spacing: 0.01786em;\n  text-decoration: inherit;\n  text-transform: inherit;\n  height: 32px;\n  display: -webkit-inline-box;\n  display: inline-flex;\n  position: relative;\n  -webkit-box-align: center;\n          align-items: center;\n  box-sizing: border-box;\n  padding: 7px 12px;\n  outline: none;\n  cursor: pointer;\n  overflow: hidden; }\n  .mdc-chip:hover {\n    color: rgba(0, 0, 0, 0.87); }\n  .mdc-chip.mdc-chip--selected .mdc-chip__checkmark,\n  .mdc-chip .mdc-chip__icon--leading:not(.mdc-chip__icon--leading-hidden) {\n    /* @noflip */\n    margin-left: -4px;\n    /* @noflip */\n    margin-right: 4px;\n    margin-top: -4px;\n    margin-bottom: -4px; }\n    [dir=\"rtl\"] .mdc-chip.mdc-chip--selected .mdc-chip__checkmark, .mdc-chip.mdc-chip--selected .mdc-chip__checkmark[dir=\"rtl\"], [dir=\"rtl\"]\n    .mdc-chip .mdc-chip__icon--leading:not(.mdc-chip__icon--leading-hidden),\n    .mdc-chip .mdc-chip__icon--leading:not(.mdc-chip__icon--leading-hidden)[dir=\"rtl\"] {\n      /* @noflip */\n      margin-left: 4px;\n      /* @noflip */\n      margin-right: -4px; }\n  .mdc-chip:hover {\n    color: #000;\n    /* @alternate */\n    color: var(--mdc-theme-on-surface, #000); }\n\n.mdc-chip--exit {\n  -webkit-transition: opacity 75ms cubic-bezier(0.4, 0, 0.2, 1), width 150ms cubic-bezier(0, 0, 0.2, 1), padding 100ms linear, margin 100ms linear;\n  transition: opacity 75ms cubic-bezier(0.4, 0, 0.2, 1), width 150ms cubic-bezier(0, 0, 0.2, 1), padding 100ms linear, margin 100ms linear;\n  opacity: 0; }\n\n.mdc-chip__text {\n  white-space: nowrap; }\n\n.mdc-chip__icon {\n  border-radius: 50%;\n  outline: none;\n  vertical-align: middle; }\n\n.mdc-chip__checkmark {\n  height: 20px; }\n\n.mdc-chip__checkmark-path {\n  -webkit-transition: stroke-dashoffset 150ms 50ms cubic-bezier(0.4, 0, 0.6, 1);\n  transition: stroke-dashoffset 150ms 50ms cubic-bezier(0.4, 0, 0.6, 1);\n  stroke-width: 2px;\n  stroke-dashoffset: 29.78334;\n  stroke-dasharray: 29.78334; }\n\n.mdc-chip--selected .mdc-chip__checkmark-path {\n  stroke-dashoffset: 0; }\n\n.mdc-chip-set--choice .mdc-chip.mdc-chip--selected {\n  color: #6200ee;\n  /* @alternate */\n  color: var(--mdc-theme-primary, #6200ee); }\n  .mdc-chip-set--choice .mdc-chip.mdc-chip--selected .mdc-chip__icon--leading {\n    color: rgba(98, 0, 238, 0.54); }\n  .mdc-chip-set--choice .mdc-chip.mdc-chip--selected:hover {\n    color: #6200ee;\n    /* @alternate */\n    color: var(--mdc-theme-primary, #6200ee); }\n\n.mdc-chip-set--choice .mdc-chip .mdc-chip__checkmark-path {\n  stroke: #6200ee;\n  /* @alternate */\n  stroke: var(--mdc-theme-primary, #6200ee); }\n\n.mdc-chip-set--choice .mdc-chip--selected {\n  background-color: #fff;\n  /* @alternate */\n  background-color: var(--mdc-theme-surface, #fff); }\n\n.mdc-chip__checkmark-svg {\n  width: 0;\n  height: 20px;\n  -webkit-transition: width 150ms cubic-bezier(0.4, 0, 0.2, 1);\n  transition: width 150ms cubic-bezier(0.4, 0, 0.2, 1); }\n\n.mdc-chip--selected .mdc-chip__checkmark-svg {\n  width: 20px; }\n\n.mdc-chip-set--filter .mdc-chip__icon--leading {\n  -webkit-transition: opacity 75ms linear;\n  transition: opacity 75ms linear;\n  -webkit-transition-delay: -50ms;\n          transition-delay: -50ms;\n  opacity: 1; }\n  .mdc-chip-set--filter .mdc-chip__icon--leading + .mdc-chip__checkmark {\n    -webkit-transition: opacity 75ms linear;\n    transition: opacity 75ms linear;\n    -webkit-transition-delay: 80ms;\n            transition-delay: 80ms;\n    opacity: 0; }\n    .mdc-chip-set--filter .mdc-chip__icon--leading + .mdc-chip__checkmark .mdc-chip__checkmark-svg {\n      -webkit-transition: width 0ms;\n      transition: width 0ms; }\n\n.mdc-chip-set--filter .mdc-chip--selected .mdc-chip__icon--leading {\n  opacity: 0; }\n  .mdc-chip-set--filter .mdc-chip--selected .mdc-chip__icon--leading + .mdc-chip__checkmark {\n    width: 0;\n    opacity: 1; }\n\n.mdc-chip-set--filter .mdc-chip__icon--leading-hidden.mdc-chip__icon--leading {\n  width: 0;\n  opacity: 0; }\n  .mdc-chip-set--filter .mdc-chip__icon--leading-hidden.mdc-chip__icon--leading + .mdc-chip__checkmark {\n    width: 20px; }\n\n@-webkit-keyframes mdc-ripple-fg-radius-in {\n  from {\n    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n    -webkit-transform: translate(var(--mdc-ripple-fg-translate-start, 0)) scale(1);\n            transform: translate(var(--mdc-ripple-fg-translate-start, 0)) scale(1); }\n  to {\n    -webkit-transform: translate(var(--mdc-ripple-fg-translate-end, 0)) scale(var(--mdc-ripple-fg-scale, 1));\n            transform: translate(var(--mdc-ripple-fg-translate-end, 0)) scale(var(--mdc-ripple-fg-scale, 1)); } }\n\n@keyframes mdc-ripple-fg-radius-in {\n  from {\n    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n    -webkit-transform: translate(var(--mdc-ripple-fg-translate-start, 0)) scale(1);\n            transform: translate(var(--mdc-ripple-fg-translate-start, 0)) scale(1); }\n  to {\n    -webkit-transform: translate(var(--mdc-ripple-fg-translate-end, 0)) scale(var(--mdc-ripple-fg-scale, 1));\n            transform: translate(var(--mdc-ripple-fg-translate-end, 0)) scale(var(--mdc-ripple-fg-scale, 1)); } }\n\n@-webkit-keyframes mdc-ripple-fg-opacity-in {\n  from {\n    -webkit-animation-timing-function: linear;\n            animation-timing-function: linear;\n    opacity: 0; }\n  to {\n    opacity: var(--mdc-ripple-fg-opacity, 0); } }\n\n@keyframes mdc-ripple-fg-opacity-in {\n  from {\n    -webkit-animation-timing-function: linear;\n            animation-timing-function: linear;\n    opacity: 0; }\n  to {\n    opacity: var(--mdc-ripple-fg-opacity, 0); } }\n\n@-webkit-keyframes mdc-ripple-fg-opacity-out {\n  from {\n    -webkit-animation-timing-function: linear;\n            animation-timing-function: linear;\n    opacity: var(--mdc-ripple-fg-opacity, 0); }\n  to {\n    opacity: 0; } }\n\n@keyframes mdc-ripple-fg-opacity-out {\n  from {\n    -webkit-animation-timing-function: linear;\n            animation-timing-function: linear;\n    opacity: var(--mdc-ripple-fg-opacity, 0); }\n  to {\n    opacity: 0; } }\n\n.mdc-ripple-surface--test-edge-var-bug {\n  --mdc-ripple-surface-test-edge-var: 1px solid #000;\n  visibility: hidden; }\n  .mdc-ripple-surface--test-edge-var-bug::before {\n    border: var(--mdc-ripple-surface-test-edge-var); }\n\n.mdc-chip {\n  --mdc-ripple-fg-size: 0;\n  --mdc-ripple-left: 0;\n  --mdc-ripple-top: 0;\n  --mdc-ripple-fg-scale: 1;\n  --mdc-ripple-fg-translate-end: 0;\n  --mdc-ripple-fg-translate-start: 0;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }\n  .mdc-chip::before, .mdc-chip::after {\n    position: absolute;\n    border-radius: 50%;\n    opacity: 0;\n    pointer-events: none;\n    content: \"\"; }\n  .mdc-chip::before {\n    -webkit-transition: opacity 15ms linear, background-color 15ms linear;\n    transition: opacity 15ms linear, background-color 15ms linear;\n    z-index: 1; }\n  .mdc-chip.mdc-ripple-upgraded::before {\n    -webkit-transform: scale(var(--mdc-ripple-fg-scale, 1));\n            transform: scale(var(--mdc-ripple-fg-scale, 1)); }\n  .mdc-chip.mdc-ripple-upgraded::after {\n    top: 0;\n    /* @noflip */\n    left: 0;\n    -webkit-transform: scale(0);\n            transform: scale(0);\n    -webkit-transform-origin: center center;\n            transform-origin: center center; }\n  .mdc-chip.mdc-ripple-upgraded--unbounded::after {\n    top: var(--mdc-ripple-top, 0);\n    /* @noflip */\n    left: var(--mdc-ripple-left, 0); }\n  .mdc-chip.mdc-ripple-upgraded--foreground-activation::after {\n    -webkit-animation: mdc-ripple-fg-radius-in 225ms forwards, mdc-ripple-fg-opacity-in 75ms forwards;\n            animation: mdc-ripple-fg-radius-in 225ms forwards, mdc-ripple-fg-opacity-in 75ms forwards; }\n  .mdc-chip.mdc-ripple-upgraded--foreground-deactivation::after {\n    -webkit-animation: mdc-ripple-fg-opacity-out 150ms;\n            animation: mdc-ripple-fg-opacity-out 150ms;\n    -webkit-transform: translate(var(--mdc-ripple-fg-translate-end, 0)) scale(var(--mdc-ripple-fg-scale, 1));\n            transform: translate(var(--mdc-ripple-fg-translate-end, 0)) scale(var(--mdc-ripple-fg-scale, 1)); }\n  .mdc-chip::before, .mdc-chip::after {\n    top: calc(50% - 100%);\n    /* @noflip */\n    left: calc(50% - 100%);\n    width: 200%;\n    height: 200%; }\n  .mdc-chip.mdc-ripple-upgraded::after {\n    width: var(--mdc-ripple-fg-size, 100%);\n    height: var(--mdc-ripple-fg-size, 100%); }\n  .mdc-chip::before, .mdc-chip::after {\n    background-color: rgba(0, 0, 0, 0.87); }\n  .mdc-chip:hover::before {\n    opacity: 0.04; }\n  .mdc-chip:not(.mdc-ripple-upgraded):focus::before, .mdc-chip.mdc-ripple-upgraded--background-focused::before {\n    -webkit-transition-duration: 75ms;\n            transition-duration: 75ms;\n    opacity: 0.12; }\n  .mdc-chip:not(.mdc-ripple-upgraded)::after {\n    -webkit-transition: opacity 150ms linear;\n    transition: opacity 150ms linear; }\n  .mdc-chip:not(.mdc-ripple-upgraded):active::after {\n    -webkit-transition-duration: 75ms;\n            transition-duration: 75ms;\n    opacity: 0.12; }\n  .mdc-chip.mdc-ripple-upgraded {\n    --mdc-ripple-fg-opacity: 0.12; }\n\n.mdc-chip-set--choice .mdc-chip.mdc-chip--selected::before {\n  opacity: 0.08; }\n\n.mdc-chip-set--choice .mdc-chip.mdc-chip--selected::before, .mdc-chip-set--choice .mdc-chip.mdc-chip--selected::after {\n  background-color: #6200ee; }\n  @supports not (-ms-ime-align: auto) {\n    .mdc-chip-set--choice .mdc-chip.mdc-chip--selected::before, .mdc-chip-set--choice .mdc-chip.mdc-chip--selected::after {\n      /* @alternate */\n      background-color: var(--mdc-theme-primary, #6200ee); } }\n\n.mdc-chip-set--choice .mdc-chip.mdc-chip--selected:hover::before {\n  opacity: 0.12; }\n\n.mdc-chip-set--choice .mdc-chip.mdc-chip--selected:not(.mdc-ripple-upgraded):focus::before, .mdc-chip-set--choice .mdc-chip.mdc-chip--selected.mdc-ripple-upgraded--background-focused::before {\n  -webkit-transition-duration: 75ms;\n          transition-duration: 75ms;\n  opacity: 0.2; }\n\n.mdc-chip-set--choice .mdc-chip.mdc-chip--selected:not(.mdc-ripple-upgraded)::after {\n  -webkit-transition: opacity 150ms linear;\n  transition: opacity 150ms linear; }\n\n.mdc-chip-set--choice .mdc-chip.mdc-chip--selected:not(.mdc-ripple-upgraded):active::after {\n  -webkit-transition-duration: 75ms;\n          transition-duration: 75ms;\n  opacity: 0.2; }\n\n.mdc-chip-set--choice .mdc-chip.mdc-chip--selected.mdc-ripple-upgraded {\n  --mdc-ripple-fg-opacity: 0.2; }\n\n@-webkit-keyframes mdc-chip-entry {\n  from {\n    -webkit-transform: scale(0.8);\n            transform: scale(0.8);\n    opacity: .4; }\n  to {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 1; } }\n\n@keyframes mdc-chip-entry {\n  from {\n    -webkit-transform: scale(0.8);\n            transform: scale(0.8);\n    opacity: .4; }\n  to {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 1; } }\n\n.mdc-chip-set {\n  padding: 4px;\n  display: -webkit-box;\n  display: flex;\n  flex-wrap: wrap;\n  box-sizing: border-box; }\n  .mdc-chip-set .mdc-chip {\n    margin: 4px; }\n\n.mdc-chip-set--input .mdc-chip {\n  -webkit-animation: mdc-chip-entry 100ms cubic-bezier(0, 0, 0.2, 1);\n          animation: mdc-chip-entry 100ms cubic-bezier(0, 0, 0.2, 1); }", ""]);
 
 // exports
 
@@ -906,7 +906,7 @@ exports.push([module.i, ".mdc-chip__icon--leading {\n  color: rgba(0, 0, 0, 0.54
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/react-toastify/dist/ReactToastify.css":
 /*!********************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/react-toastify/dist/ReactToastify.css ***!
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./node_modules/react-toastify/dist/ReactToastify.css ***!
   \********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -916,7 +916,7 @@ exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base
 
 
 // module
-exports.push([module.i, ".Toastify__toast-container {\n  z-index: 9999;\n  -webkit-transform: translate3d(0, 0, 9999px);\n  position: fixed;\n  padding: 4px;\n  width: 320px;\n  box-sizing: border-box;\n  color: #fff;\n}\n.Toastify__toast-container--top-left {\n  top: 1em;\n  left: 1em;\n}\n.Toastify__toast-container--top-center {\n  top: 1em;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.Toastify__toast-container--top-right {\n  top: 1em;\n  right: 1em;\n}\n.Toastify__toast-container--bottom-left {\n  bottom: 1em;\n  left: 1em;\n}\n.Toastify__toast-container--bottom-center {\n  bottom: 1em;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.Toastify__toast-container--bottom-right {\n  bottom: 1em;\n  right: 1em;\n}\n\n@media only screen and (max-width : 480px) {\n  .Toastify__toast-container {\n    width: 100vw;\n    padding: 0;\n    left: 0;\n    margin: 0;\n  }\n  .Toastify__toast-container--top-left, .Toastify__toast-container--top-center, .Toastify__toast-container--top-right {\n    top: 0;\n    transform: translateX(0);\n  }\n  .Toastify__toast-container--bottom-left, .Toastify__toast-container--bottom-center, .Toastify__toast-container--bottom-right {\n    bottom: 0;\n    transform: translateX(0);\n  }\n  .Toastify__toast-container--rtl {\n    right: 0;\n    left: initial;\n  }\n}\n.Toastify__toast {\n  position: relative;\n  min-height: 64px;\n  box-sizing: border-box;\n  margin-bottom: 1rem;\n  padding: 8px;\n  border-radius: 1px;\n  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 15px 0 rgba(0, 0, 0, 0.05);\n  display: flex;\n  justify-content: space-between;\n  max-height: 800px;\n  overflow: hidden;\n  font-family: sans-serif;\n  cursor: pointer;\n  direction: ltr;\n}\n.Toastify__toast--rtl {\n  direction: rtl;\n}\n.Toastify__toast--dark {\n  background: #121212;\n  color: #fff;\n}\n.Toastify__toast--default {\n  background: #fff;\n  color: #aaa;\n}\n.Toastify__toast--info {\n  background: #3498db;\n}\n.Toastify__toast--success {\n  background: #07bc0c;\n}\n.Toastify__toast--warning {\n  background: #f1c40f;\n}\n.Toastify__toast--error {\n  background: #e74c3c;\n}\n.Toastify__toast-body {\n  margin: auto 0;\n  flex: 1 1 auto;\n}\n\n@media only screen and (max-width : 480px) {\n  .Toastify__toast {\n    margin-bottom: 0;\n  }\n}\n.Toastify__close-button {\n  color: #fff;\n  background: transparent;\n  outline: none;\n  border: none;\n  padding: 0;\n  cursor: pointer;\n  opacity: 0.7;\n  transition: 0.3s ease;\n  align-self: flex-start;\n}\n.Toastify__close-button--default {\n  color: #000;\n  opacity: 0.3;\n}\n.Toastify__close-button > svg {\n  fill: currentColor;\n  height: 16px;\n  width: 14px;\n}\n.Toastify__close-button:hover, .Toastify__close-button:focus {\n  opacity: 1;\n}\n\n@-webkit-keyframes Toastify__trackProgress {\n  0% {\n    transform: scaleX(1);\n  }\n  100% {\n    transform: scaleX(0);\n  }\n}\n\n@keyframes Toastify__trackProgress {\n  0% {\n    transform: scaleX(1);\n  }\n  100% {\n    transform: scaleX(0);\n  }\n}\n.Toastify__progress-bar {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 5px;\n  z-index: 9999;\n  opacity: 0.7;\n  background-color: rgba(255, 255, 255, 0.7);\n  transform-origin: left;\n}\n.Toastify__progress-bar--animated {\n  -webkit-animation: Toastify__trackProgress linear 1 forwards;\n          animation: Toastify__trackProgress linear 1 forwards;\n}\n.Toastify__progress-bar--controlled {\n  transition: transform 0.2s;\n}\n.Toastify__progress-bar--rtl {\n  right: 0;\n  left: initial;\n  transform-origin: right;\n}\n.Toastify__progress-bar--default {\n  background: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);\n}\n.Toastify__progress-bar--dark {\n  background: #bb86fc;\n}\n@-webkit-keyframes Toastify__bounceInRight {\n  from, 60%, 75%, 90%, to {\n    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n  }\n  from {\n    opacity: 0;\n    transform: translate3d(3000px, 0, 0);\n  }\n  60% {\n    opacity: 1;\n    transform: translate3d(-25px, 0, 0);\n  }\n  75% {\n    transform: translate3d(10px, 0, 0);\n  }\n  90% {\n    transform: translate3d(-5px, 0, 0);\n  }\n  to {\n    transform: none;\n  }\n}\n@keyframes Toastify__bounceInRight {\n  from, 60%, 75%, 90%, to {\n    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n  }\n  from {\n    opacity: 0;\n    transform: translate3d(3000px, 0, 0);\n  }\n  60% {\n    opacity: 1;\n    transform: translate3d(-25px, 0, 0);\n  }\n  75% {\n    transform: translate3d(10px, 0, 0);\n  }\n  90% {\n    transform: translate3d(-5px, 0, 0);\n  }\n  to {\n    transform: none;\n  }\n}\n@-webkit-keyframes Toastify__bounceOutRight {\n  20% {\n    opacity: 1;\n    transform: translate3d(-20px, 0, 0);\n  }\n  to {\n    opacity: 0;\n    transform: translate3d(2000px, 0, 0);\n  }\n}\n@keyframes Toastify__bounceOutRight {\n  20% {\n    opacity: 1;\n    transform: translate3d(-20px, 0, 0);\n  }\n  to {\n    opacity: 0;\n    transform: translate3d(2000px, 0, 0);\n  }\n}\n@-webkit-keyframes Toastify__bounceInLeft {\n  from, 60%, 75%, 90%, to {\n    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n  }\n  0% {\n    opacity: 0;\n    transform: translate3d(-3000px, 0, 0);\n  }\n  60% {\n    opacity: 1;\n    transform: translate3d(25px, 0, 0);\n  }\n  75% {\n    transform: translate3d(-10px, 0, 0);\n  }\n  90% {\n    transform: translate3d(5px, 0, 0);\n  }\n  to {\n    transform: none;\n  }\n}\n@keyframes Toastify__bounceInLeft {\n  from, 60%, 75%, 90%, to {\n    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n  }\n  0% {\n    opacity: 0;\n    transform: translate3d(-3000px, 0, 0);\n  }\n  60% {\n    opacity: 1;\n    transform: translate3d(25px, 0, 0);\n  }\n  75% {\n    transform: translate3d(-10px, 0, 0);\n  }\n  90% {\n    transform: translate3d(5px, 0, 0);\n  }\n  to {\n    transform: none;\n  }\n}\n@-webkit-keyframes Toastify__bounceOutLeft {\n  20% {\n    opacity: 1;\n    transform: translate3d(20px, 0, 0);\n  }\n  to {\n    opacity: 0;\n    transform: translate3d(-2000px, 0, 0);\n  }\n}\n@keyframes Toastify__bounceOutLeft {\n  20% {\n    opacity: 1;\n    transform: translate3d(20px, 0, 0);\n  }\n  to {\n    opacity: 0;\n    transform: translate3d(-2000px, 0, 0);\n  }\n}\n@-webkit-keyframes Toastify__bounceInUp {\n  from, 60%, 75%, 90%, to {\n    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n  }\n  from {\n    opacity: 0;\n    transform: translate3d(0, 3000px, 0);\n  }\n  60% {\n    opacity: 1;\n    transform: translate3d(0, -20px, 0);\n  }\n  75% {\n    transform: translate3d(0, 10px, 0);\n  }\n  90% {\n    transform: translate3d(0, -5px, 0);\n  }\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n}\n@keyframes Toastify__bounceInUp {\n  from, 60%, 75%, 90%, to {\n    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n  }\n  from {\n    opacity: 0;\n    transform: translate3d(0, 3000px, 0);\n  }\n  60% {\n    opacity: 1;\n    transform: translate3d(0, -20px, 0);\n  }\n  75% {\n    transform: translate3d(0, 10px, 0);\n  }\n  90% {\n    transform: translate3d(0, -5px, 0);\n  }\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n}\n@-webkit-keyframes Toastify__bounceOutUp {\n  20% {\n    transform: translate3d(0, -10px, 0);\n  }\n  40%, 45% {\n    opacity: 1;\n    transform: translate3d(0, 20px, 0);\n  }\n  to {\n    opacity: 0;\n    transform: translate3d(0, -2000px, 0);\n  }\n}\n@keyframes Toastify__bounceOutUp {\n  20% {\n    transform: translate3d(0, -10px, 0);\n  }\n  40%, 45% {\n    opacity: 1;\n    transform: translate3d(0, 20px, 0);\n  }\n  to {\n    opacity: 0;\n    transform: translate3d(0, -2000px, 0);\n  }\n}\n@-webkit-keyframes Toastify__bounceInDown {\n  from, 60%, 75%, 90%, to {\n    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n  }\n  0% {\n    opacity: 0;\n    transform: translate3d(0, -3000px, 0);\n  }\n  60% {\n    opacity: 1;\n    transform: translate3d(0, 25px, 0);\n  }\n  75% {\n    transform: translate3d(0, -10px, 0);\n  }\n  90% {\n    transform: translate3d(0, 5px, 0);\n  }\n  to {\n    transform: none;\n  }\n}\n@keyframes Toastify__bounceInDown {\n  from, 60%, 75%, 90%, to {\n    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n  }\n  0% {\n    opacity: 0;\n    transform: translate3d(0, -3000px, 0);\n  }\n  60% {\n    opacity: 1;\n    transform: translate3d(0, 25px, 0);\n  }\n  75% {\n    transform: translate3d(0, -10px, 0);\n  }\n  90% {\n    transform: translate3d(0, 5px, 0);\n  }\n  to {\n    transform: none;\n  }\n}\n@-webkit-keyframes Toastify__bounceOutDown {\n  20% {\n    transform: translate3d(0, 10px, 0);\n  }\n  40%, 45% {\n    opacity: 1;\n    transform: translate3d(0, -20px, 0);\n  }\n  to {\n    opacity: 0;\n    transform: translate3d(0, 2000px, 0);\n  }\n}\n@keyframes Toastify__bounceOutDown {\n  20% {\n    transform: translate3d(0, 10px, 0);\n  }\n  40%, 45% {\n    opacity: 1;\n    transform: translate3d(0, -20px, 0);\n  }\n  to {\n    opacity: 0;\n    transform: translate3d(0, 2000px, 0);\n  }\n}\n.Toastify__bounce-enter--top-left, .Toastify__bounce-enter--bottom-left {\n  -webkit-animation-name: Toastify__bounceInLeft;\n          animation-name: Toastify__bounceInLeft;\n}\n.Toastify__bounce-enter--top-right, .Toastify__bounce-enter--bottom-right {\n  -webkit-animation-name: Toastify__bounceInRight;\n          animation-name: Toastify__bounceInRight;\n}\n.Toastify__bounce-enter--top-center {\n  -webkit-animation-name: Toastify__bounceInDown;\n          animation-name: Toastify__bounceInDown;\n}\n.Toastify__bounce-enter--bottom-center {\n  -webkit-animation-name: Toastify__bounceInUp;\n          animation-name: Toastify__bounceInUp;\n}\n\n.Toastify__bounce-exit--top-left, .Toastify__bounce-exit--bottom-left {\n  -webkit-animation-name: Toastify__bounceOutLeft;\n          animation-name: Toastify__bounceOutLeft;\n}\n.Toastify__bounce-exit--top-right, .Toastify__bounce-exit--bottom-right {\n  -webkit-animation-name: Toastify__bounceOutRight;\n          animation-name: Toastify__bounceOutRight;\n}\n.Toastify__bounce-exit--top-center {\n  -webkit-animation-name: Toastify__bounceOutUp;\n          animation-name: Toastify__bounceOutUp;\n}\n.Toastify__bounce-exit--bottom-center {\n  -webkit-animation-name: Toastify__bounceOutDown;\n          animation-name: Toastify__bounceOutDown;\n}\n\n@-webkit-keyframes Toastify__zoomIn {\n  from {\n    opacity: 0;\n    transform: scale3d(0.3, 0.3, 0.3);\n  }\n  50% {\n    opacity: 1;\n  }\n}\n\n@keyframes Toastify__zoomIn {\n  from {\n    opacity: 0;\n    transform: scale3d(0.3, 0.3, 0.3);\n  }\n  50% {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes Toastify__zoomOut {\n  from {\n    opacity: 1;\n  }\n  50% {\n    opacity: 0;\n    transform: scale3d(0.3, 0.3, 0.3);\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes Toastify__zoomOut {\n  from {\n    opacity: 1;\n  }\n  50% {\n    opacity: 0;\n    transform: scale3d(0.3, 0.3, 0.3);\n  }\n  to {\n    opacity: 0;\n  }\n}\n.Toastify__zoom-enter {\n  -webkit-animation-name: Toastify__zoomIn;\n          animation-name: Toastify__zoomIn;\n}\n\n.Toastify__zoom-exit {\n  -webkit-animation-name: Toastify__zoomOut;\n          animation-name: Toastify__zoomOut;\n}\n\n@-webkit-keyframes Toastify__flipIn {\n  from {\n    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);\n    -webkit-animation-timing-function: ease-in;\n            animation-timing-function: ease-in;\n    opacity: 0;\n  }\n  40% {\n    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);\n    -webkit-animation-timing-function: ease-in;\n            animation-timing-function: ease-in;\n  }\n  60% {\n    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);\n    opacity: 1;\n  }\n  80% {\n    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);\n  }\n  to {\n    transform: perspective(400px);\n  }\n}\n\n@keyframes Toastify__flipIn {\n  from {\n    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);\n    -webkit-animation-timing-function: ease-in;\n            animation-timing-function: ease-in;\n    opacity: 0;\n  }\n  40% {\n    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);\n    -webkit-animation-timing-function: ease-in;\n            animation-timing-function: ease-in;\n  }\n  60% {\n    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);\n    opacity: 1;\n  }\n  80% {\n    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);\n  }\n  to {\n    transform: perspective(400px);\n  }\n}\n@-webkit-keyframes Toastify__flipOut {\n  from {\n    transform: perspective(400px);\n  }\n  30% {\n    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);\n    opacity: 1;\n  }\n  to {\n    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);\n    opacity: 0;\n  }\n}\n@keyframes Toastify__flipOut {\n  from {\n    transform: perspective(400px);\n  }\n  30% {\n    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);\n    opacity: 1;\n  }\n  to {\n    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);\n    opacity: 0;\n  }\n}\n.Toastify__flip-enter {\n  -webkit-animation-name: Toastify__flipIn;\n          animation-name: Toastify__flipIn;\n}\n\n.Toastify__flip-exit {\n  -webkit-animation-name: Toastify__flipOut;\n          animation-name: Toastify__flipOut;\n}\n\n@-webkit-keyframes Toastify__slideInRight {\n  from {\n    transform: translate3d(110%, 0, 0);\n    visibility: visible;\n  }\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n}\n\n@keyframes Toastify__slideInRight {\n  from {\n    transform: translate3d(110%, 0, 0);\n    visibility: visible;\n  }\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n}\n@-webkit-keyframes Toastify__slideInLeft {\n  from {\n    transform: translate3d(-110%, 0, 0);\n    visibility: visible;\n  }\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n}\n@keyframes Toastify__slideInLeft {\n  from {\n    transform: translate3d(-110%, 0, 0);\n    visibility: visible;\n  }\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n}\n@-webkit-keyframes Toastify__slideInUp {\n  from {\n    transform: translate3d(0, 110%, 0);\n    visibility: visible;\n  }\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n}\n@keyframes Toastify__slideInUp {\n  from {\n    transform: translate3d(0, 110%, 0);\n    visibility: visible;\n  }\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n}\n@-webkit-keyframes Toastify__slideInDown {\n  from {\n    transform: translate3d(0, -110%, 0);\n    visibility: visible;\n  }\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n}\n@keyframes Toastify__slideInDown {\n  from {\n    transform: translate3d(0, -110%, 0);\n    visibility: visible;\n  }\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n}\n@-webkit-keyframes Toastify__slideOutRight {\n  from {\n    transform: translate3d(0, 0, 0);\n  }\n  to {\n    visibility: hidden;\n    transform: translate3d(110%, 0, 0);\n  }\n}\n@keyframes Toastify__slideOutRight {\n  from {\n    transform: translate3d(0, 0, 0);\n  }\n  to {\n    visibility: hidden;\n    transform: translate3d(110%, 0, 0);\n  }\n}\n@-webkit-keyframes Toastify__slideOutLeft {\n  from {\n    transform: translate3d(0, 0, 0);\n  }\n  to {\n    visibility: hidden;\n    transform: translate3d(-110%, 0, 0);\n  }\n}\n@keyframes Toastify__slideOutLeft {\n  from {\n    transform: translate3d(0, 0, 0);\n  }\n  to {\n    visibility: hidden;\n    transform: translate3d(-110%, 0, 0);\n  }\n}\n@-webkit-keyframes Toastify__slideOutDown {\n  from {\n    transform: translate3d(0, 0, 0);\n  }\n  to {\n    visibility: hidden;\n    transform: translate3d(0, 500px, 0);\n  }\n}\n@keyframes Toastify__slideOutDown {\n  from {\n    transform: translate3d(0, 0, 0);\n  }\n  to {\n    visibility: hidden;\n    transform: translate3d(0, 500px, 0);\n  }\n}\n@-webkit-keyframes Toastify__slideOutUp {\n  from {\n    transform: translate3d(0, 0, 0);\n  }\n  to {\n    visibility: hidden;\n    transform: translate3d(0, -500px, 0);\n  }\n}\n@keyframes Toastify__slideOutUp {\n  from {\n    transform: translate3d(0, 0, 0);\n  }\n  to {\n    visibility: hidden;\n    transform: translate3d(0, -500px, 0);\n  }\n}\n.Toastify__slide-enter--top-left, .Toastify__slide-enter--bottom-left {\n  -webkit-animation-name: Toastify__slideInLeft;\n          animation-name: Toastify__slideInLeft;\n}\n.Toastify__slide-enter--top-right, .Toastify__slide-enter--bottom-right {\n  -webkit-animation-name: Toastify__slideInRight;\n          animation-name: Toastify__slideInRight;\n}\n.Toastify__slide-enter--top-center {\n  -webkit-animation-name: Toastify__slideInDown;\n          animation-name: Toastify__slideInDown;\n}\n.Toastify__slide-enter--bottom-center {\n  -webkit-animation-name: Toastify__slideInUp;\n          animation-name: Toastify__slideInUp;\n}\n\n.Toastify__slide-exit--top-left, .Toastify__slide-exit--bottom-left {\n  -webkit-animation-name: Toastify__slideOutLeft;\n          animation-name: Toastify__slideOutLeft;\n}\n.Toastify__slide-exit--top-right, .Toastify__slide-exit--bottom-right {\n  -webkit-animation-name: Toastify__slideOutRight;\n          animation-name: Toastify__slideOutRight;\n}\n.Toastify__slide-exit--top-center {\n  -webkit-animation-name: Toastify__slideOutUp;\n          animation-name: Toastify__slideOutUp;\n}\n.Toastify__slide-exit--bottom-center {\n  -webkit-animation-name: Toastify__slideOutDown;\n          animation-name: Toastify__slideOutDown;\n}", ""]);
+exports.push([module.i, ".Toastify__toast-container {\n  z-index: 9999;\n  -webkit-transform: translate3d(0, 0, 9999px);\n  position: fixed;\n  padding: 4px;\n  width: 320px;\n  box-sizing: border-box;\n  color: #fff;\n}\n.Toastify__toast-container--top-left {\n  top: 1em;\n  left: 1em;\n}\n.Toastify__toast-container--top-center {\n  top: 1em;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.Toastify__toast-container--top-right {\n  top: 1em;\n  right: 1em;\n}\n.Toastify__toast-container--bottom-left {\n  bottom: 1em;\n  left: 1em;\n}\n.Toastify__toast-container--bottom-center {\n  bottom: 1em;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.Toastify__toast-container--bottom-right {\n  bottom: 1em;\n  right: 1em;\n}\n\n@media only screen and (max-width : 480px) {\n  .Toastify__toast-container {\n    width: 100vw;\n    padding: 0;\n    left: 0;\n    margin: 0;\n  }\n  .Toastify__toast-container--top-left, .Toastify__toast-container--top-center, .Toastify__toast-container--top-right {\n    top: 0;\n    transform: translateX(0);\n  }\n  .Toastify__toast-container--bottom-left, .Toastify__toast-container--bottom-center, .Toastify__toast-container--bottom-right {\n    bottom: 0;\n    transform: translateX(0);\n  }\n  .Toastify__toast-container--rtl {\n    right: 0;\n    left: initial;\n  }\n}\n.Toastify__toast {\n  position: relative;\n  min-height: 64px;\n  box-sizing: border-box;\n  margin-bottom: 1rem;\n  padding: 8px;\n  border-radius: 1px;\n  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 15px 0 rgba(0, 0, 0, 0.05);\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: justify;\n      justify-content: space-between;\n  max-height: 800px;\n  overflow: hidden;\n  font-family: sans-serif;\n  cursor: pointer;\n  direction: ltr;\n}\n.Toastify__toast--rtl {\n  direction: rtl;\n}\n.Toastify__toast--dark {\n  background: #121212;\n  color: #fff;\n}\n.Toastify__toast--default {\n  background: #fff;\n  color: #aaa;\n}\n.Toastify__toast--info {\n  background: #3498db;\n}\n.Toastify__toast--success {\n  background: #07bc0c;\n}\n.Toastify__toast--warning {\n  background: #f1c40f;\n}\n.Toastify__toast--error {\n  background: #e74c3c;\n}\n.Toastify__toast-body {\n  margin: auto 0;\n  -ms-flex: 1 1 auto;\n      flex: 1 1 auto;\n}\n\n@media only screen and (max-width : 480px) {\n  .Toastify__toast {\n    margin-bottom: 0;\n  }\n}\n.Toastify__close-button {\n  color: #fff;\n  background: transparent;\n  outline: none;\n  border: none;\n  padding: 0;\n  cursor: pointer;\n  opacity: 0.7;\n  transition: 0.3s ease;\n  -ms-flex-item-align: start;\n      align-self: flex-start;\n}\n.Toastify__close-button--default {\n  color: #000;\n  opacity: 0.3;\n}\n.Toastify__close-button > svg {\n  fill: currentColor;\n  height: 16px;\n  width: 14px;\n}\n.Toastify__close-button:hover, .Toastify__close-button:focus {\n  opacity: 1;\n}\n\n@keyframes Toastify__trackProgress {\n  0% {\n    transform: scaleX(1);\n  }\n  100% {\n    transform: scaleX(0);\n  }\n}\n.Toastify__progress-bar {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 5px;\n  z-index: 9999;\n  opacity: 0.7;\n  background-color: rgba(255, 255, 255, 0.7);\n  transform-origin: left;\n}\n.Toastify__progress-bar--animated {\n  animation: Toastify__trackProgress linear 1 forwards;\n}\n.Toastify__progress-bar--controlled {\n  transition: transform 0.2s;\n}\n.Toastify__progress-bar--rtl {\n  right: 0;\n  left: initial;\n  transform-origin: right;\n}\n.Toastify__progress-bar--default {\n  background: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);\n}\n.Toastify__progress-bar--dark {\n  background: #bb86fc;\n}\n@keyframes Toastify__bounceInRight {\n  from, 60%, 75%, 90%, to {\n    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n  }\n  from {\n    opacity: 0;\n    transform: translate3d(3000px, 0, 0);\n  }\n  60% {\n    opacity: 1;\n    transform: translate3d(-25px, 0, 0);\n  }\n  75% {\n    transform: translate3d(10px, 0, 0);\n  }\n  90% {\n    transform: translate3d(-5px, 0, 0);\n  }\n  to {\n    transform: none;\n  }\n}\n@keyframes Toastify__bounceOutRight {\n  20% {\n    opacity: 1;\n    transform: translate3d(-20px, 0, 0);\n  }\n  to {\n    opacity: 0;\n    transform: translate3d(2000px, 0, 0);\n  }\n}\n@keyframes Toastify__bounceInLeft {\n  from, 60%, 75%, 90%, to {\n    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n  }\n  0% {\n    opacity: 0;\n    transform: translate3d(-3000px, 0, 0);\n  }\n  60% {\n    opacity: 1;\n    transform: translate3d(25px, 0, 0);\n  }\n  75% {\n    transform: translate3d(-10px, 0, 0);\n  }\n  90% {\n    transform: translate3d(5px, 0, 0);\n  }\n  to {\n    transform: none;\n  }\n}\n@keyframes Toastify__bounceOutLeft {\n  20% {\n    opacity: 1;\n    transform: translate3d(20px, 0, 0);\n  }\n  to {\n    opacity: 0;\n    transform: translate3d(-2000px, 0, 0);\n  }\n}\n@keyframes Toastify__bounceInUp {\n  from, 60%, 75%, 90%, to {\n    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n  }\n  from {\n    opacity: 0;\n    transform: translate3d(0, 3000px, 0);\n  }\n  60% {\n    opacity: 1;\n    transform: translate3d(0, -20px, 0);\n  }\n  75% {\n    transform: translate3d(0, 10px, 0);\n  }\n  90% {\n    transform: translate3d(0, -5px, 0);\n  }\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n}\n@keyframes Toastify__bounceOutUp {\n  20% {\n    transform: translate3d(0, -10px, 0);\n  }\n  40%, 45% {\n    opacity: 1;\n    transform: translate3d(0, 20px, 0);\n  }\n  to {\n    opacity: 0;\n    transform: translate3d(0, -2000px, 0);\n  }\n}\n@keyframes Toastify__bounceInDown {\n  from, 60%, 75%, 90%, to {\n    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n  }\n  0% {\n    opacity: 0;\n    transform: translate3d(0, -3000px, 0);\n  }\n  60% {\n    opacity: 1;\n    transform: translate3d(0, 25px, 0);\n  }\n  75% {\n    transform: translate3d(0, -10px, 0);\n  }\n  90% {\n    transform: translate3d(0, 5px, 0);\n  }\n  to {\n    transform: none;\n  }\n}\n@keyframes Toastify__bounceOutDown {\n  20% {\n    transform: translate3d(0, 10px, 0);\n  }\n  40%, 45% {\n    opacity: 1;\n    transform: translate3d(0, -20px, 0);\n  }\n  to {\n    opacity: 0;\n    transform: translate3d(0, 2000px, 0);\n  }\n}\n.Toastify__bounce-enter--top-left, .Toastify__bounce-enter--bottom-left {\n  animation-name: Toastify__bounceInLeft;\n}\n.Toastify__bounce-enter--top-right, .Toastify__bounce-enter--bottom-right {\n  animation-name: Toastify__bounceInRight;\n}\n.Toastify__bounce-enter--top-center {\n  animation-name: Toastify__bounceInDown;\n}\n.Toastify__bounce-enter--bottom-center {\n  animation-name: Toastify__bounceInUp;\n}\n\n.Toastify__bounce-exit--top-left, .Toastify__bounce-exit--bottom-left {\n  animation-name: Toastify__bounceOutLeft;\n}\n.Toastify__bounce-exit--top-right, .Toastify__bounce-exit--bottom-right {\n  animation-name: Toastify__bounceOutRight;\n}\n.Toastify__bounce-exit--top-center {\n  animation-name: Toastify__bounceOutUp;\n}\n.Toastify__bounce-exit--bottom-center {\n  animation-name: Toastify__bounceOutDown;\n}\n\n@keyframes Toastify__zoomIn {\n  from {\n    opacity: 0;\n    transform: scale3d(0.3, 0.3, 0.3);\n  }\n  50% {\n    opacity: 1;\n  }\n}\n@keyframes Toastify__zoomOut {\n  from {\n    opacity: 1;\n  }\n  50% {\n    opacity: 0;\n    transform: scale3d(0.3, 0.3, 0.3);\n  }\n  to {\n    opacity: 0;\n  }\n}\n.Toastify__zoom-enter {\n  animation-name: Toastify__zoomIn;\n}\n\n.Toastify__zoom-exit {\n  animation-name: Toastify__zoomOut;\n}\n\n@keyframes Toastify__flipIn {\n  from {\n    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);\n    animation-timing-function: ease-in;\n    opacity: 0;\n  }\n  40% {\n    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);\n    animation-timing-function: ease-in;\n  }\n  60% {\n    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);\n    opacity: 1;\n  }\n  80% {\n    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);\n  }\n  to {\n    transform: perspective(400px);\n  }\n}\n@keyframes Toastify__flipOut {\n  from {\n    transform: perspective(400px);\n  }\n  30% {\n    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);\n    opacity: 1;\n  }\n  to {\n    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);\n    opacity: 0;\n  }\n}\n.Toastify__flip-enter {\n  animation-name: Toastify__flipIn;\n}\n\n.Toastify__flip-exit {\n  animation-name: Toastify__flipOut;\n}\n\n@keyframes Toastify__slideInRight {\n  from {\n    transform: translate3d(110%, 0, 0);\n    visibility: visible;\n  }\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n}\n@keyframes Toastify__slideInLeft {\n  from {\n    transform: translate3d(-110%, 0, 0);\n    visibility: visible;\n  }\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n}\n@keyframes Toastify__slideInUp {\n  from {\n    transform: translate3d(0, 110%, 0);\n    visibility: visible;\n  }\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n}\n@keyframes Toastify__slideInDown {\n  from {\n    transform: translate3d(0, -110%, 0);\n    visibility: visible;\n  }\n  to {\n    transform: translate3d(0, 0, 0);\n  }\n}\n@keyframes Toastify__slideOutRight {\n  from {\n    transform: translate3d(0, 0, 0);\n  }\n  to {\n    visibility: hidden;\n    transform: translate3d(110%, 0, 0);\n  }\n}\n@keyframes Toastify__slideOutLeft {\n  from {\n    transform: translate3d(0, 0, 0);\n  }\n  to {\n    visibility: hidden;\n    transform: translate3d(-110%, 0, 0);\n  }\n}\n@keyframes Toastify__slideOutDown {\n  from {\n    transform: translate3d(0, 0, 0);\n  }\n  to {\n    visibility: hidden;\n    transform: translate3d(0, 500px, 0);\n  }\n}\n@keyframes Toastify__slideOutUp {\n  from {\n    transform: translate3d(0, 0, 0);\n  }\n  to {\n    visibility: hidden;\n    transform: translate3d(0, -500px, 0);\n  }\n}\n.Toastify__slide-enter--top-left, .Toastify__slide-enter--bottom-left {\n  animation-name: Toastify__slideInLeft;\n}\n.Toastify__slide-enter--top-right, .Toastify__slide-enter--bottom-right {\n  animation-name: Toastify__slideInRight;\n}\n.Toastify__slide-enter--top-center {\n  animation-name: Toastify__slideInDown;\n}\n.Toastify__slide-enter--bottom-center {\n  animation-name: Toastify__slideInUp;\n}\n\n.Toastify__slide-exit--top-left, .Toastify__slide-exit--bottom-left {\n  animation-name: Toastify__slideOutLeft;\n}\n.Toastify__slide-exit--top-right, .Toastify__slide-exit--bottom-right {\n  animation-name: Toastify__slideOutRight;\n}\n.Toastify__slide-exit--top-center {\n  animation-name: Toastify__slideOutUp;\n}\n.Toastify__slide-exit--bottom-center {\n  animation-name: Toastify__slideOutDown;\n}", ""]);
 
 // exports
 
@@ -925,7 +925,7 @@ exports.push([module.i, ".Toastify__toast-container {\n  z-index: 9999;\n  -webk
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/Profile/Components/style.css":
 /*!***********************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./resources/js/Profile/Components/style.css ***!
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./resources/js/Profile/Components/style.css ***!
   \***********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -935,7 +935,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "/* Example Styles for React Tags*/\ndiv.ReactTags__tags {\n    position: relative;\n}\n\n/* Styles for the input */\ndiv.ReactTags__tagInput {\n    width: 100%;\n    border-radius: 2px;\n    display: inline-block;\n    padding: 5px;\n}\ndiv.ReactTags__tagInput input.ReactTags__tagInputField,\ndiv.ReactTags__tagInput input.ReactTags__tagInputField:focus {\n    height: 31px;\n    margin: 0;\n    width: 100%;\n    font-size: 12px;\n    padding: .45rem .9rem;\n    border: 2px solid #ececec;\n}\n\n/* Styles for selected tags */\ndiv.ReactTags__selected span.ReactTags__tag {\n    border: 1px solid #dddddd42;\n    background: #f3f3f361;\n    font-size: 12px;\n    display: inline-block;\n    padding: 5px 10px;\n    margin: 0 5px 10px;\n    line-height: 1;\n    border-radius: 2px;\n}\ndiv.ReactTags__selected a.ReactTags__remove {\n    color: #aaa;\n    margin-left: 5px;\n    cursor: pointer;\n}\n\n/* Styles for suggestions */\ndiv.ReactTags__suggestions {\n    position: absolute;\n}\ndiv.ReactTags__suggestions ul {\n    list-style-type: none;\n    box-shadow: .05em .01em .5em rgba(0,0,0,.2);\n    background: white;\n    width: 200px;\n}\ndiv.ReactTags__suggestions li {\n    border-bottom: 1px solid #ddd;\n    padding: 5px 10px;\n    margin: 0;\n}\ndiv.ReactTags__suggestions li mark {\n    text-decoration: underline;\n    background: none;\n    font-weight: 600;\n}\ndiv.ReactTags__suggestions ul li.ReactTags__activeSuggestion {\n    background: #b7cfe0;\n    cursor: pointer;\n}\n\n.custom-theme .custom-select{\n    border: 2px solid #ececec;\n}\n\n#profile-app .mdc-chip-set,#view-profile-modal .mdc-chip-set {\n    padding: 0;\n}\n\n#profile-app .mdc-chip-set .mdc-chip,#view-profile-modal .mdc-chip-set .mdc-chip{\n    margin-right: 10px;\n    margin-bottom: 10px;\n    font-size: 12px;\n    line-height: 1;\n    padding: 6px 15px;\n    height: auto;\n    background: #88c232;\n    color: #fff;\n    margin: 0 10px 10px 0;\n}\n\n#profile-app  .mdc-chip__checkmark-path,#view-profile-modal .mdc-chip__checkmark-path{\n    stroke: white;\n    stroke-width: 3px;\n}\n\n#profile-app .mdc-chip--selected .mdc-chip__checkmark-svg {\n    width: 18px;\n}\n\n#profile-app .mdc-chip.mdc-chip--selected .mdc-chip__checkmark, \n#profile-app .mdc-chip .mdc-chip__icon--leading:not(.mdc-chip__icon--leading-hidden) {\n    margin: -10px 4px 0px -4px;\n    height: 10px;\n}", ""]);
+exports.push([module.i, "/* Example Styles for React Tags*/\r\ndiv.ReactTags__tags {\r\n    position: relative;\r\n}\r\n\r\n/* Styles for the input */\r\ndiv.ReactTags__tagInput {\r\n    width: 100%;\r\n    border-radius: 2px;\r\n    display: inline-block;\r\n    padding: 5px;\r\n}\r\ndiv.ReactTags__tagInput input.ReactTags__tagInputField,\r\ndiv.ReactTags__tagInput input.ReactTags__tagInputField:focus {\r\n    height: 31px;\r\n    margin: 0;\r\n    width: 100%;\r\n    font-size: 12px;\r\n    padding: .45rem .9rem;\r\n    border: 2px solid #ececec;\r\n}\r\n\r\n/* Styles for selected tags */\r\ndiv.ReactTags__selected span.ReactTags__tag {\r\n    border: 1px solid #dddddd42;\r\n    background: #f3f3f361;\r\n    font-size: 12px;\r\n    display: inline-block;\r\n    padding: 5px 10px;\r\n    margin: 0 5px 10px;\r\n    line-height: 1;\r\n    border-radius: 2px;\r\n}\r\ndiv.ReactTags__selected a.ReactTags__remove {\r\n    color: #aaa;\r\n    margin-left: 5px;\r\n    cursor: pointer;\r\n}\r\n\r\n/* Styles for suggestions */\r\ndiv.ReactTags__suggestions {\r\n    position: absolute;\r\n}\r\ndiv.ReactTags__suggestions ul {\r\n    list-style-type: none;\r\n    box-shadow: .05em .01em .5em rgba(0,0,0,.2);\r\n    background: white;\r\n    width: 200px;\r\n}\r\ndiv.ReactTags__suggestions li {\r\n    border-bottom: 1px solid #ddd;\r\n    padding: 5px 10px;\r\n    margin: 0;\r\n}\r\ndiv.ReactTags__suggestions li mark {\r\n    text-decoration: underline;\r\n    background: none;\r\n    font-weight: 600;\r\n}\r\ndiv.ReactTags__suggestions ul li.ReactTags__activeSuggestion {\r\n    background: #b7cfe0;\r\n    cursor: pointer;\r\n}\r\n\r\n.custom-theme .custom-select{\r\n    border: 2px solid #ececec;\r\n}\r\n\r\n#profile-app .mdc-chip-set,#view-profile-modal .mdc-chip-set {\r\n    padding: 0;\r\n}\r\n\r\n#profile-app .mdc-chip-set .mdc-chip,#view-profile-modal .mdc-chip-set .mdc-chip{\r\n    margin-right: 10px;\r\n    margin-bottom: 10px;\r\n    font-size: 12px;\r\n    line-height: 1;\r\n    padding: 6px 15px;\r\n    height: auto;\r\n    background: #88c232;\r\n    color: #fff;\r\n    margin: 0 10px 10px 0;\r\n}\r\n\r\n#profile-app  .mdc-chip__checkmark-path,#view-profile-modal .mdc-chip__checkmark-path{\r\n    stroke: white;\r\n    stroke-width: 3px;\r\n}\r\n\r\n#profile-app .mdc-chip--selected .mdc-chip__checkmark-svg {\r\n    width: 18px;\r\n}\r\n\r\n#profile-app .mdc-chip.mdc-chip--selected .mdc-chip__checkmark, \r\n#profile-app .mdc-chip .mdc-chip__icon--leading:not(.mdc-chip__icon--leading-hidden) {\r\n    margin: -10px 4px 0px -4px;\r\n    height: 10px;\r\n}", ""]);
 
 // exports
 
@@ -38258,7 +38258,7 @@ function canDrop(params) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../css-loader??ref--7-1!../../postcss-loader/src??ref--7-2!./ReactToastify.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/react-toastify/dist/ReactToastify.css");
+var content = __webpack_require__(/*! !../../css-loader??ref--5-1!../../postcss-loader/src??ref--5-2!./ReactToastify.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/react-toastify/dist/ReactToastify.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -46289,7 +46289,15 @@ var _ref = window.config || {},
     savedContactsURL = _ref.savedContactsURL,
     tagSuggestions = _ref.tagSuggestions,
     exportContactsURL = _ref.exportContactsURL,
-    mailContactsURL = _ref.mailContactsURL;
+    mailContactsURL = _ref.mailContactsURL,
+    company_sizes = _ref.company_sizes,
+    mytags = _ref.mytags,
+    geography = _ref.geography,
+    practice_areas = _ref.practice_areas,
+    cetrifications = _ref.cetrifications,
+    firm_size = _ref.firm_size,
+    ownership = _ref.ownership,
+    others = _ref.others;
 
 var recordEvent = window.recordEvent;
 
@@ -46385,7 +46393,15 @@ var Contacts = /*#__PURE__*/function (_Component) {
         className: "tab-pane",
         id: "attendees"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AttendeeList, {
-        url: attendeesURL
+        url: attendeesURL,
+        company_sizes: company_sizes,
+        mytags: mytags,
+        geography: geography,
+        practice_areas: practice_areas,
+        cetrifications: cetrifications,
+        firm_size: firm_size,
+        ownership: ownership,
+        others: others
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "tab-pane",
         id: "my-contacts"
@@ -46448,6 +46464,18 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
       }
     });
 
+    _defineProperty(_assertThisInitialized(_this2), "handleTagsSelect", function (e) {
+      var input = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "tagSelected";
+
+      if (e && e.target) {
+        recordEvent("contacts_filtered_" + input, "Filter Used / " + input, "attendees_interaction");
+
+        _this2.setState(_defineProperty({}, input, e.target.value), function () {
+          return _this2.fetchAttendeesList(1);
+        });
+      }
+    });
+
     _defineProperty(_assertThisInitialized(_this2), "handleSearch", function (e) {
       if (e && e.target) {
         recordEvent("contacts_filtered_search", "Filter Used / Search", "attendees_interaction");
@@ -46480,7 +46508,14 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
           tagSelected = _this2$state.tagSelected,
           role = _this2$state.role,
           company_size = _this2$state.company_size,
-          industry = _this2$state.industry;
+          industry = _this2$state.industry,
+          MY_TAGS = _this2$state.MY_TAGS,
+          Geography = _this2$state.Geography,
+          Cetrifications = _this2$state.Cetrifications,
+          Firm_Size = _this2$state.Firm_Size,
+          Ownership = _this2$state.Ownership,
+          Practice = _this2$state.Practice,
+          Others = _this2$state.Others;
 
       if (!isRefresh) {
         _this2.setState({
@@ -46491,7 +46526,8 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
       }
 
       var q = {
-        page: page
+        page: page,
+        tags: []
       };
 
       if (tagSelected !== "") {
@@ -46512,6 +46548,34 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
 
       if (search && search.trim().length >= 1) {
         q.search = search.trim();
+      }
+
+      if (MY_TAGS) {
+        q.tags.push(MY_TAGS);
+      }
+
+      if (Geography) {
+        q.tags.push(Geography);
+      }
+
+      if (Others) {
+        q.tags.push(Others);
+      }
+
+      if (Cetrifications) {
+        q.tags.push(Cetrifications);
+      }
+
+      if (Firm_Size) {
+        q.tags.push(Firm_Size);
+      }
+
+      if (Ownership) {
+        q.tags.push(Ownership);
+      }
+
+      if (Practice) {
+        q.tags.push(Practice);
       }
 
       requestsHelper(_this2.props.url, q).then(function (suggestions) {
@@ -46649,9 +46713,33 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
           company_size = _this$state.company_size,
           role = _this$state.role,
           _this$state$customPag = _this$state.customPage,
-          customPage = _this$state$customPag === void 0 ? "" : _this$state$customPag;
-      var _this$props$showSearc = this.props.showSearch,
-          showSearch = _this$props$showSearc === void 0 ? true : _this$props$showSearc;
+          customPage = _this$state$customPag === void 0 ? "" : _this$state$customPag,
+          MY_TAGS = _this$state.MY_TAGS,
+          Firm_Size = _this$state.Firm_Size,
+          Ownership = _this$state.Ownership,
+          Geography = _this$state.Geography,
+          Practice = _this$state.Practice,
+          Cetrifications = _this$state.Cetrifications,
+          Others = _this$state.Others;
+      var _this$props = this.props,
+          _this$props$showSearc = _this$props.showSearch,
+          showSearch = _this$props$showSearc === void 0 ? true : _this$props$showSearc,
+          _this$props$company_s = _this$props.company_sizes,
+          company_sizes = _this$props$company_s === void 0 ? [] : _this$props$company_s,
+          _this$props$mytags = _this$props.mytags,
+          mytags = _this$props$mytags === void 0 ? [] : _this$props$mytags,
+          _this$props$firm_size = _this$props.firm_size,
+          firm_size = _this$props$firm_size === void 0 ? [] : _this$props$firm_size,
+          _this$props$ownership = _this$props.ownership,
+          ownership = _this$props$ownership === void 0 ? [] : _this$props$ownership,
+          _this$props$practice_ = _this$props.practice_areas,
+          practice_areas = _this$props$practice_ === void 0 ? [] : _this$props$practice_,
+          _this$props$geography = _this$props.geography,
+          geography = _this$props$geography === void 0 ? [] : _this$props$geography,
+          _this$props$cetrifica = _this$props.cetrifications,
+          cetrifications = _this$props$cetrifica === void 0 ? [] : _this$props$cetrifica,
+          _this$props$others = _this$props.others,
+          others = _this$props$others === void 0 ? [] : _this$props$others;
       var offset = per_page * (page - 1);
       var toShow = 5;
       var startFrom = 1;
@@ -46687,108 +46775,105 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
         className: "col-lg-6 mb-2"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group m-0"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Geography"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
         className: "custom-select",
         onChange: function onChange(e) {
-          return _this4.handleTagSelect(e, "industry");
+          return _this4.handleTagSelect(e, "Geography");
         },
-        value: industry
+        value: Geography
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: ""
-      }, "Industry"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Government"
-      }, "Government"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "BFSI"
-      }, "BFSI"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Oil & Gas"
-      }, "Oil & Gas"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Retail"
-      }, "Retail"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Transport & Logistics"
-      }, "Transport & Logistics"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Education"
-      }, "Education"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Healthcare"
-      }, "Healthcare"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Aviation"
-      }, "Aviation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "FMCG"
-      }, "FMCG"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Power and Utilities"
-      }, "Power and Utilities"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Other"
-      }, "Other")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-lg-6"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group mb-3 mb-lg-0"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-        className: "custom-select",
-        onChange: function onChange(e) {
-          return _this4.handleTagSelect(e, "company_size");
-        },
-        value: company_size
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: ""
-      }, "Company Size"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "0 - 100"
-      }, "0 - 100"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "100 - 250"
-      }, "100 - 250"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "250 - 500"
-      }, "250 - 500"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "500  - 1000"
-      }, "500  - 1000"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "1000+"
-      }, "1000+")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Geography"), geography ? geography.map(function (tag) {
+        return tag.tag ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          key: tag.tag,
+          value: tag.tag
+        }, tag.tag) : null;
+      }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-lg-6 mb-2"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group m-0"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Others (MBA)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
         className: "custom-select",
         onChange: function onChange(e) {
-          return _this4.handleTagSelect(e, "role");
+          return _this4.handleTagSelect(e, "Others");
         },
-        value: role
+        value: Others
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: ""
-      }, "Role"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "CIO"
-      }, "CIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "CXO"
-      }, "CXO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Board Member"
-      }, "Board Member"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Manager"
-      }, "Manager"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Influencer"
-      }, "Influencer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Decision Maker"
-      }, "Decision Maker "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Finance controler"
-      }, "Finance controler"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Entry-level"
-      }, "Entry-level"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Research Professional"
-      }, "Research Professional"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Vendor"
-      }, "Vendor"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Others"
-      }, "Others")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Others"), others ? others.map(function (tag) {
+        return tag.tag ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          key: tag.tag,
+          value: tag.tag
+        }, tag.tag) : null;
+      }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-lg-6 mb-2"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group m-0"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Cetrifications"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
         className: "custom-select",
-        onChange: this.handleTagSelect,
-        value: tagSelected
+        onChange: function onChange(e) {
+          return _this4.handleTagSelect(e, "Cetrifications");
+        },
+        value: Cetrifications
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: ""
-      }, "Interest"), tagSuggestions.map(function (tag) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          key: tag,
-          value: tag
-        }, tag);
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Cetrifications"), cetrifications ? cetrifications.map(function (tag) {
+        return tag.tag ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          key: tag.tag,
+          value: tag.tag
+        }, tag.tag) : null;
+      }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-lg-6 mb-2"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group m-0"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Firm_Size"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+        className: "custom-select",
+        onChange: function onChange(e) {
+          return _this4.handleTagSelect(e, "Firm_Size");
+        },
+        value: Firm_Size
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: ""
+      }, "Firm Size"), firm_size ? firm_size.map(function (tag) {
+        return tag.tag ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          key: tag.tag,
+          value: tag.tag
+        }, tag.tag) : null;
+      }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-lg-6 mb-2"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group m-0"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Ownership"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+        className: "custom-select",
+        onChange: function onChange(e) {
+          return _this4.handleTagSelect(e, "Ownership");
+        },
+        value: Ownership
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: ""
+      }, "Ownership"), ownership ? ownership.map(function (tag) {
+        return tag.tag ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          key: tag.tag,
+          value: tag.tag
+        }, tag.tag) : null;
+      }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-lg-6 mb-2"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group m-0"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Practice Areas"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+        className: "custom-select",
+        onChange: function onChange(e) {
+          return _this4.handleTagSelect(e, "Practice");
+        },
+        value: Practice
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: ""
+      }, "Practice Areas"), practice_areas ? practice_areas.map(function (tag) {
+        return tag.tag ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          key: tag.tag,
+          value: tag.tag
+        }, tag.tag) : null;
+      }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-lg-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group  m-0"
@@ -46910,7 +46995,7 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
         viewBox: "0 0 127.433 132.743"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
         fill: "#f79fac",
-        d: "M116.223,125.064c1.032-1.183,1.323-2.73,1.391-3.747V54.76c0,0-4.625-34.875-36.125-44.375 s-66,6.625-72.125,44l-0.781,63.219c0.062,4.197,1.105,6.177,1.808,7.006c1.94,1.811,5.408,3.465,10.099-0.6 c7.5-6.5,8.375-10,12.75-6.875s5.875,9.75,13.625,9.25s12.75-9,13.75-9.625s4.375-1.875,7,1.25s5.375,8.25,12.875,7.875 s12.625-8.375,12.625-8.375s2.25-3.875,7.25,0.375s7.625,9.75,14.375,8.125C114.739,126.01,115.412,125.902,116.223,125.064z"
+        d: "M116.223,125.064c1.032-1.183,1.323-2.73,1.391-3.747V54.76c0,0-4.625-34.875-36.125-44.375\r s-66,6.625-72.125,44l-0.781,63.219c0.062,4.197,1.105,6.177,1.808,7.006c1.94,1.811,5.408,3.465,10.099-0.6\r c7.5-6.5,8.375-10,12.75-6.875s5.875,9.75,13.625,9.25s12.75-9,13.75-9.625s4.375-1.875,7,1.25s5.375,8.25,12.875,7.875\r s12.625-8.375,12.625-8.375s2.25-3.875,7.25,0.375s7.625,9.75,14.375,8.125C114.739,126.01,115.412,125.902,116.223,125.064z"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("circle", {
         fill: "#013E51",
         cx: "86.238",
@@ -46923,7 +47008,7 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
         r: "6.667"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
         fill: "#013E51",
-        d: "M71.916,62.782c0.05-1.108-0.809-2.046-1.917-2.095c-0.673-0.03-1.28,0.279-1.667,0.771 c-0.758,0.766-2.483,2.235-4.696,2.358c-1.696,0.094-3.438-0.625-5.191-2.137c-0.003-0.003-0.007-0.006-0.011-0.009l0.002,0.005 c-0.332-0.294-0.757-0.488-1.235-0.509c-1.108-0.049-2.046,0.809-2.095,1.917c-0.032,0.724,0.327,1.37,0.887,1.749 c-0.001,0-0.002-0.001-0.003-0.001c2.221,1.871,4.536,2.88,6.912,2.986c0.333,0.014,0.67,0.012,1.007-0.01 c3.163-0.191,5.572-1.942,6.888-3.166l0.452-0.453c0.021-0.019,0.04-0.041,0.06-0.061l0.034-0.034 c-0.007,0.007-0.015,0.014-0.021,0.02C71.666,63.771,71.892,63.307,71.916,62.782z"
+        d: "M71.916,62.782c0.05-1.108-0.809-2.046-1.917-2.095c-0.673-0.03-1.28,0.279-1.667,0.771\r c-0.758,0.766-2.483,2.235-4.696,2.358c-1.696,0.094-3.438-0.625-5.191-2.137c-0.003-0.003-0.007-0.006-0.011-0.009l0.002,0.005\r c-0.332-0.294-0.757-0.488-1.235-0.509c-1.108-0.049-2.046,0.809-2.095,1.917c-0.032,0.724,0.327,1.37,0.887,1.749\r c-0.001,0-0.002-0.001-0.003-0.001c2.221,1.871,4.536,2.88,6.912,2.986c0.333,0.014,0.67,0.012,1.007-0.01\r c3.163-0.191,5.572-1.942,6.888-3.166l0.452-0.453c0.021-0.019,0.04-0.041,0.06-0.061l0.034-0.034\r c-0.007,0.007-0.015,0.014-0.021,0.02C71.666,63.771,71.892,63.307,71.916,62.782z"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("circle", {
         fill: "#FCEFED",
         stroke: "#FEEBE6",
@@ -46963,7 +47048,7 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
         fill: "#FCEFED",
         stroke: "#FEEBE6",
         strokeMiterlimit: "10",
-        d: "M116.279,55.814c-0.021-0.286-2.323-28.744-30.221-41.012 c-7.806-3.433-15.777-5.173-23.691-5.173c-16.889,0-30.283,7.783-37.187,15.067c-9.229,9.736-13.84,26.712-14.191,30.259 l-0.748,62.332c0.149,2.133,1.389,6.167,5.019,6.167c1.891,0,4.074-1.083,6.672-3.311c4.96-4.251,7.424-6.295,9.226-6.295 c1.339,0,2.712,1.213,5.102,3.762c4.121,4.396,7.461,6.355,10.833,6.355c2.713,0,5.311-1.296,7.942-3.962 c3.104-3.145,5.701-5.239,8.285-5.239c2.116,0,4.441,1.421,7.317,4.473c2.638,2.8,5.674,4.219,9.022,4.219 c4.835,0,8.991-2.959,11.27-5.728l0.086-0.104c1.809-2.2,3.237-3.938,5.312-3.938c2.208,0,5.271,1.942,9.359,5.936 c0.54,0.743,3.552,4.674,6.86,4.674c1.37,0,2.559-0.65,3.531-1.932l0.203-0.268L116.279,55.814z M114.281,121.405 c-0.526,0.599-1.096,0.891-1.734,0.891c-2.053,0-4.51-2.82-5.283-3.907l-0.116-0.136c-4.638-4.541-7.975-6.566-10.82-6.566 c-3.021,0-4.884,2.267-6.857,4.667l-0.086,0.104c-1.896,2.307-5.582,4.999-9.725,4.999c-2.775,0-5.322-1.208-7.567-3.59 c-3.325-3.528-6.03-5.102-8.772-5.102c-3.278,0-6.251,2.332-9.708,5.835c-2.236,2.265-4.368,3.366-6.518,3.366 c-2.772,0-5.664-1.765-9.374-5.723c-2.488-2.654-4.29-4.395-6.561-4.395c-2.515,0-5.045,2.077-10.527,6.777 c-2.727,2.337-4.426,2.828-5.37,2.828c-2.662,0-3.017-4.225-3.021-4.225l0.745-62.163c0.332-3.321,4.767-19.625,13.647-28.995 c3.893-4.106,10.387-8.632,18.602-11.504c-0.458,0.503-0.744,1.165-0.744,1.898c0,1.565,1.269,2.833,2.833,2.833 c1.564,0,2.833-1.269,2.833-2.833c0-1.355-0.954-2.485-2.226-2.764c4.419-1.285,9.269-2.074,14.437-2.074 c7.636,0,15.336,1.684,22.887,5.004c26.766,11.771,29.011,39.047,29.027,39.251V121.405z"
+        d: "M116.279,55.814c-0.021-0.286-2.323-28.744-30.221-41.012\r c-7.806-3.433-15.777-5.173-23.691-5.173c-16.889,0-30.283,7.783-37.187,15.067c-9.229,9.736-13.84,26.712-14.191,30.259\r l-0.748,62.332c0.149,2.133,1.389,6.167,5.019,6.167c1.891,0,4.074-1.083,6.672-3.311c4.96-4.251,7.424-6.295,9.226-6.295\r c1.339,0,2.712,1.213,5.102,3.762c4.121,4.396,7.461,6.355,10.833,6.355c2.713,0,5.311-1.296,7.942-3.962\r c3.104-3.145,5.701-5.239,8.285-5.239c2.116,0,4.441,1.421,7.317,4.473c2.638,2.8,5.674,4.219,9.022,4.219\r c4.835,0,8.991-2.959,11.27-5.728l0.086-0.104c1.809-2.2,3.237-3.938,5.312-3.938c2.208,0,5.271,1.942,9.359,5.936\r c0.54,0.743,3.552,4.674,6.86,4.674c1.37,0,2.559-0.65,3.531-1.932l0.203-0.268L116.279,55.814z M114.281,121.405\r c-0.526,0.599-1.096,0.891-1.734,0.891c-2.053,0-4.51-2.82-5.283-3.907l-0.116-0.136c-4.638-4.541-7.975-6.566-10.82-6.566\r c-3.021,0-4.884,2.267-6.857,4.667l-0.086,0.104c-1.896,2.307-5.582,4.999-9.725,4.999c-2.775,0-5.322-1.208-7.567-3.59\r c-3.325-3.528-6.03-5.102-8.772-5.102c-3.278,0-6.251,2.332-9.708,5.835c-2.236,2.265-4.368,3.366-6.518,3.366\r c-2.772,0-5.664-1.765-9.374-5.723c-2.488-2.654-4.29-4.395-6.561-4.395c-2.515,0-5.045,2.077-10.527,6.777\r c-2.727,2.337-4.426,2.828-5.37,2.828c-2.662,0-3.017-4.225-3.021-4.225l0.745-62.163c0.332-3.321,4.767-19.625,13.647-28.995\r c3.893-4.106,10.387-8.632,18.602-11.504c-0.458,0.503-0.744,1.165-0.744,1.898c0,1.565,1.269,2.833,2.833,2.833\r c1.564,0,2.833-1.269,2.833-2.833c0-1.355-0.954-2.485-2.226-2.764c4.419-1.285,9.269-2.074,14.437-2.074\r c7.636,0,15.336,1.684,22.887,5.004c26.766,11.771,29.011,39.047,29.027,39.251V121.405z"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "text-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
@@ -47060,7 +47145,7 @@ var _ref = window.config || {},
     token = _ref.token,
     tagSuggestions = _ref.tagSuggestions;
 
-var interestsList = ["Networking", "Lead generation", "Business matchmaking", "Making contacts", "Selling", "Adding prospects", "Knowledge sharing/gaining", "Product info/demo", "Vendor meeting", "Other"];
+var interestsList = ["Networking", "Lead generation", "Business matchmaking", "Making contacts", "Selling", "Adding prospects", "Knowledge sharing/gaining", "Product info/demo", "Vendor meeting", "Others"];
 var inputRef = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
 
 var EditProfile = /*#__PURE__*/function (_Component) {
@@ -47082,12 +47167,7 @@ var EditProfile = /*#__PURE__*/function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "state", {
       saving: false,
       tags: [],
-      suggestions: tagSuggestions.map(function (i) {
-        return {
-          id: i,
-          text: i
-        };
-      })
+      suggestions: tagSuggestions
     });
 
     _defineProperty(_assertThisInitialized(_this), "saveProfile", function (e) {
@@ -47249,8 +47329,6 @@ var EditProfile = /*#__PURE__*/function (_Component) {
     key: "render",
     //Tags Input Related stuff Ends Here
     value: function render() {
-      var _this3 = this;
-
       var _this$state2 = this.state,
           _this$state2$name = _this$state2.name,
           name = _this$state2$name === void 0 ? '' : _this$state2$name,
@@ -47375,174 +47453,10 @@ var EditProfile = /*#__PURE__*/function (_Component) {
       })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
         className: "mb-3 text-uppercase bg-light p-2"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "mdi mdi-heart mr-1"
-      }), " Interests"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-12"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Select any 4 Technologies of interest"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_3__["ChipSet"], {
-        handleSelect: function handleSelect(tags) {
-          return _this3.updateTagsSelection("tags", tags);
-        },
-        selectedChipIds: tags,
-        filter: true
-      }, suggestions.map(function (chip) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_3__["Chip"], {
-          id: chip.id,
-          key: chip.id,
-          label: chip.text
-        });
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-12"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Who I am looking for?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_3__["ChipSet"], {
-        handleSelect: function handleSelect(tags) {
-          return _this3.updateTagsSelection("looking_for_tags", tags);
-        },
-        selectedChipIds: looking_for_tags,
-        filter: true
-      }, suggestions.map(function (chip) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_3__["Chip"], {
-          id: chip.id,
-          key: chip.id,
-          label: chip.text
-        });
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-12"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Select key areas of interest"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_3__["ChipSet"], {
-        handleSelect: function handleSelect(tags) {
-          return _this3.updateTagsSelection("interests", tags);
-        },
-        selectedChipIds: interests,
-        filter: true
-      }, interestsList.map(function (interest) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_3__["Chip"], {
-          id: interest,
-          key: interest,
-          label: interest
-        });
-      }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-        className: "mb-3 text-uppercase bg-light p-2"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "mdi mdi-office-building mr-1"
       }), " Company Info"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-6"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "companyname"
-      }, "Company Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text",
-        className: "form-control",
-        onChange: this.handleChange,
-        id: "companyname",
-        name: "company_name",
-        value: company_name,
-        placeholder: "Enter company name"
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-6"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "industry"
-      }, "Industry"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-        id: "industry",
-        className: "form-control",
-        value: industry,
-        onChange: this.handleChange,
-        name: "industry"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: ""
-      }, "Choose industry"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Government"
-      }, "Government"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "BFSI"
-      }, "BFSI"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Oil & Gas"
-      }, "Oil & Gas"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Retail"
-      }, "Retail"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Transport & Logistics"
-      }, "Transport & Logistics"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Education"
-      }, "Education"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Healthcare"
-      }, "Healthcare"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Aviation"
-      }, "Aviation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "FMCG"
-      }, "FMCG"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Power and Utilities"
-      }, "Power and Utilities"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Other"
-      }, "Other")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-6"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "cjob_title"
-      }, "Role"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-        id: "cjob_title",
-        className: "form-control",
-        value: job_title,
-        onChange: this.handleChange,
-        name: "job_title"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: ""
-      }, "Your Role"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "CIO"
-      }, "CIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "CXO"
-      }, "CXO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Board Member"
-      }, "Board Member"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Manager"
-      }, "Manager"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Influencer"
-      }, "Influencer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Decision Maker"
-      }, "Decision Maker "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Finance controler"
-      }, "Finance controler"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Entry-level"
-      }, "Entry-level"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Research Professional"
-      }, "Research Professional"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Vendor"
-      }, "Vendor"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "Others"
-      }, "Others")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-6"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "company_size"
-      }, "Company Size"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-        name: "company_size",
-        onChange: this.handleChange,
-        value: company_size,
-        id: "company_size",
-        className: "form-control"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: ""
-      }, "Select Company Size"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "0 - 100"
-      }, "0 - 100"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "100 - 250"
-      }, "100 - 250"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "250 - 500"
-      }, "250 - 500"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "500  - 1000"
-      }, "500  - 1000"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "1000+"
-      }, "1000+")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-md-12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
@@ -48000,6 +47914,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _material_react_chips__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/react-chips */ "./node_modules/@material/react-chips/dist/index.js");
 /* harmony import */ var _material_react_chips__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_react_chips__WEBPACK_IMPORTED_MODULE_1__);
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -48046,6 +47968,8 @@ function ProfileInfo(_ref2) {
       isAdding = _useState4[0],
       setAdding = _useState4[1];
 
+  var usertags = user.tags ? groupArrayOfObjects(_toConsumableArray(user.tags), "tag_group") : null;
+  var userlookingtags = user.looking_for_tags ? groupArrayOfObjects(_toConsumableArray(user.looking_for_tags), "tag_group") : null;
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     // Update the document title using the browser API
     var tooltip = $('.show-email-tooltip');
@@ -48213,6 +48137,14 @@ function ProfileInfo(_ref2) {
     }, isAdding ? "Saving" : "Save to Contact"));
   }
 
+  function groupArrayOfObjects(list, key) {
+    return list.reduce(function (rv, x) {
+      (rv[x[key]] = rv[x[key]] || []).push(x);
+      return rv;
+    }, {});
+  }
+
+  ;
   var isEditable = userId === user.id && typeof edit === "function";
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-box text-center"
@@ -48268,21 +48200,35 @@ function ProfileInfo(_ref2) {
     className: "font-13 text-uppercase mt-3 mb-2"
   }, "My Tags:") : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mt-3"
-  }, user.tags && Array.isArray(user.tags) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_1__["ChipSet"], null, user.tags.map(function (chip) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_1__["Chip"], {
-      id: chip.id,
-      key: chip.id,
-      label: chip.tag
-    });
-  })) : null), isEditable ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+  }, usertags != null ? Object.keys(usertags).map(function (taggroup, i) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+      key: "fragment" + i
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+      className: "font-13 text-uppercase mt-3 mb-2"
+    }, taggroup), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_1__["ChipSet"], null, usertags[taggroup].map(function (chip) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_1__["Chip"], {
+        id: chip.id,
+        key: chip.id,
+        label: chip.tag
+      });
+    })));
+  }) : null), isEditable ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "font-13 text-uppercase mt-3 mb-2"
-  }, "Looking for Tags:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, user.looking_for_tags && Array.isArray(user.looking_for_tags) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_1__["ChipSet"], null, user.looking_for_tags.map(function (chip) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_1__["Chip"], {
-      id: chip.id,
-      key: chip.id,
-      label: chip.tag
-    });
-  })) : null)) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, "Looking for Tags:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, userlookingtags != null ? Object.keys(userlookingtags).map(function (taggroup, i) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+      key: "fg" + i
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+      className: "font-13 text-uppercase mt-3 mb-2"
+    }, taggroup), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_1__["ChipSet"], {
+      key: i + i
+    }, userlookingtags[taggroup].map(function (chip) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_1__["Chip"], {
+        id: chip.id,
+        key: chip.id,
+        label: chip.tag
+      });
+    })));
+  }) : null)) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "social-list list-inline mt-3 mb-0"
   }, user.facebook_link ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list-inline-item"
@@ -48331,7 +48277,7 @@ function ProfileInfo(_ref2) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--7-1!../../../../node_modules/postcss-loader/src??ref--7-2!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/Profile/Components/style.css");
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--5-1!../../../../node_modules/postcss-loader/src??ref--5-2!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/Profile/Components/style.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -48631,14 +48577,14 @@ if (document.getElementById(mountingElement)) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 0:
 /*!*********************************************!*\
   !*** multi ./resources/js/Profile/index.js ***!
   \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/resources/js/Profile/index.js */"./resources/js/Profile/index.js");
+module.exports = __webpack_require__(/*! C:\shubh\NBA\resources\js\Profile\index.js */"./resources/js/Profile/index.js");
 
 
 /***/ })

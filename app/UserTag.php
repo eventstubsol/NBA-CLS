@@ -36,7 +36,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class UserTag extends Model
 {
     use SoftDeletes;
-    protected $fillable = ['tag'];
+    protected $fillable = ['tag',"tag_group"];
 
     public function users(){
         return $this->belongsToMany('\App\User', 'user_tag_links', 'tag_id')->select([

@@ -404,6 +404,18 @@ class UserController extends Controller
             $userQuery->orWhere("company_name", "like", "%" . $request->get("search") . "%");
             //            $userQuery->orWhere("job_title", "like", "%" . $request->get("search") . "%");
         }
+        if ($request->has("tags") && is_iterable($request->get("tags")) && count($request->get("tags")) > 0) {
+            $ids = [];
+             foreach($request->get("tags") as $tagname){
+                if($tagname){
+                    $tag = UserTag::where("tag","like", $tagname)->with("user_id")->first();
+                    foreach ($tag->user_id as $user) {
+                        $ids[] = $user->user_id;
+                    }
+                }
+            }
+            $userQuery->whereIn("id", $ids);
+        }
         if ($request->has("tag") && strlen($request->get("tag")) > 0) {
             $tag = UserTag::where("tag", $request->get("tag"))->with("user_id")->first();
             $ids = [];
