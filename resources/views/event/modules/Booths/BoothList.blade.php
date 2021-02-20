@@ -71,38 +71,42 @@
 
 
 
-        <div title="BakerHostetler" class= "area candidate-booth positioned" style="width: 7%;height: 12%; top: 25%;left: 22%;" data-link="booth/2edd03bf-11c9-46e5-b860-81d4d5370a0b">
+
+
+        <div title="BakerHostetler" class= "area candidate-booth positioned" style="width: 7%;height: 12%; top: 33%;left: 78%;" data-link="booth/2edd03bf-11c9-46e5-b860-81d4d5370a0b">
         </div>
 
-        <div title="Beveridge & Diamond" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 25%;left: 71%;" data-link="booth/6504cb33-70fa-47c5-a334-1e8fa9c3c5fa">
+        <div title="Beveridge & Diamond" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 33%;left: 69%;" data-link="booth/6504cb33-70fa-47c5-a334-1e8fa9c3c5fa">
         </div>
 
-        <div title="Fee, Smith, Sharp & Vitullo LLP" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 25%;    left: 78%;" data-link="booth/5c570b49-5842-4262-97eb-57862ad7f63c">
+        <div title="Fee, Smith, Sharp & Vitullo LLP" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 33%;    left: 60%;" data-link="booth/5c570b49-5842-4262-97eb-57862ad7f63c">
         </div>
 
-        
-
-
-
-
-
-
-
-
-        <div title="Finnegan" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 39%;left: 81%;" data-link="booth/a04a7aea-00a0-4831-8b8e-3de27cab0d87">
+        <div title="Finnegan" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 33%;left: 51%;" data-link="booth/a04a7aea-00a0-4831-8b8e-3de27cab0d87">
         </div>
 
-        <div title="FisherBroyles" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 39%;left: 71%;" data-link="booth/c163539b-a463-4659-b16e-058bd5a06b55">
+        <div title="FisherBroyles" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 33%;left: 41%;" data-link="booth/c163539b-a463-4659-b16e-058bd5a06b55">
         </div>
 
-        <div title="Forman Watkins & Krutz LLP" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 39%;left: 61%;" data-link="booth/59ed373b-8072-4ddd-986b-805d0f7b7356">
+        <div title="Forman Watkins & Krutz LLP" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 33%;left: 31%;" data-link="booth/59ed373b-8072-4ddd-986b-805d0f7b7356">
         </div>
 
-        <div title="Fragomen" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 39%;left: 51%;" data-link="booth/2e20b15c-f0a6-4755-bf6b-4fe6243d207d">
+        <div title="Fragomen" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 33%;left: 23%;" data-link="booth/2e20b15c-f0a6-4755-bf6b-4fe6243d207d">
         </div>
 
-        <div title="GaffneyLewis LLC" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 39%;left: 41%;" data-link="booth/6aa04121-eaf6-4a34-9702-c5ee144ff936">
+        <div title="GaffneyLewis LLC" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 33%;left: 13%;" data-link="booth/6aa04121-eaf6-4a34-9702-c5ee144ff936">
         </div>
+
+
+
+
+
+
+
+
+
+
+
 
         <div title="Garrison, Yount Forte & Mulcahy, LLC" class= "area candidate-booth positioned" style="width: 7%;height: 12%;top: 39%;    left: 31%;" data-link="booth/85f0c541-35e6-45fc-9731-f611c07258d1">
         </div>
