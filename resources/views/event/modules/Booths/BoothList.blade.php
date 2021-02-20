@@ -3,7 +3,7 @@
 {{--        @continue--}}
 {{--    @endif--}}
 {{--    <div class="page booths" id="room-{{ $room->id }}">--}}
-{{--        <img src="{{ assetUrl(getField($room->type)) }}" class="positioned booth-bg" alt="">--}}
+{{--        <img src="{{ assetUrl(getField($room->type)) }}" class="positioned booth-bg" alt="">--}} 
 {{--        <h2>{{ $room->name }} - Booths {{$room->type}}</h2>--}}
 {{--        <div class="booths position-relative" style="padding:10%;">--}}
 {{--            @foreach($room->booths as $booth)--}}
