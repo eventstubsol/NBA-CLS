@@ -163,10 +163,10 @@
         
        <a class="area" data-link="lobby"><div title="lobby" class= "area candidate-booth positioned" style="width: 12%;  height: 9%;   top: 12%;  left: 43%; ">
         </div></a>
-        <a class="area" data-link="infodesk"><div title="infodesk" class= "area candidate-booth positioned" style="width: 8%;  height: 10%;   top: 21%;  left: 34%; " data-link="booth/97b0ef6f-1d60-462f-9e8a-abe4f14924aa">
-        </div></a>
-        <a class="area" data-link="infodesk"><div title="infodesk" class= "area candidate-booth positioned" style="width: 8%;  height: 10%;   top: 21%;  left: 55%; " data-link="booth/97b0ef6f-1d60-462f-9e8a-abe4f14924aa">
-        </div></a>
+        <div title="infodesk" class= "area candidate-booth positioned" style="width: 8%;  height: 10%;   top: 21%;  left: 34%; " data-link="infodesk">
+        </div>
+        <div title="infodesk" class= "area candidate-booth positioned" style="width: 8%;  height: 10%;   top: 21%;  left: 55%; " data-link="infodesk">
+        </div>
          {!! getScavengerItems("room1") !!} 
      </div> 
  </div> 
