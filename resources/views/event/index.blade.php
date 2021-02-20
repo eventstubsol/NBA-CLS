@@ -536,6 +536,7 @@ $user = Auth::user();
         attendeesURL: '{{ route("attendeesURL") }}',
         company_sizes: {!! json_encode(getFilters("company_size")) !!},
         geography: {!! json_encode(getFilters("Geography")) !!},
+        others: {!! json_encode(getFilters("Others (MBA)")) !!},
         practice_areas: {!! json_encode(getFilters("Practice Areas")) !!},
         cetrifications: {!! json_encode(getFilters("Cetrifications")) !!},
         firm_size: {!! json_encode(getFilters("Firm Size")) !!},

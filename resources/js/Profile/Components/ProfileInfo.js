@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import {ChipSet, Chip} from '@material/react-chips';
 
 const {
@@ -205,9 +205,9 @@ function ProfileInfo({ user, refresh = false, edit = false, updateStatus = false
                      usertags !=null ? 
                         Object.keys(usertags).map((taggroup,i) =>
                         {
-                            return <>
-                                <h4 className="font-13 text-uppercase mt-3 mb-2" id={i} key={taggroup}>{taggroup}</h4>
-                                <ChipSet key={i}>
+                            return <Fragment key={"fragment"+i}>
+                                <h4 className="font-13 text-uppercase mt-3 mb-2">{taggroup}</h4>
+                                <ChipSet>
                             {
                                 usertags[taggroup].map((chip)=>
                                      <Chip
@@ -219,7 +219,7 @@ function ProfileInfo({ user, refresh = false, edit = false, updateStatus = false
                             
                         }
                         </ChipSet>
-                            </>
+                            </Fragment >
                         }
                             )
                         
@@ -236,9 +236,9 @@ function ProfileInfo({ user, refresh = false, edit = false, updateStatus = false
                                 userlookingtags != null ? 
                                 Object.keys(userlookingtags).map((taggroup,i) =>
                                 {
-                                    return <>
-                                        <h4 className="font-13 text-uppercase mt-3 mb-2" id={i} key={taggroup}>{taggroup}</h4>
-                                        <ChipSet key={i}>
+                                    return <Fragment key={"fg"+i} >
+                                        <h4 className="font-13 text-uppercase mt-3 mb-2" >{taggroup}</h4>
+                                        <ChipSet key={i+i}>
                                     {
                                         userlookingtags[taggroup].map((chip)=>
                                              <Chip
@@ -250,7 +250,7 @@ function ProfileInfo({ user, refresh = false, edit = false, updateStatus = false
                                     
                                 }
                                 </ChipSet>
-                                    </>
+                                    </Fragment>
                                 }
                                     )
                                  : null

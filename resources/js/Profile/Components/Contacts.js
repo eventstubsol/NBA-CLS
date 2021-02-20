@@ -18,6 +18,7 @@ const {
     cetrifications,
     firm_size,
     ownership,
+    others,
 } = window.config || {};
 
 const recordEvent = window.recordEvent;
@@ -77,7 +78,7 @@ class Contacts extends Component{
                     <AttendeeList showSearch={false} editProfile={this.props.editProfile} url={suggestedContactsURL} />
                 </div>
                 <div className="tab-pane" id="attendees">
-                    <AttendeeList url={attendeesURL}  company_sizes={company_sizes} mytags={mytags} geography={geography} practice_areas={practice_areas} cetrifications={cetrifications} firm_size={firm_size} ownership={ownership}/>
+                    <AttendeeList url={attendeesURL}  company_sizes={company_sizes} mytags={mytags} geography={geography} practice_areas={practice_areas} cetrifications={cetrifications} firm_size={firm_size} ownership={ownership} others={others}/>
                 </div>
                 <div className="tab-pane" id="my-contacts">
                     <AttendeeList allowExport={true} url={savedContactsURL} showOnlyContacts={true} />
@@ -154,6 +155,7 @@ class AttendeeList extends Component{
             Firm_Size ,
             Ownership,
             Practice,
+            Others
         } = this.state;
         if(!isRefresh){
             this.setState({
@@ -187,6 +189,9 @@ class AttendeeList extends Component{
         }
         if(Geography){
             q.tags.push(Geography);
+        }
+        if(Others){
+            q.tags.push(Others);
         }
         if(Cetrifications){
             q.tags.push(Cetrifications);
@@ -323,6 +328,7 @@ class AttendeeList extends Component{
             Geography,
             Practice,
             Cetrifications,
+            Others,
 
         } = this.state;
         const {
@@ -333,7 +339,8 @@ class AttendeeList extends Component{
             ownership = [],
             practice_areas = [],
             geography=[],
-            cetrifications=[]
+            cetrifications=[],
+            others=[],
         } = this.props;
         const offset = per_page * (page - 1);
         let toShow = 5;
@@ -419,7 +426,17 @@ class AttendeeList extends Component{
                                             <label>Geography</label>
                                             <select className="custom-select" onChange={e => this.handleTagSelect(e,"Geography")} value={Geography}>
                                                 <option value="">Geography</option>
-                                                {  geography ? geography.map(tag=>tag.tag ? <option value={tag.tag}>{tag.tag}</option> : null)
+                                                {  geography ? geography.map(tag=>tag.tag ? <option key={tag.tag} value={tag.tag}>{tag.tag}</option> : null)
+                                                : null }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6 mb-2">
+                                        <div className="form-group m-0">
+                                            <label>Others (MBA)</label>
+                                            <select className="custom-select" onChange={e => this.handleTagSelect(e,"Others")} value={Others}>
+                                                <option value="">Others</option>
+                                                {  others ? others.map(tag=>tag.tag ? <option key={tag.tag} value={tag.tag}>{tag.tag}</option> : null)
                                                 : null }
                                             </select>
                                         </div>
@@ -429,7 +446,7 @@ class AttendeeList extends Component{
                                             <label>Cetrifications</label>
                                             <select className="custom-select" onChange={e => this.handleTagSelect(e,"Cetrifications")} value={Cetrifications}>
                                                 <option value="">Cetrifications</option>
-                                                {  cetrifications ? cetrifications.map(tag=>tag.tag ? <option value={tag.tag}>{tag.tag}</option> : null)
+                                                {  cetrifications ? cetrifications.map(tag=>tag.tag ? <option key={tag.tag} value={tag.tag}>{tag.tag}</option> : null)
                                                 : null }
                                             </select>
                                         </div>
@@ -439,7 +456,7 @@ class AttendeeList extends Component{
                                             <label>Firm_Size</label>
                                             <select className="custom-select" onChange={e => this.handleTagSelect(e,"Firm_Size")} value={Firm_Size}>
                                                 <option value="">Firm Size</option>
-                                                {  firm_size ? firm_size.map(tag=>tag.tag ? <option value={tag.tag}>{tag.tag}</option> : null)
+                                                {  firm_size ? firm_size.map(tag=>tag.tag ? <option key={tag.tag} value={tag.tag}>{tag.tag}</option> : null)
                                                 : null }
                                             </select>
                                         </div>
@@ -449,7 +466,7 @@ class AttendeeList extends Component{
                                             <label>Ownership</label>
                                             <select className="custom-select" onChange={e => this.handleTagSelect(e,"Ownership")} value={Ownership}>
                                                 <option value="">Ownership</option>
-                                                {  ownership ? ownership.map(tag=>tag.tag ? <option value={tag.tag}>{tag.tag}</option> : null)
+                                                {  ownership ? ownership.map(tag=>tag.tag ? <option key={tag.tag} value={tag.tag}>{tag.tag}</option> : null)
                                                 : null }
                                             </select>
                                         </div>
@@ -459,7 +476,7 @@ class AttendeeList extends Component{
                                             <label>Practice Areas</label>
                                             <select className="custom-select" onChange={e => this.handleTagSelect(e,"Practice")} value={Practice}>
                                                 <option value="">Practice Areas</option>
-                                                {  practice_areas ? practice_areas.map(tag=>tag.tag ? <option value={tag.tag}>{tag.tag}</option> : null)
+                                                {  practice_areas ? practice_areas.map(tag=>tag.tag ? <option key={tag.tag} value={tag.tag}>{tag.tag}</option> : null)
                                                 : null }
                                             </select>
                                         </div>

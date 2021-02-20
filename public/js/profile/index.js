@@ -46296,7 +46296,8 @@ var _ref = window.config || {},
     practice_areas = _ref.practice_areas,
     cetrifications = _ref.cetrifications,
     firm_size = _ref.firm_size,
-    ownership = _ref.ownership;
+    ownership = _ref.ownership,
+    others = _ref.others;
 
 var recordEvent = window.recordEvent;
 
@@ -46399,7 +46400,8 @@ var Contacts = /*#__PURE__*/function (_Component) {
         practice_areas: practice_areas,
         cetrifications: cetrifications,
         firm_size: firm_size,
-        ownership: ownership
+        ownership: ownership,
+        others: others
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "tab-pane",
         id: "my-contacts"
@@ -46512,7 +46514,8 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
           Cetrifications = _this2$state.Cetrifications,
           Firm_Size = _this2$state.Firm_Size,
           Ownership = _this2$state.Ownership,
-          Practice = _this2$state.Practice;
+          Practice = _this2$state.Practice,
+          Others = _this2$state.Others;
 
       if (!isRefresh) {
         _this2.setState({
@@ -46553,6 +46556,10 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
 
       if (Geography) {
         q.tags.push(Geography);
+      }
+
+      if (Others) {
+        q.tags.push(Others);
       }
 
       if (Cetrifications) {
@@ -46712,7 +46719,8 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
           Ownership = _this$state.Ownership,
           Geography = _this$state.Geography,
           Practice = _this$state.Practice,
-          Cetrifications = _this$state.Cetrifications;
+          Cetrifications = _this$state.Cetrifications,
+          Others = _this$state.Others;
       var _this$props = this.props,
           _this$props$showSearc = _this$props.showSearch,
           showSearch = _this$props$showSearc === void 0 ? true : _this$props$showSearc,
@@ -46729,7 +46737,9 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
           _this$props$geography = _this$props.geography,
           geography = _this$props$geography === void 0 ? [] : _this$props$geography,
           _this$props$cetrifica = _this$props.cetrifications,
-          cetrifications = _this$props$cetrifica === void 0 ? [] : _this$props$cetrifica;
+          cetrifications = _this$props$cetrifica === void 0 ? [] : _this$props$cetrifica,
+          _this$props$others = _this$props.others,
+          others = _this$props$others === void 0 ? [] : _this$props$others;
       var offset = per_page * (page - 1);
       var toShow = 5;
       var startFrom = 1;
@@ -46775,6 +46785,24 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
         value: ""
       }, "Geography"), geography ? geography.map(function (tag) {
         return tag.tag ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          key: tag.tag,
+          value: tag.tag
+        }, tag.tag) : null;
+      }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-lg-6 mb-2"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group m-0"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Others (MBA)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+        className: "custom-select",
+        onChange: function onChange(e) {
+          return _this4.handleTagSelect(e, "Others");
+        },
+        value: Others
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: ""
+      }, "Others"), others ? others.map(function (tag) {
+        return tag.tag ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          key: tag.tag,
           value: tag.tag
         }, tag.tag) : null;
       }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -46791,6 +46819,7 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
         value: ""
       }, "Cetrifications"), cetrifications ? cetrifications.map(function (tag) {
         return tag.tag ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          key: tag.tag,
           value: tag.tag
         }, tag.tag) : null;
       }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -46807,6 +46836,7 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
         value: ""
       }, "Firm Size"), firm_size ? firm_size.map(function (tag) {
         return tag.tag ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          key: tag.tag,
           value: tag.tag
         }, tag.tag) : null;
       }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -46823,6 +46853,7 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
         value: ""
       }, "Ownership"), ownership ? ownership.map(function (tag) {
         return tag.tag ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          key: tag.tag,
           value: tag.tag
         }, tag.tag) : null;
       }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -46839,6 +46870,7 @@ var AttendeeList = /*#__PURE__*/function (_Component2) {
         value: ""
       }, "Practice Areas"), practice_areas ? practice_areas.map(function (tag) {
         return tag.tag ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          key: tag.tag,
           value: tag.tag
         }, tag.tag) : null;
       }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -48169,13 +48201,11 @@ function ProfileInfo(_ref2) {
   }, "My Tags:") : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mt-3"
   }, usertags != null ? Object.keys(usertags).map(function (taggroup, i) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
-      className: "font-13 text-uppercase mt-3 mb-2",
-      id: i,
-      key: taggroup
-    }, taggroup), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_1__["ChipSet"], {
-      key: i
-    }, usertags[taggroup].map(function (chip) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+      key: "fragment" + i
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+      className: "font-13 text-uppercase mt-3 mb-2"
+    }, taggroup), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_1__["ChipSet"], null, usertags[taggroup].map(function (chip) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_1__["Chip"], {
         id: chip.id,
         key: chip.id,
@@ -48185,12 +48215,12 @@ function ProfileInfo(_ref2) {
   }) : null), isEditable ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "font-13 text-uppercase mt-3 mb-2"
   }, "Looking for Tags:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, userlookingtags != null ? Object.keys(userlookingtags).map(function (taggroup, i) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
-      className: "font-13 text-uppercase mt-3 mb-2",
-      id: i,
-      key: taggroup
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+      key: "fg" + i
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+      className: "font-13 text-uppercase mt-3 mb-2"
     }, taggroup), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_1__["ChipSet"], {
-      key: i
+      key: i + i
     }, userlookingtags[taggroup].map(function (chip) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_react_chips__WEBPACK_IMPORTED_MODULE_1__["Chip"], {
         id: chip.id,
