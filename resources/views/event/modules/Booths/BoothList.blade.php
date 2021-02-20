@@ -51,9 +51,9 @@
         </div>
        <div title="Bowman and Brooke LLP" class= "area candidate-booth positioned" style="width: 7%; height: 14%; top: 47%; left: 69%;" data-link="booth/d07859ae-ee57-4336-b808-cfc5a54457ff">
         </div>
-       <div title="Bradley Arant Boult Cummings LLP" class= "area candidate-booth positioned" style="width: 14%; height: 47%; top: 57%; left: 46%;" data-link="booth/a62bd00e-b182-481b-a298-b49a9c6c7de4">
+       <div title="Bradley Arant Boult Cummings LLP" class= "area candidate-booth positioned" style="width:7%; height:14%; top: 47%; left: 46%;" data-link="booth/a62bd00e-b182-481b-a298-b49a9c6c7de4">
         </div>
-       <div title="GreenbergTraurig" class= "area candidate-booth positioned" style="width: 7%; height: 14%; top: 47%; left: 46%;" data-link="booth/45f94fcf-c355-4f36-8f0b-b91b7eb73d40">
+       <div title="GreenbergTraurig" class= "area candidate-booth positioned" style="width: 7%; height: 14%; top: 47%; left: 57%;" data-link="booth/45f94fcf-c355-4f36-8f0b-b91b7eb73d40">
         </div>
        <div title="Hamilton, Milller & Birthisel" class= "area candidate-booth positioned" style="width: 7%; height: 14%; top: 47%; left: 34%;" data-link="booth/571f902e-1c21-4559-96eb-52045a0993f3">
         </div>
