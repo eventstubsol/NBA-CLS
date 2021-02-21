@@ -6,7 +6,7 @@
 </a>
 <div class="rightbar-overlay"></div>
 @endif
-<div id="cometchat"></div>
+<div id="cometchatnew"></div>
 <div class="consent-notification hide-on-exterior">
     <h4>Subscribe to Notifications.</h4>
     <p>We'll send you  notifications about the event, chats and other cool stuff. Sounds good?</p>
@@ -32,7 +32,9 @@
             }).then(response => {
                 CometChatWidget.launch({
                     "widgetID": "{{env('COMET_WIDGET_ID')}}",
-                    "target": "#cometchat",
+                    "target": "custom-theme",
+                    "docked": "true",
+                    "alignment": "right", //left or right
                     "roundedCorners": "true",
                     "height": "600px",
                     "width": "800px",
