@@ -20,9 +20,9 @@
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
         CometChatWidget.init({
-            "appID": "env('COMET_CHAT_APP_ID')",
-            "appRegion": "env('COMET_CHAT_REGION')" ,
-            "authKey": " env('COMET_CHAT_AUTH_KEY')"
+            "appID": "{{env('COMET_CHAT_APP_ID')}}",
+            "appRegion": "{{env('COMET_CHAT_REGION')}}",
+            "authKey": "{{env('COMET_CHAT_AUTH_KEY')}}"
         }).then(response => {
             console.log("Initialization completed successfully");
             console.log('{{$user->id}}');
@@ -31,7 +31,7 @@
                 "uid": "{{ $user->id }}"
             }).then(response => {
                 CometChatWidget.launch({
-                    "widgetID": " env('COMET_WIDGET_ID')",
+                    "widgetID": "{{env('COMET_WIDGET_ID')}}",
                     "target": "#cometchat",
                     "roundedCorners": "true",
                     "height": "600px",
