@@ -30,7 +30,7 @@ define("LOBBY_AREAS", [
         "title" => "welcome",
         "area" =>[ 56,54.5,6.5,8],
         "class" => "txt-white",
-        "videoEmbed" => "https://vimeo.com/514564783",
+        "videoEmbed" => "https://vimeo.com/515024188",
     ],
 //    "Photobooth" => [
 //        "title" => "photobooth",
