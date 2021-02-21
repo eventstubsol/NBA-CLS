@@ -226,6 +226,7 @@ function initApp(){
         $("body").removeClass("right-bar-enabled"); //Hide Chat modal
         $("#chat-toggle").show();
         window.scrollTo(0, 0);
+        CometChatWidget.chatWithGroup('public-chat');
         $('.YouTubePopUp-Wrap, .YouTubePopUp-Close').click();
         if($('.page:visible').hasClass('menu-filled')){
             $('.navbar-custom.theme-nav').addClass('filled')
@@ -515,6 +516,7 @@ function initApp(){
             pages.hide();
             let page = pages.filter("#lounge-page").show();
             $("#chat-container").addClass("in-lounge");
+            CometChatWidget.chatWithUser(window.config.supportChatUser);
             $("body").addClass("in-lounge").addClass("right-bar-enabled");
             pageChangeActions();
             recordPageView("lounge", "Lounge");
