@@ -618,7 +618,7 @@ function initApp(){
                 type: room+"_visit"
             });
             createGroup(room);
-            console.log("room created")
+            CometChatWidget.chatWithGroup(room);
             pageChangeActions();
             const loadContent = () => {
                 $("#session-content-"+room).empty().append(`<iframe frameborder="0"  class="positioned fill" src="${window.config.auditoriumEmbed}?type=${room}"></iframe>`);
