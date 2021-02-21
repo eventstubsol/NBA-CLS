@@ -253,11 +253,35 @@ class EventController extends Controller
                             // $multipletags = explode(",", $tag);
                             $multipletags = explode(",",$tag);
                             foreach($multipletags as $innertag){
-                                $existingTag = UserTag::where("tag", "like", $innertag)->first();
-                                if (!$existingTag) {
+                                if($innertag && $innertag !=="" && $innertag !==" "){
+
+                                    $existingTag = UserTag::where("tag", "like", $innertag)->first();
+                                    if (!$existingTag) {
+                                        $user->tags()->create([
+                                            "tag" =>  str_replace(".",",",$innertag),
+                                            "tag_group" => str_replace("*","",$index) 
+                                            ]);
+                                    } else {
+                                            if(!UserTagLinks::where([
+                                                'tag_id' => $existingTag->id,
+                                                'user_id' => $user->id
+                                                ])->first()){
+                                                UserTagLinks::create([
+                                                    'tag_id' => $existingTag->id,
+                                                    'user_id' => $user->id
+                                                    ]);
+                                            }
+                                        }
+                                }
+                            }
+                        }else{
+                            $existingTag = UserTag::where("tag", "like", $tag)->first();
+                            if (!$existingTag) {
+                                if($tag && $tag !=="" && $tag !==" "){
+
                                     $user->tags()->create([
-                                        "tag" => $innertag,
-                                        "tag_group" => str_replace("*","",$index) 
+                                        "tag" => $tag,
+                                        "tag_group" => $index
                                     ]);
                                 } else {
                                     UserTagLinks::create([
@@ -265,19 +289,6 @@ class EventController extends Controller
                                         'user_id' => $user->id
                                     ]);
                                 }
-                            }
-                        }else{
-                            $existingTag = UserTag::where("tag", "like", $tag)->first();
-                            if (!$existingTag) {
-                                $user->tags()->create([
-                                    "tag" => $tag,
-                                    "tag_group" => $index
-                                ]);
-                            } else {
-                                UserTagLinks::create([
-                                    'tag_id' => $existingTag->id,
-                                    'user_id' => $user->id
-                                ]);
                             }
                         }  
                     }
