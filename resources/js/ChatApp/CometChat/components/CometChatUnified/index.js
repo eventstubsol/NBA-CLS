@@ -9,6 +9,7 @@ import CometChatMessageListScreen from "../CometChatMessageListScreen";
 import CometChatUserDetail from "../CometChatUserDetail";
 import CometChatGroupDetail from "../CometChatGroupDetail";
 import {SvgAvatar} from "../../util/svgavatar";
+import { replace } from "lodash";
 
 let chatOpeningFunction;
 let openChat = (which) => {
@@ -70,6 +71,16 @@ class CometChatUnified extends React.Component {
         if(room.length == 2){
           room[1] = room[1].replace("%20", " ");
           this.fetchBoothChat(room[1], window.config.roomNames[room[1]]);
+          // this.fetchBoothChat("workshop", "Workshop");          
+        }
+    }else if(hash.startsWith("#sessionroom/")){
+        let room = hash.split("/");
+        console.log(room);
+        if(room.length == 2){
+          room[1] = room[1].replace("%20", " ");
+          let roomNames  = room[1].split("_");
+          roomNames =   roomNames.map(roomName=>roomName[0] ? roomName[0].toUpperCase()+roomName.substr(1) : null);
+          this.fetchBoothChat(room[1],roomNames);
           // this.fetchBoothChat("workshop", "Workshop");          
         }
     }

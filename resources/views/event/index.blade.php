@@ -264,6 +264,10 @@ $user = Auth::user();
                     background: none !important;
             } 
 
+            #chat-toggle{
+                display: none !important;
+            }
+
 
         </style>
     {{--    App favicon--}}
@@ -487,6 +491,7 @@ $user = Auth::user();
     @include("event.modules.ArchiveVideos")
 
     @include("event.modules.ByLaws")
+    <script defer src="https://widget-js.cometchat.io/v2/cometchatwidget.js"></script>
 
     <script>
         

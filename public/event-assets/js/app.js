@@ -617,7 +617,8 @@ function initApp(){
             trackEvent({
                 type: room+"_visit"
             });
-            // createGroup(room);
+            createGroup(room);
+            console.log("room created")
             pageChangeActions();
             const loadContent = () => {
                 $("#session-content-"+room).empty().append(`<iframe frameborder="0"  class="positioned fill" src="${window.config.auditoriumEmbed}?type=${room}"></iframe>`);

@@ -255,7 +255,7 @@ class EventController extends Controller
                             foreach($multipletags as $innertag){
                                 if($innertag && $innertag !=="" && $innertag !==" "){
 
-                                    $existingTag = UserTag::where("tag", "like", $innertag)->first();
+                                    $existingTag = UserTag::where("tag", "like", str_replace(".",",",$innertag))->first();
                                     if (!$existingTag) {
                                         $user->tags()->create([
                                             "tag" =>  str_replace(".",",",$innertag),
@@ -275,22 +275,27 @@ class EventController extends Controller
                                 }
                             }
                         }else{
-                            $existingTag = UserTag::where("tag", "like", $tag)->first();
-                            if (!$existingTag) {
-                                if($tag && $tag !=="" && $tag !==" "){
-
-                                    $user->tags()->create([
-                                        "tag" => $tag,
-                                        "tag_group" => $index
-                                    ]);
-                                } else {
-                                    UserTagLinks::create([
-                                        'tag_id' => $existingTag->id,
-                                        'user_id' => $user->id
-                                    ]);
+                            if($tag && $tag !=="" && $tag !==" "){
+                              
+                                    $existingTag = UserTag::where("tag", "like", str_replace(".",",",$tag))->first();
+                                    if (!$existingTag) {
+                                        $user->tags()->create([
+                                            "tag" =>  str_replace(".",",",$tag),
+                                            "tag_group" => str_replace("*","",$index) 
+                                            ]);
+                                    } else {
+                                            if(!UserTagLinks::where([
+                                                'tag_id' => $existingTag->id,
+                                                'user_id' => $user->id
+                                                ])->first()){
+                                                UserTagLinks::create([
+                                                    'tag_id' => $existingTag->id,
+                                                    'user_id' => $user->id
+                                                    ]);
+                                            }
+                                        }
                                 }
-                            }
-                        }  
+                        }
                     }
                 }
             }
@@ -309,41 +314,56 @@ class EventController extends Controller
                  }else{
                     $email = $tags['email'];
                     $user = User::where('email',$email)->first();
+                    if($tag && $tag !=="" && $tag !==" "){
+
                     // return ["success"=>true ,"index"=>$index];
-                    if(isset($user->id)){
-                        if(strpos($index,"*"))
-                        {
-                            // $multipletags = explode(",", $tag);
-                            $multipletags = explode(",",$tag);
-                            foreach($multipletags as $innertag){
-                                $existingTag = UserTag::where("tag", "like", $innertag)->first();
-                                if (!$existingTag) {
-                                    $user->looking_for_tags()->create([
-                                        "tag" => $innertag,
-                                        "tag_group" => str_replace("*","",$index) 
-                                    ]);
-                                } else {
-                                    UserLookingTagLinks::create([
-                                        'tag_id' => $existingTag->id,
-                                        'user_id' => $user->id
-                                    ]);
+                        if(isset($user->id)){
+                            if(strpos($index,"*"))
+                            {
+                                // $multipletags = explode(",", $tag);
+                                $multipletags = explode(",",$tag);
+                                foreach($multipletags as $innertag){
+                                    $existingTag = UserTag::where("tag", "like", str_replace(".",",",$innertag))->first();
+                                       if (!$existingTag) {
+                                            $user->looking_for_tags()->create([
+                                                "tag" =>  str_replace(".",",",$innertag),
+                                                "tag_group" => str_replace("*","",$index) 
+                                                ]);
+                                        } else {
+                                                if(!UserLookingTagLinks::where([
+                                                    'tag_id' => $existingTag->id,
+                                                    'user_id' => $user->id
+                                                    ])->first()){
+                                                    UserLookingTagLinks::create([
+                                                        'tag_id' => $existingTag->id,
+                                                        'user_id' => $user->id
+                                                        ]);
+                                                }
+                                            }
                                 }
-                            }
-                        }else{
-                            $existingTag = UserTag::where("tag", "like", $tag)->first();
-                            if (!$existingTag) {
-                                $user->looking_for_tags()->create([
-                                    "tag" => $tag,
-                                    "tag_group" => $index
-                                ]);
-                            } else {
-                                UserLookingTagLinks::create([
-                                    'tag_id' => $existingTag->id,
-                                    'user_id' => $user->id
-                                ]);
-                            }
-                        }  
+                            }else{
+                                $existingTag = UserTag::where("tag", "like", $tag)->first();
+                                  $existingTag = UserTag::where("tag", "like", str_replace(".",",",$tag))->first();
+                                    if (!$existingTag) {
+                                        $user->looking_for_tags()->create([
+                                            "tag" =>  str_replace(".",",",$tag),
+                                            "tag_group" => str_replace("*","",$index) 
+                                            ]);
+                                    } else {
+                                            if(!UserLookingTagLinks::where([
+                                                'tag_id' => $existingTag->id,
+                                                'user_id' => $user->id
+                                                ])->first()){
+                                                UserLookingTagLinks::create([
+                                                    'tag_id' => $existingTag->id,
+                                                    'user_id' => $user->id
+                                                    ]);
+                                            }
+                                        }
+                            }  
+                        }
                     }
+
                 }
             }
         }
