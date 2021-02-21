@@ -45,7 +45,7 @@ define("LOBBY_AREAS", [
     "InfoDesk" => [
         "title" => "infodesk",
         "link"=> "infodesk",
-        "area" =>[ 65,36.5,27,12],
+        "area" =>[ 68,37,26,9],
     ],
     "Lounge" => [
         "title" => "Lounge",
