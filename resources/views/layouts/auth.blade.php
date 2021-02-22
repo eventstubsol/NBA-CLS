@@ -80,7 +80,7 @@
                         <img src="{{assetUrl(getField('logo'))}}" alt="BGICC" class="img-responsive">
                     </a>
                     <p class="hidden-v" style="font-size:13px">
-                    Disclaimer: For an immersive experience please login to the platform using a Laptop/PC/Desktop and one of the following browsers only  <a href="https://www.google.com/chrome/">Google Chrome</a>, Mozilla Firefox, Internet Explorer Edge.<br/>Although the Virtual Event Platform has been developed to work on all devices however, users may experience issues using a mobile phone and tablets.  If you experience any issues kindly switch to a Laptop/PC/Desktop using one of the following browsers - Google Chrome, Mozilla Firefox, Internet Explorer Edge.</p>
+                    Disclaimer: For an immersive experience, please log onto the platform using a PC (desktop or laptop) and one of the following browsers: Google Chrome, Mozilla Firefox, Microsoft Edge. Although the Virtual Event Platform has been developed to work on all devices, users may experience issues using a mobile phone. If you experience any issues, kindly switch to a PC.
                     <p class="mb-0 hidden-v">@yield('subtitle-text')</p>
                 </div>
                 <div class="form">

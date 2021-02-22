@@ -272,8 +272,13 @@ $user = Auth::user();
                 bottom: 0;
                 left: 13px;
                 cursor: pointer;
-                height: 5%;
+                height: 10%;
+                font-weight: 700;
                 background: white;
+            }
+            .card-box.text-center .main-heading{
+                font-size: 18px;
+                font-weight: 900;
             }
 
             .custom-navpills .nav-link{
