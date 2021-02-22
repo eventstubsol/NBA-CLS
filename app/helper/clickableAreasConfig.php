@@ -43,7 +43,7 @@ define("LOBBY_AREAS", [
 //        "area" => [ 39.5, 65.5, 14.5, 13] , //In Percentage
 //    ],
     "InfoDesk" => [
-        "title" => "infodesk",
+        "title" => "infodesk ranjeet",
         "link"=> "infodesk",
         "area" =>[ 68,37,26,9],
     ],
