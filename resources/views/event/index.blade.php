@@ -453,9 +453,9 @@ $user = Auth::user();
     @include("event.modules.Menubar")
     @include("event.modules.Sidebar")
 
-{{--    @if(isOpenForPublic("photo-booth"))--}}
-{{--    @include("event.modules.Booths.PhotoBooth")--}}
-{{--    @endif  --}}
+   @if(isOpenForPublic("photo-booth"))
+    @include("event.modules.Booths.PhotoBooth")
+    @endif  
 
     @if(isOpenForPublic("library"))
     @include("event.modules.Resources")
