@@ -32,7 +32,7 @@
             }).then(response => {
                 CometChatWidget.launch({
                     "widgetID": "{{env('COMET_WIDGET_ID')}}",
-                    "target": "custom-theme",
+                    "target": "#chat_div",
                     "docked": "true",
                     "alignment": "right", //left or right
                     "roundedCorners": "true",
