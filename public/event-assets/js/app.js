@@ -237,7 +237,7 @@ $("#unsubscribe-agenda").on("click", function(e){
 
 
     function pageChangeActions(){
-        $(".cometchat__widget").show();
+        $("#cometchat__widget").show();
         currentresbtns = null;
         // window.$socket.emit("update_page", window.location.hash.substr(1));
         loader.hide();
@@ -501,7 +501,7 @@ $("#unsubscribe-agenda").on("click", function(e){
         },
         'exterior': function() {
             pages.hide();
-            $(".cometchat__widget").hide();
+            $("#cometchat__widget").hide();
             navs.addClass('hidden');
             pages.filter(".initial").show();
             if(!isMobile()){
@@ -652,7 +652,7 @@ $("#unsubscribe-agenda").on("click", function(e){
             CometChatWidget.chatWithGroup(room);
             pageChangeActions();
             if(! (room==="Auditorium"||room==="auditorium")){
-                $(".cometchat__widget").style.display = 'none';
+                $("#cometchat__widget").style.display = 'none';
             }
             const loadContent = () => {
                 $("#session-content-"+room).empty().append(`<iframe frameborder="0"  class="positioned fill" src="${window.config.auditoriumEmbed}?type=${room}"></iframe>`);
