@@ -267,7 +267,9 @@ $user = Auth::user();
             #chat-toggle{
                 display: none !important;
             }
-
+            .app__messenger{
+                min-height: 0 !important;
+            }
 
         </style>
     {{--    App favicon--}}
