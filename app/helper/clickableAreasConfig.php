@@ -70,11 +70,16 @@ define("LOBBY_AREAS", [
 ]);
 
 define("LOUNGE_AREAS", [
-    "InfoDesk" => [
-        "title" => "infodesk",
-        "link"=> "infodesk",
+    "MeetTitle" => [
+        "title" => "MeetTitleToolTip",
+        "zoom_url"=> "zoom_url_here",
         "area" =>[ 48,23.5,52,20],
-    ]
+    ],
+    "EnterTainmentRoom" => [
+        "title" => "Entertainment Room",
+        "link" => "sessionroom/Entertainment_Room",
+        "area" => [ 54, 45.5, 9.5, 12] , //In Percentage
+    ],
 //    "Auditorioum" => [
 //        "title" => "Auditorium",
 //        "link" => "auditorium",

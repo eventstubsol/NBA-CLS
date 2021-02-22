@@ -32,6 +32,8 @@ function initApp(){
     $(".open-support-chat").on("click", function(e){
 
         e.preventDefault();
+        CometChatWidget.chatWithUser(window.config.supportChatUser);
+        CometChatWidget.openOrCloseChat(true);
         openChat(config.cometChat.supportChatUser);
         loader.show();
         setTimeout(() => {
@@ -39,10 +41,18 @@ function initApp(){
             loader.hide();
         }, 750);
     });
+    $("body .open-user-chat").on("click", function(e){
+        e.preventDefault();
+        console.log("reached");
+        const userid = $(this).data("user");
+        CometChatWidget.chatWithUser(userid);
+        CometChatWidget.openOrCloseChat(true);
+    });
 
 
     
     $("#agenda").on("click",function(){
+        
         $.ajax({
             url: window.config.subscription_raw,
             method: "GET",
@@ -52,7 +62,31 @@ function initApp(){
             success: function(data){
                 // alert("done");
                 // console.log(data)
-                $("#agenda-modal").html(data);
+                $("#agenda-modal").html(data);                    
+                    $("#unsubscribe-agenda").on("click", function(e){
+                        console.log("Hello World")
+                        e.preventDefault();
+                        let t = $(this);
+                        t.prop("disabled", true);
+                        if(t.data("id")){
+                            $.ajax({
+                                url: window.config.unsubscribeToEvent.replace("EVENT_ID", t.data("id")),
+                                method: "POST",
+                                data: {
+                                    _token: window.config.token,
+                                },
+                                success: function(){
+                                    // t.parent().find("a").prop("disabled", false).hide().filter(".subscribe-to-event").show();
+                                    t.parent().parent().hide();
+                                    showMessage("Unsubscribed to session. ", "success");
+                                },
+                                error: function(){
+                                    showMessage("Error occurred while disabling session notification. Please try again later or refresh page.", "error");
+                                }
+                            })
+                        }
+                    });
+
             },
             error: function(){
                 showMessage("Error occurred while subscribing to session. Please try again later or refresh page.", "error");
@@ -210,30 +244,6 @@ function initApp(){
         }
     }
 
-    
-$("#unsubscribe-agenda").on("click", function(e){
-    console.log("Hello World")
-    e.preventDefault();
-    let t = $(this);
-    t.prop("disabled", true);
-    if(t.data("id")){
-        $.ajax({
-            url: window.config.unsubscribeToEvent.replace("EVENT_ID", t.data("id")),
-            method: "POST",
-            data: {
-                _token: window.config.token,
-            },
-            success: function(){
-                // t.parent().find("a").prop("disabled", false).hide().filter(".subscribe-to-event").show();
-                t.parent().parent().hide();
-                showMessage("Unsubscribed to session. ", "success");
-            },
-            error: function(){
-                showMessage("Error occurred while disabling session notification. Please try again later or refresh page.", "error");
-            }
-        })
-    }
-});
 
 
     function pageChangeActions(){

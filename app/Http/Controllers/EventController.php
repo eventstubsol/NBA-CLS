@@ -645,7 +645,7 @@ class EventController extends Controller
             }
 
             if($session->type == "ZOOM_URL"){
-                return redirect("https://zoom.us/j/".$session->zoom_webinar_id);
+                return redirect($session->zoom_url);
             }
             //Setup for normal days
             //To make it visible only for delegates add && $user->type === USER_TYPE_DELEGATE
