@@ -1,5 +1,5 @@
 <div class="page  has-padding padding-small pb-0" id="photo-booth-page" style="height: 100vh">
-    <iframe frameborder="0" class="photo-booth" id="photo-gallery"  src="https://virtualbooth.brandedactivations.com/virtual/capture/wlLKq" allow="camera"></iframe>
+    <iframe frameborder="0" class="photo-booth" id="photo-gallery"  src="https://www.smugmug.com/gallery/n-Npn5gv" allow="camera"></iframe>
     <button id="capture" class="pb-button">
         <i class="fe-camera mr-1"></i>
         Capture

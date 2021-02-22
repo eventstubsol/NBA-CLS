@@ -129,8 +129,13 @@
                                                                 </div>
                                                                 <h5 class="mt-0 mb-1">{{ $event['name'] }}</h5>
                                                                 <p class="text-dark mt-2">{!! $event['description'] !!}</p>
-                                                                <a href="javascript: void(0);" class="area btn btn-sm btn-link text-muted font-14 " data-link="sessionroom/{{ $event['room']}}"> Visit {{ $event['room'] }}</a>
-
+                                                                @if(isset($event['type']))
+                                                                    @if($event['type'] === 'PRIVATE_SESSION')
+                                                                        <a href="{{ $event['type'] }}" class="btn btn-sm btn-link text-muted font-14 " target="_blank"> Visit {{ $event['room'] }}</a>
+                                                                    @else
+                                                                        <a href="javascript: void(0);" class="area btn btn-sm btn-link text-muted font-14 " data-link="sessionroom/{{ $event['room']}}"> Visit {{ $event['room'] }}</a>
+                                                                    @endif
+                                                                @endif
                                                                 @if($event['status'] === 1 || $event['status'] === 3)
                                                                     <span class="btn btn-sm btn-link text-muted font-14 ">
                                                                         <i class="mdi mdi-clock mr-1"></i>{{ $event['status'] === 1 ? "Ongoing" : "Starting soon" }}

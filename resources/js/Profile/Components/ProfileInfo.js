@@ -13,7 +13,7 @@ const {
 const assetUrl = window.assetUrl;
 const recordEvent = window.recordEvent;
 
-const openChat = window.openChat;
+const openChat = window.openUserChat;
 
 function ProfileInfo({ user, refresh = false, edit = false, updateStatus = false }){
     let [isUpdating, setUpdating] = useState(false);
@@ -88,7 +88,7 @@ function ProfileInfo({ user, refresh = false, edit = false, updateStatus = false
                 return <p>{user.connection_type === "sent" ? "Declined" : "You Declined"}</p>;
             }
             if(user.connection_status === 1){
-                return <p><button type="button" className="btn btn-danger btn-xs waves-effect mb-2 waves-light" onClick={() => openChat(user.id)}>Message </button></p>;
+                return <p><button type="button" className="btn btn-danger open-user-chat btn-xs waves-effect mb-2 waves-light" data-user={user.id}  onClick={() => openChat}>Message </button></p>;
             }
             return <p>{
                 user.connection_type === "sent" ?
@@ -193,7 +193,7 @@ function ProfileInfo({ user, refresh = false, edit = false, updateStatus = false
                         </a>
                     }
             </p><br/>
-                <a className="full-profile" onClick={()=>window.showProfile(user.id)} data-id={userId} >View Profile</a>
+                <a className="full-profile" data-id={userId} >View Profile</a>
             {
                 user.country ? <p className="text-muted mb-1 font-13"><strong>Location:</strong> <span
                     className="ml-2">{user.country}</span></p> : null
