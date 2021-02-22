@@ -70,11 +70,19 @@ define("LOBBY_AREAS", [
 ]);
 
 define("LOUNGE_AREAS", [
-    "InfoDesk" => [
-        "title" => "infodesk ranjeet",
-        "link"=> "infodesk",
-        "area" =>[ 48,23.5,52,20],
-    ]
+"Photobooth" => [
+        "title" => "photobooth",
+        "area" =>[ 48,23.5,52,20 ],
+        "link" => "photo-booth",
+    ],
+
+
+
+ //   "InfoDesk" => [
+ //       "title" => "infodesk",
+ //       "link"=> "infodesk",
+ //       "area" =>[ 48,23.5,52,20],
+ //   ]
 //    "Auditorioum" => [
 //        "title" => "Auditorium",
 //        "link" => "auditorium",
