@@ -473,8 +473,8 @@ $user = Auth::user();
     @include("event.modules.Booths.SingleBooth")
 
     @include("event.modules.Leaderboard")
-    @include("event.modules.MuseumList")
-    @include("event.modules.MuseumSingle")
+ {{--    @include("event.modules.MuseumList") --}}
+ {{--   @include("event.modules.MuseumSingle")--}}
 
     @if(isOpenForPublic("swagbag"))
     @include("event.modules.Report")
@@ -589,7 +589,7 @@ $user = Auth::user();
         suggestedContactsURL: '{{ route("suggestedContacts") }}',
         attendeesURL: '{{ route("attendeesURL") }}',
         company_sizes: {!! json_encode(getFilters("company_size")) !!},
-        geography: {!! json_encode(getFilters("Geography")) !!},
+        geography: {!! json_encode(getFilters("Geographical Location")) !!},
         others: {!! json_encode(getFilters("Others (MBA)")) !!},
         practice_areas: {!! json_encode(getFilters("Practice Areas")) !!},
         cetrifications: {!! json_encode(getFilters("Cetrifications")) !!},
