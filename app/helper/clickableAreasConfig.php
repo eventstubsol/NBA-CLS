@@ -72,7 +72,7 @@ define("LOBBY_AREAS", [
 define("LOUNGE_AREAS", [
 "Photobooth" => [
         "title" => "photobooth",
-        "area" =>[ 43,23.5,52,20 ],
+        "area" =>[ 41,43.5,13.5,22 ],
         "link" => "photo-booth",
     ],
 
