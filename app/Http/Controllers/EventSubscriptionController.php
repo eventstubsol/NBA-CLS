@@ -41,13 +41,13 @@ public function bulk_create(Request $request)
              }else{
                 $email = $subscription['email'];
                 if($email === ''){
-                    return [ "success" => true];
+                    return [ "success" => false ,"message"=> "Empty Email"];
                 }
                 
                 $user = User::where('email',$email)->first();
   
                 if(isset($user->id)){
-                    $session = EventSession::where("name",$sub)->first();
+                    $session = EventSession::where("name","like",$sub)->first();
                    if($session){
                        $if_exists = EventSubscription::where([
                            "user_id"=>$user->id,
@@ -61,7 +61,7 @@ public function bulk_create(Request $request)
                            ]);
                        }
                     }else{
-                        array_push($failed,$sub." Not found");
+                        array_push($failed,$sub." Not found For Email".$email);
                     }
                 }
                 else{
@@ -72,7 +72,6 @@ public function bulk_create(Request $request)
     }
     if(count($failed)){
         return ["success" => FALSE,"message"=>$failed];
-
     }
     return ["success" => TRUE];
 }

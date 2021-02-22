@@ -193,13 +193,13 @@ function ProfileInfo({ user, refresh = false, edit = false, updateStatus = false
                         </a>
                     }
             </p><br/>
-                <a className="full-profile" onClick={()=>window.showProfile(user.id)} data-id={userId} >Profile</a>
+                <a className="full-profile" onClick={()=>window.showProfile(user.id)} data-id={userId} >View Profile</a>
             {
                 user.country ? <p className="text-muted mb-1 font-13"><strong>Location:</strong> <span
                     className="ml-2">{user.country}</span></p> : null
             }
             {
-                isEditable ? <h4 className="font-13 text-uppercase mt-3 mb-2">My Tags:</h4> : null
+                isEditable ? <h4 className="text-uppercase mt-3 mb-2 main-heading">My Tags:</h4> : null
             }
             <div className="mt-3">
                 {
@@ -231,7 +231,7 @@ function ProfileInfo({ user, refresh = false, edit = false, updateStatus = false
             {
                 isEditable ?
                     <>
-                        <h4 className="font-13 text-uppercase mt-3 mb-2">Looking for Tags:</h4>
+                        <h4 className="text-uppercase mt-3 mb-2 main-heading">Looking for Tags:</h4>
                         <div>
                             { 
                                 userlookingtags != null ? 
