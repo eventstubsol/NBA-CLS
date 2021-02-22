@@ -255,6 +255,27 @@ $user = Auth::user();
             #profile-app .mdc-chip-set .mdc-chip, #view-profile-modal .mdc-chip-set .mdc-chip{
                 background: #951e34 !important;
             }
+            .col-md-6 .card-box{
+                max-height: 455px;
+                overflow: hidden;
+                position: relative;
+            }
+            .col-md-6 .card-box .full-profile{
+                display: block !important;
+            }
+            
+            .full-profile{            
+                text-align: center;
+                width: 92%;
+                display: none;
+                position: absolute;
+                bottom: 0;
+                left: 13px;
+                cursor: pointer;
+                height: 5%;
+                background: white;
+            }
+
             .custom-navpills .nav-link{
                     border-width: 2px;
                      border-style: solid;
@@ -267,7 +288,9 @@ $user = Auth::user();
             #chat-toggle{
                 display: none !important;
             }
-
+            .app__messenger{
+                min-height: 0 !important;
+            }
 
         </style>
     {{--    App favicon--}}

@@ -408,9 +408,12 @@ class UserController extends Controller
             $ids = [];
              foreach($request->get("tags") as $tagname){
                 if($tagname){
-                    $tag = UserTag::where("tag","like", $tagname)->with("user_id")->first();
-                    foreach ($tag->user_id as $user) {
-                        $ids[] = $user->user_id;
+                    $tag = UserTag::where("tag","like" , $tagname)->with("user_id")->first();
+                    if(isset($tag->user_id))
+                    {
+                        foreach ($tag->user_id as $user) {
+                            $ids[] = $user->user_id;
+                        }
                     }
                 }
             }
@@ -447,6 +450,7 @@ class UserController extends Controller
             "page" => $page,
             "per_page" => NUMBER_OF_CONTACTS_TO_SHOW,
             "total_pages" => ceil($totalCount / NUMBER_OF_CONTACTS_TO_SHOW),
+            "tags" => $request->get("tags")
         ];
     }
 

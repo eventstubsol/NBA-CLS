@@ -36,8 +36,8 @@
                     "docked": "true",
                     "alignment": "right", //left or right
                     "roundedCorners": "true",
-                    "height": "600px",
-                    "width": "800px",
+                    "height": "74vh",
+                    "width": "85vw",
                     "defaultID": 'public-chat', //default UID (user) or GUID (group) to show,
                     "defaultType": 'group' //user or group
                 });
