@@ -47,7 +47,7 @@ public function bulk_create(Request $request)
                 $user = User::where('email',$email)->first();
   
                 if(isset($user->id)){
-                    $session = EventSession::where("name","like",$sub)->first();
+                    $session = EventSession::where("name",$sub)->first();
                    if($session){
                        $if_exists = EventSubscription::where([
                            "user_id"=>$user->id,
