@@ -47,24 +47,28 @@ public function bulk_create(Request $request)
                 $user = User::where('email',$email)->first();
   
                 if(isset($user->id)){
-                    $session = EventSession::where("name",$sub)->first();
-                   if($session){
-                       $if_exists = EventSubscription::where([
-                           "user_id"=>$user->id,
-                           "session_id"=>$session->id
-                           ])->first();
+                    if($sub){
+
+                        $session = EventSession::where("name",$sub)->first();
+                    if($session){
+                        $if_exists = EventSubscription::where([
+                            "user_id"=>$user->id,
+                            "session_id"=>$session->id
+                            ])->first();
+        
+                        if(!isset($if_exists->id)){
+                            EventSubscription::create([
+                                "user_id"=>$user->id,
+                                "session_id"=>$session->id
+                            ]);
+                        }
+                        }else{
+                            array_push($failed,$sub." Not found For Email".$email);
+                        }
        
-                       if(!isset($if_exists->id)){
-                           EventSubscription::create([
-                               "user_id"=>$user->id,
-                               "session_id"=>$session->id
-                           ]);
-                       }
-                    }else{
-                        array_push($failed,$sub." Not found For Email".$email);
                     }
                 }
-                else{
+               else{
                     array_push($failed,$subscription["email"]." user Not found");
                 }
             }
