@@ -71,7 +71,7 @@ define("LOBBY_AREAS", [
 
 define("LOUNGE_AREAS", [
     "InfoDesk" => [
-        "title" => "infodesk",
+        "title" => "infodesk ranjeet",
         "link"=> "infodesk",
         "area" =>[ 48,23.5,52,20],
     ]
