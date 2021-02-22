@@ -192,7 +192,8 @@ function ProfileInfo({ user, refresh = false, edit = false, updateStatus = false
                             ****@****.***
                         </a>
                     }
-            </p>
+            </p><br/>
+                <a className="full-profile" onClick={()=>window.showProfile(user.id)} data-id={userId} >Profile</a>
             {
                 user.country ? <p className="text-muted mb-1 font-13"><strong>Location:</strong> <span
                     className="ml-2">{user.country}</span></p> : null
