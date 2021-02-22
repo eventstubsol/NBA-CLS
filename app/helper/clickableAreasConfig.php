@@ -30,7 +30,7 @@ define("LOBBY_AREAS", [
         "title" => "welcome",
         "area" =>[ 56,54.5,6.5,8],
         "class" => "txt-white",
-        "videoEmbed" => "https://vimeo.com/514564783",
+        "videoEmbed" => "https://vimeo.com/515024188",
     ],
 //    "Photobooth" => [
 //        "title" => "photobooth",
@@ -45,7 +45,7 @@ define("LOBBY_AREAS", [
     "InfoDesk" => [
         "title" => "infodesk",
         "link"=> "infodesk",
-        "area" =>[ 65,36.5,27,12],
+        "area" =>[ 68,37,26,9],
     ],
     "Lounge" => [
         "title" => "Lounge",
@@ -80,6 +80,19 @@ define("LOUNGE_AREAS", [
         "link" => "sessionroom/Entertainment_Room",
         "area" => [ 54, 45.5, 9.5, 12] , //In Percentage
     ],
+"Photobooth" => [
+        "title" => "photobooth",
+        "area" =>[ 41,43.5,13.5,22 ],
+        "link" => "photo-booth",
+    ],
+
+
+
+ //   "InfoDesk" => [
+ //       "title" => "infodesk",
+ //       "link"=> "infodesk",
+ //       "area" =>[ 48,23.5,52,20],
+ //   ]
 //    "Auditorioum" => [
 //        "title" => "Auditorium",
 //        "link" => "auditorium",

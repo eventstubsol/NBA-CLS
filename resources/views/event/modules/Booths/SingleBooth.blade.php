@@ -198,7 +198,7 @@
     <div class="modal-dialog  modal-lg modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="myLargeModalLabel">Firm Atendees</h4>
+                <h4 class="modal-title" id="myLargeModalLabel">Firm Attendees</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             </div>
             <div class="modal-body">
@@ -231,8 +231,8 @@
                             <td>{{ $resource->title }}</td>
                             <td class="text-right resource  r-{{$resource->id}} ">
                                 <a class="btn theme-btn plain  mr-2 _df_button theme-btn primary" href="{{ assetUrl($resource->url) }}" title="{{$resource->title}}" source="{{ assetUrl($resource->url)}}" >View Now</a>
-                                <button class="btn theme-btn primary add-to-bag add" data-resource="{{ $resource->id }}" type="button" name="button"> + swagbag</button>
-                                <button class="btn btn-danger add-to-bag remove hidden" data-resource="{{ $resource->id }}" type="button" name="button"> - swagbag</button>
+                                <button class="btn theme-btn primary add-to-bag add" data-resource="{{ $resource->id }}" type="button" name="button"> + Briefcase</button>
+                                <button class="btn btn-danger add-to-bag remove hidden" data-resource="{{ $resource->id }}" type="button" name="button"> - Briefcase</button>
                             </td>
                         </tr>
                     @endforeach
