@@ -552,6 +552,11 @@ $user = Auth::user();
         </script>
 
     <script>
+        window.openUserChat = (userid) =>{
+            console.log("hello")
+            CometChatWidget.chatWithUser(userid);
+            CometChatWidget.openOrCloseChat(true);
+        }
         // console.log( {!! json_encode(getSuggestedTags()) !!} );
         const config = {
         baseRoute: "{{ url("/") }}",
@@ -592,7 +597,7 @@ $user = Auth::user();
         geography: {!! json_encode(getFilters("Geographical Location")) !!},
         others: {!! json_encode(getFilters("Others (MBA)")) !!},
         practice_areas: {!! json_encode(getFilters("Practice Areas")) !!},
-        cetrifications: {!! json_encode(getFilters("Cetrifications")) !!},
+        cetrifications: {!! json_encode(getFilters("Certifications")) !!},
         firm_size: {!! json_encode(getFilters("Firm Size")) !!},
         ownership: {!! json_encode(getFilters("Ownership")) !!},
         mytags: {!! json_encode(getFilters("mytags")) !!},
