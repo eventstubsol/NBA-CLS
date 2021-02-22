@@ -45,7 +45,7 @@ $user = Auth::user();
             }
         }
         .tab-content .nav-justified .nav-item {
-            min-width: 25%;
+            min-width: max-content;
             max-width: 25%;
             margin-top:15px;
         }
@@ -519,6 +519,8 @@ $user = Auth::user();
     @include("event.modules.ArchiveVideos")
 
     @include("event.modules.ByLaws")
+
+    <div id="chat_div"></div>
     <script defer src="https://widget-js.cometchat.io/v2/cometchatwidget.js"></script>
 
     <script>

@@ -31,7 +31,7 @@
                 $i++;
             @endphp
             <li class="nav-item">
-                <a href="#sch-{{ $i }}" data-toggle="tab" aria-expanded="{{ $i === 1 ? 'true' : 'false' }}" class="nav-link @if($i === 1) active @endif">{{ $date }}</a>
+                <a href="#agn-{{ $i }}" data-toggle="tab" aria-expanded="{{ $i === 1 ? 'true' : 'false' }}" class="nav-link @if($i === 1) active @endif">{{ $date }}</a>
             </li>
         @endforeach
         @php
@@ -48,7 +48,7 @@
                     $i++;
                 @endphp
                 <!-- Tab for each date -->
-                <div class="tab-pane {{ $i === 1 ? "active show" : "" }}" id="sch-{{ $i }}">
+                <div class="tab-pane {{ $i === 1 ? "active show" : "" }}" id="agn-{{ $i }}">
                         @php
                             $j = 0;
                         @endphp
@@ -60,7 +60,7 @@
                                    $j++;
                                 @endphp
                                     <li class="nav-item">
-                                        <a href="#sch-{{ $i }}-{{ $j }}" data-toggle="tab" aria-expanded="{{ $j === 1 ? 'true' : 'false' }}" class="nav-link @if($j === 1) active @endif">{{ ucfirst(str_replace("_"," ", $master_room ))}}</a>
+                                        <a href="#agn-{{ $i }}-{{ $j }}" data-toggle="tab" aria-expanded="{{ $j === 1 ? 'true' : 'false' }}" class="nav-link @if($j === 1) active @endif">{{   strtoupper(str_replace("_"," ", $master_room==='Auditorium' || $master_room==='auditorium' ? 'IMPACT AUDITORIUM' : $master_room ))  }}</a>
                                     </li>
                             @endforeach
                         </ul>
@@ -87,14 +87,14 @@
                                     <!-- Room Tab Content -->
                                     <!-- <div class="tab-content"> -->
                                       <!-- Loop foreach Room   -->
-                                      <div class=" tab-pane {{ $j === 1 ? "active show" : "" }}" id="sch-{{ $i }}-{{ $j }}">
+                                      <div class=" tab-pane {{ $j === 1 ? "active show" : "" }}" id="agn-{{ $i }}-{{ $j }}">
                                         @foreach($rooms as $room => $events)
                                             @php
                                                 $k++;
                                                 $l = 0;
                                             @endphp
                                             <!-- Tabs for each room -->
-                                                <!-- Print each event in schedule -->
+                                                <!-- Print each event in agnedule -->
                                                 @foreach($events as $id => $event)
                                                     @php 
                                                         $id = $event['id'];
@@ -118,7 +118,7 @@
 
                                                                         data-original-title="{{ isset($speaker->speaker->name) ?  $speaker->speaker->name .' '. $speaker->speaker->last_name: "" }}">
 
-                                                                            <img src="{{ $speaker->speaker->profileImage ? assetUrl($speaker->speaker->profileImage) : "https://congress2021web.fra1.digitaloceanspaces.com/uploads/default-profile.jpeg" }}"
+                                                                            <img src="{{ $speaker->speaker ? $speaker->speaker->profileImage ? assetUrl($speaker->speaker->profileImage) : "https://congress2021web.fra1.digitaloceanspaces.com/uploads/default-profile.jpeg" : null}}"
 
                                                                                 class="rounded-circle avatar-sm" alt="">
 
@@ -166,30 +166,3 @@
             @endforeach
         </div>
 </div>
-<script>
-
-$("#unsubscribe-agenda").on("click", function(e){
-        console.log("Hello World")
-        e.preventDefault();
-        let t = $(this);
-        t.prop("disabled", true);
-        if(t.data("id")){
-            $.ajax({
-                url: window.config.unsubscribeToEvent.replace("EVENT_ID", t.data("id")),
-                method: "POST",
-                data: {
-                    _token: window.config.token,
-                },
-                success: function(){
-                    // t.parent().find("a").prop("disabled", false).hide().filter(".subscribe-to-event").show();
-                    t.parent().parent().hide();
-                    showMessage("Unsubscribed to session. ", "success");
-                },
-                error: function(){
-                    showMessage("Error occurred while disabling session notification. Please try again later or refresh page.", "error");
-                }
-            })
-        }
-    });
-
-</script>

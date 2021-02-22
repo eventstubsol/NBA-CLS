@@ -210,7 +210,34 @@ function initApp(){
         }
     }
 
+    
+$("#unsubscribe-agenda").on("click", function(e){
+    console.log("Hello World")
+    e.preventDefault();
+    let t = $(this);
+    t.prop("disabled", true);
+    if(t.data("id")){
+        $.ajax({
+            url: window.config.unsubscribeToEvent.replace("EVENT_ID", t.data("id")),
+            method: "POST",
+            data: {
+                _token: window.config.token,
+            },
+            success: function(){
+                // t.parent().find("a").prop("disabled", false).hide().filter(".subscribe-to-event").show();
+                t.parent().parent().hide();
+                showMessage("Unsubscribed to session. ", "success");
+            },
+            error: function(){
+                showMessage("Error occurred while disabling session notification. Please try again later or refresh page.", "error");
+            }
+        })
+    }
+});
+
+
     function pageChangeActions(){
+        $(".cometchat__widget").show();
         currentresbtns = null;
         // window.$socket.emit("update_page", window.location.hash.substr(1));
         loader.hide();
@@ -360,6 +387,7 @@ function initApp(){
                     id,
                 });
                 pageChangeActions();
+                CometChatWidget.chatWithGroup(id);
                 $.ajax({
                     url: window.config.boothDetails.replace("BID", id),
                     success: function(html){
@@ -473,6 +501,7 @@ function initApp(){
         },
         'exterior': function() {
             pages.hide();
+            $(".cometchat__widget").hide();
             navs.addClass('hidden');
             pages.filter(".initial").show();
             if(!isMobile()){
@@ -622,6 +651,9 @@ function initApp(){
             createGroup(room);
             CometChatWidget.chatWithGroup(room);
             pageChangeActions();
+            if(! (room==="Auditorium"||room==="auditorium")){
+                $(".cometchat__widget").style.display = 'none';
+            }
             const loadContent = () => {
                 $("#session-content-"+room).empty().append(`<iframe frameborder="0"  class="positioned fill" src="${window.config.auditoriumEmbed}?type=${room}"></iframe>`);
                 $(".cc1-chat-win-inpt-wrap input").unbind("mousedown").on("mousedown", function(e){ e.preventDefault(); e.stopImmediatePropagation(); $(e.target).focus() });
