@@ -131,7 +131,7 @@
                                                                 <p class="text-dark mt-2">{!! $event['description'] !!}</p>
                                                                 @if(isset($event['type']))
                                                                     @if($event['type'] === 'PRIVATE_SESSION')
-                                                                        <a href="{{ $event['type'] }}" class="btn btn-sm btn-link text-muted font-14 " target="_blank"> Visit {{ $event['room'] }}</a>
+                                                                        <a href="{{ $event['zoom_url'] }}" class="btn btn-sm btn-link text-muted font-14 " target="_blank"> Visit {{ $event['room'] }}</a>
                                                                     @else
                                                                         <a href="javascript: void(0);" class="area btn btn-sm btn-link text-muted font-14 " data-link="sessionroom/{{ $event['room']}}"> Visit {{ $event['room'] }}</a>
                                                                     @endif
