@@ -8,7 +8,7 @@
                 </a>
                 <div class="custom-dropdown-menu">
                         <a class="area dropdown-item" data-link="sessionroom/Auditorium">Impact Auditorium</a>
-                        <a class="area dropdown-item" data-link="sessions-list/peek_behind_corporate_veil">Peek Behind The Corporate Hall</a>
+                        <a class="area dropdown-item" data-link="sessions-list/peek_behind_corporate_veil">Peek Behind The Corporate Veil</a>
                         <a class="area dropdown-item" data-link="sessions-list/fireside_chat">Fireside Chat</a>
                 </div>
             </li>
