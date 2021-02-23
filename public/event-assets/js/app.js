@@ -60,10 +60,23 @@ function initApp(){
                 _token: window.config.token,
             },
             success: function(data){
+                let areas = $(".area");
+                const doNotRoute = [
+                    "support"
+                ];
+                areas.on("click", function(e){
+                    const link = $(this).data("link");
+                    directAccess = false;
+                    if(!doNotRoute.includes(link)){
+                        routie(link);
+                    }else{
+                        e.preventDefault();
+                    }
+                });
                 // alert("done");
                 // console.log(data)
                 $("#agenda-modal").html(data);                    
-                    $("#unsubscribe-agenda").on("click", function(e){
+                    $(".unsubscribe-agenda").on("click", function(e){
                         console.log("Hello World")
                         e.preventDefault();
                         let t = $(this);
@@ -221,14 +234,13 @@ function initApp(){
         let id = $(this).data("id");
         $("#audi-content").empty().append(`<iframe frameborder="0"  class="positioned fill" src="${window.config.auditoriumEmbed}?type=pre-recorded&id=${id}"></iframe>`);
     });
-
-    $(".open-profile-popup").on("click", function(e){
+    $(".open-profile-popup").unbind().on("click", function(e){
         e.preventDefault();
         let id = $(this).data("id");
         if(id){
             window.showProfile(id);
         }
-    });
+    }); 
 
     pages.hide();
     $("#audi-content").empty();
