@@ -149,7 +149,7 @@
                                                                         <!-- <i class="mdi mdi-bell-ring mr-1"></i>  -->
                                                                         + Agenda
                                                                     </a>
-                                                                    <a href="javascript: void(0);" data-id="{{ $id }}" id="unsubscribe-agenda" class="btn btn-danger unsubscribe-agenda btn-sm btn-link text-muted font-14  {{ in_array($id, $subscriptions) ? "" : "hidden" }}">
+                                                                    <a href="javascript: void(0);" data-id="{{ $id }}" class="btn btn-danger unsubscribe-agenda btn-sm btn-link text-muted font-14  {{ in_array($id, $subscriptions) ? "" : "hidden" }}">
                                                                         <!-- <i class="mdi mdi-bell-off mr-1"></i> -->
                                                                             - Agenda
                                                                     </a>
