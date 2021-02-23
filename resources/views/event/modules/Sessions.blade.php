@@ -3,8 +3,13 @@
         <div class="page" id="sessionroom-{{$room->name}}">
             <div class="position-relative" style="height:100vh;">
                 <img src="{{ assetUrl($room->background->url??'') }}" class="{{$roomgroup}} positioned fill booth-bg" alt="">
-                <div class="positioned" id="play-session-{{$room->name}}" style="{{ areaStyles(CAUCUS_SCREEN_AREA) }};display:flex;align-items: center; justify-content: center;cursor: pointer;">
-                </div>
+                @if($roomgroup === 'fireside_chat')
+                    <div class="positioned" id="play-session-{{$room->name}}" style="{{ areaStyles(FIRESIDE_SCREEN_AREA) }};display:flex;align-items: center; justify-content: center;cursor: pointer;">
+                    </div>
+                @else
+                    <div class="positioned" id="play-session-{{$room->name}}" style="{{ areaStyles(CAUCUS_SCREEN_AREA) }};display:flex;align-items: center; justify-content: center;cursor: pointer;">
+                    </div>
+                @endif
             </div>
         </div>
         <div class="modal fade embed-modal slido-container-modal" id="session-modal-{{$room->name}}" tabindex="-1" role="dialog" aria-hidden="true">

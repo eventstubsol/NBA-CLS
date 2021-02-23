@@ -580,6 +580,8 @@ define("SCAVENGER_HUNT", [
 
 define("AUDI_SCREEN_AREA", [ 15, 27.6, 44, 44 ]);
 define("CAUCUS_SCREEN_AREA", [ 30, 34.3, 31.5, 27 ]);
+define("FIRESIDE_SCREEN_AREA", [ 52, 61.3, 24.5, 14 ]);
+
 
 define("AUDI_IMAGE_ASPECT", 56.15);
 define("AUDI_VIDEO_ASPECT", 56.15);
