@@ -60,6 +60,8 @@ function initApp(){
                 _token: window.config.token,
             },
             success: function(data){
+                $("#agenda-modal").html(data);                    
+
                 let areas = $(".area");
                 const doNotRoute = [
                     "support"
@@ -75,8 +77,7 @@ function initApp(){
                 });
                 // alert("done");
                 // console.log(data)
-                $("#agenda-modal").html(data);                    
-                    $(".unsubscribe-agenda").on("click", function(e){
+                  $(".unsubscribe-agenda").on("click", function(e){
                         console.log("Hello World")
                         e.preventDefault();
                         let t = $(this);
