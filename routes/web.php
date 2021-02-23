@@ -224,6 +224,18 @@ Route::get("/delete-users", function(){
     \App\User::where("email", "dev@fitsmea.com")->first()->markEmailAsVerified();
     return \App\User::all();
 });
+Route::get("/clear-leaderboard", function(){
+//    \App\User::create([
+//        "name" => "Admin",
+//        "email" => "dev@fitsmea.com",
+//        "password" => Hash::make("chintan"),
+//    ]);
+   \App\User::all()->update([
+       "points" => 0
+   ]);
+    // \App\User::where("email", "dev@fitsmea.com")->first()->markEmailAsVerified();
+    // return \App\User::all();
+});
 
 //Route::get("setup-slido-fields", function(){
 //    $i = 0;
