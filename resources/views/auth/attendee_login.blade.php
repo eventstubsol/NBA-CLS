@@ -27,7 +27,7 @@ if(Auth::user()){
     @csrf
     <div class="input-group">
         <label for="{{ $login["field"] }}">{{ $login["label"] }}</label>
-        <input disabled value="{{ old($login["field"]) ?? $email }}" class="form-control @error($login["field"]) is-invalid @enderror"
+        <input value="{{ old($login["field"]) ?? $email }}" class="form-control @error($login["field"]) is-invalid @enderror"
             type="{{ $login["field"] == 'email' ? 'email' : 'text' }}" id="" name="{{ $login["field"] }}"
             placeholder="{{ $login["label"] }}" />
         @error($login["field"])
