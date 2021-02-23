@@ -580,7 +580,7 @@ $user = Auth::user();
 
     <script>
         window.openUserChat = (userid) =>{
-            console.log("hello")
+            console.log(userid)
             CometChatWidget.chatWithUser(userid);
             CometChatWidget.openOrCloseChat(true);
         }
