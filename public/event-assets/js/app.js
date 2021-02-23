@@ -700,11 +700,12 @@ function initApp(){
             createGroup(room);
             CometChatWidget.chatWithGroup(room);
             pageChangeActions(false);
-            $("#cometchat__widget").hide();
-           
-            // if(! (room==="Auditorium"||room==="auditorium")){
+            
+            
+            if(! (room==="Auditorium"||room==="auditorium")){
+                $("#cometchat__widget").hide();
             //     $("#cometchat__widget").style.display = 'none';
-            // }
+            }
             const loadContent = () => {
                 // if(window.config.auditoriumEmbed.startsWith(""))
                 console.log(window.config.auditoriumEmbed)

@@ -87,7 +87,7 @@ function ProfileInfo({ user, refresh = false, edit = false, updateStatus = false
                 return <p>{user.connection_type === "sent" ? "Declined" : "You Declined"}</p>;
             }
             if(user.connection_status === 1){
-                return <p><button type="button" className="btn btn-danger open-user-chat btn-xs waves-effect mb-2 waves-light" data-user={user.id}  onClick={() => {window.openUserChat()}}>Message </button></p>;
+                return <p><button type="button" className="btn btn-danger open-user-chat btn-xs waves-effect mb-2 waves-light" data-user={user.id}  onClick={() => {window.openUserChat(user.id)}}>Message </button></p>;
             }
             return <p>{
                 user.connection_type === "sent" ?
