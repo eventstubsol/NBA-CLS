@@ -81,7 +81,7 @@ class Contacts extends Component{
                     <AttendeeList url={attendeesURL}  company_sizes={company_sizes} mytags={mytags} geography={geography} practice_areas={practice_areas} cetrifications={cetrifications} firm_size={firm_size} ownership={ownership} others={others}/>
                 </div>
                 <div className="tab-pane" id="my-contacts">
-                    <AttendeeList allowExport={true} url={savedContactsURL} showOnlyContacts={true} />
+                    <AttendeeList allowExport={true} url={savedContactsURL} showOnlyContacts={true} company_sizes={company_sizes} mytags={mytags} geography={geography} practice_areas={practice_areas} cetrifications={cetrifications} firm_size={firm_size} ownership={ownership} others={others} />
                 </div>
             </div>
         </div>;
