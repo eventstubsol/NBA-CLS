@@ -70,10 +70,10 @@ define("LOBBY_AREAS", [
 ]);
 
 define("LOUNGE_AREAS", [
-    "MeetTitle" => [
-        "title" => "MeetTitleToolTip",
-        "zoom_url"=> "zoom_url_here",
-        "area" =>[ 48,23.5,52,20],
+    "Trivia" => [
+        "title" => "Trivia",
+        "zoom_url"=> "https://eventsibles.zoom.us/j/83448563720?pwd=Z2ZzQ1pxd3BrTzRSTnFSUlRKT011Zz09",
+        "area" =>[ 12.8,2.8,11.2,11],
     ],
     "EnterTainmentRoom" => [
         "title" => "Entertainment Room",
