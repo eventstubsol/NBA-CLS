@@ -18,7 +18,7 @@
                     </li>
                 </ul>
             </li>        
-            <li class="custom-dropdown not-booth-menu">
+            <li class="custom-dropdown">
                 <a  class="area">
                     <i class="menu-icon expo"></i>
                     Expo Hall
@@ -32,7 +32,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="not-booth-menu">
+            <li >
                 @if(isOpenForPublic("lounge"))
                     <a href="javascript:void(0);" class="area" data-link="lounge">
                         <i class="menu-icon lounge"></i>

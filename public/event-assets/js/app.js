@@ -60,6 +60,8 @@ function initApp(){
                 _token: window.config.token,
             },
             success: function(data){
+                $("#agenda-modal").html(data);                    
+
                 let areas = $(".area");
                 const doNotRoute = [
                     "support"
@@ -75,8 +77,7 @@ function initApp(){
                 });
                 // alert("done");
                 // console.log(data)
-                $("#agenda-modal").html(data);                    
-                    $(".unsubscribe-agenda").on("click", function(e){
+                  $(".unsubscribe-agenda").on("click", function(e){
                         console.log("Hello World")
                         e.preventDefault();
                         let t = $(this);
@@ -191,6 +192,7 @@ function initApp(){
             $("#notbooth_menu_toggle i").addClass("mdi-chevron-right-circle");
             boothMenus.addClass("hidden");
             $(".booth_description").parent().hide();
+            $(".booth_description_2").parent().hide();
             $(".booth_resources").parent().hide();
             $(".candidatemenus").hide();
         }else{
@@ -202,6 +204,7 @@ function initApp(){
                 currentresbtns.show();
             }else{
                 $(".booth_description").parent().show();
+                $(".booth_description_2").parent().show();
                 $(".booth_resources").parent().show();
             }
         }
