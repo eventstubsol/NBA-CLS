@@ -331,6 +331,11 @@ function initApp(){
             window.history.back();
         }
     });
+    $("#booth_directory").unbind().on("hide.bs.modal", function(){
+        if(window.location.hash === "#booth_directory"){
+            window.history.back();
+        }
+    });
     $("#session-list-peek_behind_corporate_veil").unbind().on("hide.bs.modal", function(){
         if(window.location.hash === "#sessions-list/peek_behind_corporate_veil"){
             window.history.back();

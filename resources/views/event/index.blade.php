@@ -298,6 +298,30 @@ $user = Auth::user();
                 min-height: 0 !important;
             }
 
+            .booth_directory_item{            
+                color: #6c757d !important;
+                border: 1px solid;
+                padding: 5px;
+            }
+            .expo_hall_list{
+                width: 50%;
+            }
+
+            .boothroomlist{
+                display: flex;
+                flex-direction: row;
+                padding: 23px;
+            }
+
+            .booth_directory_item_heading{            
+                color: #6c757d !important;
+                font-size: 30px;
+                font-weight: 800;
+                border: 2px solid;
+                padding: 4px;
+
+            }
+
         </style>
     {{--    App favicon--}}
     <link rel="shortcut icon" href="{{assetUrl(getField("favicon"))}}">
