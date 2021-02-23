@@ -267,9 +267,11 @@ function initApp(){
         });
     })
 
-    function pageChangeActions(){
+    function pageChangeActions(changeChat = true){
         // $("#cometchat__widget").show();
         currentresbtns = null;
+        if(changeChat)
+         CometChatWidget.chatWithGroup('public-chat');
         // window.$socket.emit("update_page", window.location.hash.substr(1));
         if( $("#cometchat__widget")){
             $("#cometchat__widget").show();
@@ -288,7 +290,6 @@ function initApp(){
         $("body").removeClass("right-bar-enabled"); //Hide Chat modal
         $("#chat-toggle").show();
         window.scrollTo(0, 0);
-        CometChatWidget.chatWithGroup('public-chat');
         $('.YouTubePopUp-Wrap, .YouTubePopUp-Close').click();
         if($('.page:visible').hasClass('menu-filled')){
             $('.navbar-custom.theme-nav').addClass('filled')
@@ -426,7 +427,8 @@ function initApp(){
                     type: "boothVisit",
                     id,
                 });
-                pageChangeActions();
+                pageChangeActions(false);
+                CometChatWidget.chatWithGroup('930a272a-62e9-467a-8a4d-7db23f51a628');
                 console.log(id);
                 // console.log(CometChatWidget.chatWithGroup('98237'));
                 $.ajax({
@@ -434,7 +436,6 @@ function initApp(){
                     success: function(html){
                         $("#description-"+id).html(html[0]);
                         $("#description-two-"+id).html(html[1]);
-                        CometChatWidget.chatWithGroup('930a272a-62e9-467a-8a4d-7db23f51a628');
                         // console.log(html);
                     }
                 });
@@ -587,9 +588,9 @@ function initApp(){
             pages.hide();
             let page = pages.filter("#lounge-page").show();
             $("#chat-container").addClass("in-lounge");
-            CometChatWidget.chatWithUser(window.config.supportChatUser);
             $("body").addClass("in-lounge").addClass("right-bar-enabled");
-            pageChangeActions();
+            pageChangeActions(false);
+            CometChatWidget.chatWithUser("supportchat");
             recordPageView("lounge", "Lounge");
         },
         'auditorium': function() {
@@ -698,7 +699,7 @@ function initApp(){
             });
             createGroup(room);
             CometChatWidget.chatWithGroup(room);
-            pageChangeActions();
+            pageChangeActions(false);
             $("#cometchat__widget").hide();
            
             // if(! (room==="Auditorium"||room==="auditorium")){
@@ -750,7 +751,8 @@ function initApp(){
             }else{
                 routie(notFoundRoute);
             }
-            pageChangeActions();
+            pageChangeActions(false);
+            CometChatWidget.chatWithUser("supportchat");
             recordPageView("infodesk", "Infodesk");
         },
         'photo-booth': function(){
