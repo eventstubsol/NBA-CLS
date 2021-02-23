@@ -13,6 +13,7 @@
                             <li> Viewing a document in the library</li>
                             <li> Viewing a live streaming</li>
                             <li> Visiting a booth</li>
+                            <li> Prizes - To be announced at a later date</li>
                         </ul>
                     </div>
                 </div>
