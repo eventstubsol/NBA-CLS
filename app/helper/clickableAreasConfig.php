@@ -75,6 +75,21 @@ define("LOUNGE_AREAS", [
         "zoom_url"=> "https://eventsibles.zoom.us/j/83448563720?pwd=Z2ZzQ1pxd3BrTzRSTnFSUlRKT011Zz09",
         "area" =>[ 12.8,2.8,11.2,11],
     ],
+    "WineTasting" => [
+        "title" => "Wine Tasting",
+        "zoom_url"=> "https://eventsibles.zoom.us/j/89621735900?pwd=R3FQNTdwSUxqZUNZV2N3K3pPSUhEZz09",
+        "area" =>[ 26.8,3,11.3,11],
+    ],
+    "Mixology" => [
+        "title" => "Mixology",
+        "zoom_url"=> "https://eventsibles.zoom.us/j/83624749324?pwd=MVBYTTVVRlhLSmpZbS9ObjhnVlpIdz09",
+        "area" =>[ 12.8,85.8,11.2,11],
+    ],
+    "ChocolateTasting" => [
+        "title" => "Chocolate Tasting",
+        "zoom_url"=> "https://eventsibles.zoom.us/j/87120424525?pwd=NEF5TjVmTDJaQ3dGOUFlNkRaUjQ5UT09",
+        "area" =>[ 26.8,85.8,11.2,11],
+    ],
     "EnterTainmentRoom" => [
         "title" => "Entertainment Room",
         "link" => "sessionroom/Entertainment_Room",
