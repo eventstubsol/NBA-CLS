@@ -35,7 +35,7 @@
                     <div class="modal-body">
                         <div class="position-relative">
                            <h4>
-                               {{ strtoupper(str_replace("_"," ",$roomgroup)) }}
+                               {{ $roomgroup === 'peek_behind_corporate_veil' ? 'PEEK BEHIND THE CORPORATE VEIL' : strtoupper(str_replace("_"," ",$roomgroup)) }}
                            </h4> 
                            <ul class="nav nav-pills custom-navpills navtab-bg nav-justified" style="margin: 0px -5px;">
                                  @foreach($rooms as $room)

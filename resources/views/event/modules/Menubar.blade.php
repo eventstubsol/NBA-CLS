@@ -8,7 +8,7 @@
                 </a>
                 <div class="custom-dropdown-menu">
                         <a class="area dropdown-item" data-link="sessionroom/Auditorium">Impact Auditorium</a>
-                        <a class="area dropdown-item" data-link="sessions-list/peek_behind_corporate_veil">Peek Behind The Corporate Veil</a>
+                        <a class="area dropdown-item" data-link="sessions-list/peek_behind_corporate_veil">PEEK BEHIND THE CORPORATE VEIL</a>
                         <a class="area dropdown-item" data-link="sessions-list/fireside_chat">Fireside Chat</a>
                 </div>
             </li>
@@ -20,6 +20,7 @@
                 <div class="custom-dropdown-menu">
                         <a class="area dropdown-item" data-link="room/ca9d92bd-e5a1-4392-9659-b65d9c857310">Walker Expo Hall</a>
                         <a class="area dropdown-item" data-link="room/d4021162-16a5-43a2-aba1-005ac9507717">Lewis Expo Hall</a>
+                        <a class="area dropdown-item" data-link="booth_directory">Booth Directory</a>
                 </div>
             </li>
             <li class="custom-dropdown not-booth-menu" >

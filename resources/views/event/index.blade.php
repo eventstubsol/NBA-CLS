@@ -275,6 +275,7 @@ $user = Auth::user();
                 height: 10%;
                 font-weight: 700;
                 background: white;
+                z-index: 2;
             }
             .card-box.text-center .main-heading{
                 font-size: 18px;
@@ -466,6 +467,8 @@ $user = Auth::user();
 
     @include("event.modules.Booths.BoothList")
 
+    @include("event.modules.Booths.BoothDirectory")
+
     @include("event.modules.Booths.ExpoHall")
 
     @include("event.modules.Sessions")
@@ -594,8 +597,8 @@ $user = Auth::user();
         suggestedContactsURL: '{{ route("suggestedContacts") }}',
         attendeesURL: '{{ route("attendeesURL") }}',
         company_sizes: {!! json_encode(getFilters("company_size")) !!},
-        geography: {!! json_encode(getFilters("Geographical Location")) !!},
-        others: {!! json_encode(getFilters("Others (MBA)")) !!},
+        geography: {!! json_encode(getFilters("Geographical Preference")) !!},
+        others: {!! json_encode(getFilters("Top 3  Industries")) !!},
         practice_areas: {!! json_encode(getFilters("Practice Areas")) !!},
         cetrifications: {!! json_encode(getFilters("Certifications")) !!},
         firm_size: {!! json_encode(getFilters("Firm Size")) !!},

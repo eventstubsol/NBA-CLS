@@ -4,7 +4,7 @@
         @foreach(LOUNGE_AREAS as $area)
             @if(isset($area['zoom_url']))
             <a title="{{ $area['title']}}" 
-                class="positioned"
+                class="positioned zoom_urls"
                 style="{{ areaStyles($area['area']) }}"
                 href="{{ $area['zoom_url'] }}"
                 target="_blank"

@@ -60,7 +60,7 @@
                                    $j++;
                                 @endphp
                                     <li class="nav-item">
-                                        <a href="#agn-{{ $i }}-{{ $j }}" data-toggle="tab" aria-expanded="{{ $j === 1 ? 'true' : 'false' }}" class="nav-link @if($j === 1) active @endif">{{   strtoupper(str_replace("_"," ", $master_room==='Auditorium' || $master_room==='auditorium' ? 'IMPACT AUDITORIUM' : $master_room ))  }}</a>
+                                        <a href="#agn-{{ $i }}-{{ $j }}" data-toggle="tab" aria-expanded="{{ $j === 1 ? 'true' : 'false' }}" class="nav-link @if($j === 1) active @endif">{{ $master_room  === 'peek_behind_corporate_veil' ? 'PEEK BEHIND THE CORPORATE VEIL' :   strtoupper(str_replace("_"," ", $master_room==='Auditorium' || $master_room==='auditorium' ? 'IMPACT AUDITORIUM' : $master_room ))  }}</a>
                                     </li>
                             @endforeach
                         </ul>

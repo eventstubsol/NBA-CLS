@@ -259,7 +259,13 @@ function initApp(){
         }
     }
 
-
+    $(".zoom_urls").on("click",function(){
+        t = $(this);
+        trackEvent({
+            type: "LoungeSessionAttended",
+            name: t.attr("title")
+        });
+    })
 
     function pageChangeActions(){
         // $("#cometchat__widget").show();
@@ -672,6 +678,12 @@ function initApp(){
             // });
             recordPageView("#session-list-"+roomgroup, "Session List "+roomgroup);
             active_session_list = $("#session-list-"+roomgroup);
+        },
+        'booth_directory': function(roomgroup){
+            console.log("booth")
+            pageChangeActions();
+            $("#booth_directory").modal();
+            recordPageView("#session-list-"+roomgroup, "Session List "+roomgroup);
         },
         'sessionroom/:room': function(room) {
             pages.hide().filter("#sessionroom-"+room).show();
