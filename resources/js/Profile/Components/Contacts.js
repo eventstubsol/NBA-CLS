@@ -433,9 +433,9 @@ class AttendeeList extends Component{
                                     </div>
                                     <div className="col-lg-6 mb-2">
                                         <div className="form-group m-0">
-                                            <label>Others (MBA)</label>
+                                            <label>Top 3  Industries</label>
                                             <select className="custom-select" onChange={e => this.handleTagSelect(e,"Others")} value={Others}>
-                                                <option value="">Others</option>
+                                                <option value="">Top 3  Industries</option>
                                                 {  others ? others.map(tag=>tag.tag ? <option key={tag.tag} value={tag.tag}>{tag.tag}</option> : null)
                                                 : null }
                                             </select>

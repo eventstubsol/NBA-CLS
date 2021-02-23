@@ -48,7 +48,8 @@ class EventController extends Controller
             "type",
             "boothurl"
         ]);
-        $rooms = Room::orderBy("position")->get();
+        $boothrooms = Room::orderBy("position")->get()->load("booths");
+
         $reports = Report::with(["resources", "video"])->get();
         $FAQs = FAQ::all();
         //        $provisionals = ProvisionalGroup::with(["resource", "video"])->get();
@@ -87,7 +88,7 @@ class EventController extends Controller
                     "FAQs",
                     "reports",
                     //                    "provisionals",
-                    "rooms",
+                    "boothrooms",
                     "schedule",
                     "subscriptions",
                     "prizes",
@@ -551,6 +552,12 @@ class EventController extends Controller
                 $pointsDetails["details"] = $request->get("id");
                 Points::create($pointsDetails);
                 break;
+            case "LoungeSessionAttended":
+                $pointsDetails["points"] = 0;
+                $pointsDetails["details"] = $request->get("name");
+                Points::create($pointsDetails);
+                break;
+
 
             default:
                 //By Default it is just for analytics - keep on recording without giving points

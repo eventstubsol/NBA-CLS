@@ -4,7 +4,7 @@
         <div class="modal-content">
             <div  class="modal-body">
                 <h4>Personal Agenda</h4>
-                <h6>Events to be attended By me </h6>
+                <h6>Events to be attended by me </h6>
                 <div id="agenda-modal">
                     @include("event.modules.agenda")
                 </div>
