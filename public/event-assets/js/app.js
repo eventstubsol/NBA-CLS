@@ -428,7 +428,7 @@ function initApp(){
                     id,
                 });
                 pageChangeActions(false);
-                CometChatWidget.chatWithGroup('930a272a-62e9-467a-8a4d-7db23f51a628');
+                CometChatWidget.chatWithGroup(id);
                 console.log(id);
                 // console.log(CometChatWidget.chatWithGroup('98237'));
                 $.ajax({
