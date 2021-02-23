@@ -241,7 +241,8 @@ define("MASTER_ROOMS",[
     "peek_behind_corporate_veil",
     "fireside_chat",
     "auditorium",
-    "private"
+    "private",
+    "general"
 ]);
 
 define("CREATOR_TELLER_LINKS", [
