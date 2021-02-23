@@ -590,7 +590,7 @@ function initApp(){
             $("#chat-container").addClass("in-lounge");
             $("body").addClass("in-lounge").addClass("right-bar-enabled");
             pageChangeActions(false);
-            CometChatWidget.chatWithUser("supportchat");
+            CometChatWidget.chatWithGroup("virtual_entertainment");
             recordPageView("lounge", "Lounge");
         },
         'auditorium': function() {
@@ -753,7 +753,7 @@ function initApp(){
                 routie(notFoundRoute);
             }
             pageChangeActions(false);
-            CometChatWidget.chatWithUser("supportchat");
+            CometChatWidget.chatWithUser("4012ab18-b834-481f-ace7-b16991512d84");
             recordPageView("infodesk", "Infodesk");
         },
         'photo-booth': function(){
