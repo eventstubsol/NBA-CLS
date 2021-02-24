@@ -128,11 +128,11 @@
                                                                     @elseif($event['type']!="PRIVATE_SESSION")
                                                                         <a href="javascript: void(0);" data-id="{{ $id }}" class="btn subscribe-to-event btn-sm btn-link text-muted font-14 {{ in_array($id, $subscriptions) ? "hidden" : "" }}">
                                                                             <!-- <i class="mdi mdi-bell-ring mr-1"></i>  -->
-                                                                            + Agenda
+                                                                            + Add to Personal Agenda
                                                                         </a>
                                                                         <a href="javascript: void(0);" data-id="{{ $id }}"class="btn btn-danger unsubscribe-event btn-sm btn-link text-muted font-14  {{ in_array($id, $subscriptions) ? "" : "hidden" }}">
                                                                             <!-- <i class="mdi mdi-bell-off mr-1"></i> -->
-                                                                             - Agenda
+                                                                             - Remove from Personal Agenda
                                                                         </a>
                                                                     @elseif($event['type']==="PRIVATE_SESSION")
                                                                         <a href="{{$event['zoom_url']??''}}" target="_blank" data-id="{{ $id }}" class="btn btn-sm btn-link text-muted font-14">
