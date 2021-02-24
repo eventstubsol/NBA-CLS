@@ -4,7 +4,7 @@
             <li class="custom-dropdown not-booth-menu">
                 <a class="area">
                     <i class="menu-icon live"></i>
-                    Live now
+                    Session Rooms
                 </a>
                 <div class="custom-dropdown-menu">
                         <a class="area dropdown-item" data-link="sessionroom/Auditorium">IMPACT AUDITORIUM</a>
