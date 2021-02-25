@@ -138,7 +138,7 @@
                                                                         @if($event['type'] === 'PRIVATE_SESSION')
                                                                             <a href="{{ $event['zoom_url'] }}" class="btn btn-sm btn-link text-muted font-14 " target="_blank"> Join Session </a>
                                                                         @else
-                                                                            <a href="javascript: void(0);" class="area btn btn-sm btn-link text-muted font-14 " data-link="sessionroom/{{ $event['room']}}"> Join Session</a>
+                                                                            <a href="javascript: void(0);" class="area btn btn-sm btn-link text-muted font-14 " data-link="sessionroom/{{ $event['room']}}"> Join This Session</a>
                                                                         @endif
                                                                     @endif
                                                                 @elseif($event['status'] === -1)
@@ -147,6 +147,7 @@
                                                                     </span>
                                                                 
                                                                 @endif
+                                                                @if($event['status'] !== -1)
                                                                     <a href="javascript: void(0);" data-id="{{ $id }}" class="btn subscribe-to-event btn-sm btn-link text-muted font-14 {{ in_array($id, $subscriptions) ? "hidden" : "" }}">
                                                                         <!-- <i class="mdi mdi-bell-ring mr-1"></i>  -->
                                                                         + Add to Personal Agenda
@@ -157,6 +158,7 @@
                                                                                 - Remove from Personal Agenda
                                                                         </a>
                                                                     @endif
+                                                                @endif
                                                             </div>
                                                         </li>
                                                     </ul>
