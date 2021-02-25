@@ -90,6 +90,26 @@ define("LOUNGE_AREAS", [
         "zoom_url"=> "https://eventsibles.zoom.us/j/87120424525?pwd=NEF5TjVmTDJaQ3dGOUFlNkRaUjQ5UT09",
         "area" =>[ 26.8,85.8,11.2,11],
     ],
+    "YOUAREONMUTE" => [
+        "title" => "You Are On Mute",
+        "zoom_url"=> "https://eventsibles.zoom.us/j/83448563720?pwd=Z2ZzQ1pxd3BrTzRSTnFSUlRKT011Zz09",
+        "area" =>[ 38.7,24.7,12.9,6.3],
+    ],
+    "YOUAREFROZEN" => [
+        "title" => "You Are Frozen",
+        "zoom_url"=> "https://eventsibles.zoom.us/j/89621735900?pwd=R3FQNTdwSUxqZUNZV2N3K3pPSUhEZz09",
+        "area" =>[ 46.4,28.9,13.3,6.3],
+    ],
+    "SHARINGMYSCREEN" => [
+        "title" => "Sharing My Screen",
+        "zoom_url"=> "https://eventsibles.zoom.us/j/83624749324?pwd=MVBYTTVVRlhLSmpZbS9ObjhnVlpIdz09",
+        "area" =>[ 38.6,60.7,14.4.9,6.3],
+    ],
+    "HAVETODROP" => [
+        "title" => "Have To Drop",
+        "zoom_url"=> "https://eventsibles.zoom.us/j/87120424525?pwd=NEF5TjVmTDJaQ3dGOUFlNkRaUjQ5UT09",
+        "area" =>[ 46.2,59.7,12.8,6.3],
+    ],
     "EnterTainmentRoom" => [
         "title" => "Entertainment Room",
         "link" => "sessionroom/Entertainment_Room",
