@@ -133,12 +133,13 @@
                                                                     <span class="btn btn-sm btn-link text-muted font-14 ">
                                                                         <i class="mdi mdi-clock mr-1"></i>{{ $event['status'] === 1 ? "Ongoing" : "Starting soon" }}
                                                                     </span>
-                                                                    <a href="javascript: void(0);" class="area btn btn-sm btn-link text-muted font-14 " data-link="sessionroom/{{ $event['room']}}"> Join Session </a>
+                                                                    <a href="javascript: void(0);" class="area btn btn-sm btn-link text-muted font-14 " data-link="sessionroom/{{ $event['room']}}"> Join This Session </a>
                                                                 @elseif($event['status'] === -1)
                                                                     <span class="btn btn-sm btn-link text-muted font-14 ">
                                                                         Session Ended
                                                                     </span>
                                                                 @endif
+                                                                @if($event['status'] !== -1)
                                                                     <a href="javascript: void(0);" data-id="{{ $id }}" class="btn subscribe-to-event btn-sm btn-link text-muted font-14 {{ in_array($id, $subscriptions) ? "hidden" : "" }}">
                                                                         <!-- <i class="mdi mdi-bell-ring mr-1"></i>  -->
                                                                         + Add to Personal Agenda
@@ -147,6 +148,7 @@
                                                                         <!-- <i class="mdi mdi-bell-off mr-1"></i> -->
                                                                             - Remove from Personal Agenda
                                                                     </a>
+                                                                @endif
                                                             </div>
                                                         </li>
                                                     </ul>
