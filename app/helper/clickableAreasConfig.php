@@ -113,7 +113,7 @@ define("LOUNGE_AREAS", [
     "EnterTainmentRoom" => [
         "title" => "Entertainment Room",
         "link" => "sessionroom/Entertainment_Room",
-        "area" => [ 43.8,76.8,17.2,19] , //In Percentage
+        "area" => [ 36,32.2,35.5,39] , //In Percentage
     ],
 "Photobooth" => [
         "title" => "photobooth",
