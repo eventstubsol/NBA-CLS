@@ -13,13 +13,12 @@
                             <li> Viewing a document in the library</li>
                             <li> Viewing a live streaming</li>
                             <li> Visiting a booth</li>
-                            <li> Prizes - To be announced at a later date</li>
                         </ul>
                     </div>
                 </div>
                 <div class="d-block">
                 <div class="wrap-title">
-                    <h2>Prizes</h2>
+                    <h2>Prizes - To be announced at a later date</h2>
                     <p class="pr-text"></p>
                 </div>
                 <div class="carousel slide h-100" id="prizes" data-ride="carousel">

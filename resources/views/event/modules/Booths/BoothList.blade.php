@@ -144,7 +144,7 @@
         </div>
         <div title="O'Melveny & Myers LLP" class= "area candidate-booth positioned" style="width: 9%;  height: 14%;   top: 63%;  left: 60%; " data-link="booth/ea547aa7-0b79-4b0d-9840-25d26633aa8d">
         </div>
-        <div title="Ogletreee Deakins" class= "area candidate-booth positioned" style="width: 9%;  height: 14%;   top: 63%;  left: 50%; " data-link="booth/1a6008c5-89ff-48b6-913f-4cfcabf30735">
+        <div title="Ogletree Deakins" class= "area candidate-booth positioned" style="width: 9%;  height: 14%;   top: 63%;  left: 50%; " data-link="booth/1a6008c5-89ff-48b6-913f-4cfcabf30735">
         </div>
         <div title="Seyfarth Shaw LLP" class= "area candidate-booth positioned" style="width: 9%;  height: 14%;   top: 63%;  left: 38%;" data-link="booth/13250fee-fc53-4882-a889-3275b733a55c">
         </div>

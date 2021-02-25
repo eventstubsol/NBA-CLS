@@ -107,7 +107,7 @@
                 <div title="O'Melveny & Myers LLP" class= " area booth_directory_item   "       data-link="booth/ea547aa7-0b79-4b0d-9840-25d26633aa8d">
                 O'Melveny & Myers LLP</div>
                 <div title="Ogletreee Deakins" class= " area booth_directory_item   "       data-link="booth/1a6008c5-89ff-48b6-913f-4cfcabf30735">
-                Ogletreee Deakins</div>
+                Ogletree Deakins</div>
                 <div title="Seyfarth Shaw LLP" class= " area booth_directory_item   "      data-link="booth/13250fee-fc53-4882-a889-3275b733a55c">
                 Seyfarth Shaw LLP</div>
                 <div title="Shook Hardy & Bacon, LLP" class= " area booth_directory_item   "       data-link="booth/559d6fc0-696c-41ed-b5dd-5f869f133c0a">

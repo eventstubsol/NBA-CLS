@@ -4,12 +4,12 @@
             <li class="custom-dropdown not-booth-menu">
                 <a class="area">
                     <i class="menu-icon live"></i>
-                    Live now
+                    Session Rooms
                 </a>
                 <div class="custom-dropdown-menu">
-                        <a class="area dropdown-item" data-link="sessionroom/Auditorium">Impact Auditorium</a>
+                        <a class="area dropdown-item" data-link="sessionroom/Auditorium">IMPACT AUDITORIUM</a>
                         <a class="area dropdown-item" data-link="sessions-list/peek_behind_corporate_veil">PEEK BEHIND THE CORPORATE VEIL</a>
-                        <a class="area dropdown-item" data-link="sessions-list/fireside_chat">Fireside Chat</a>
+                        <a class="area dropdown-item" data-link="sessions-list/fireside_chat">FIRESIDE CHAT</a>
                 </div>
             </li>
             <li class="custom-dropdown not-booth-menu">
