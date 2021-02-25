@@ -103,7 +103,7 @@ define("LOUNGE_AREAS", [
     "SHARINGMYSCREEN" => [
         "title" => "Sharing My Screen",
         "zoom_url"=> "https://eventsibles.zoom.us/j/83624749324?pwd=MVBYTTVVRlhLSmpZbS9ObjhnVlpIdz09",
-        "area" =>[ 38.6,60.7,14.4.9,6.3],
+        "area" =>[ 38.6,60.7,14.4,6.3],
     ],
     "HAVETODROP" => [
         "title" => "Have To Drop",
@@ -113,7 +113,7 @@ define("LOUNGE_AREAS", [
     "EnterTainmentRoom" => [
         "title" => "Entertainment Room",
         "link" => "sessionroom/Entertainment_Room",
-        "area" => [ 43.8, 76.8,17.2,19] , //In Percentage
+        "area" => [ 43.8,76.8,17.2,19] , //In Percentage
     ],
 "Photobooth" => [
         "title" => "photobooth",
