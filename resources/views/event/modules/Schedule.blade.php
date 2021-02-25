@@ -139,7 +139,7 @@
                                                                         Session Ended
                                                                     </span>
                                                                 @endif
-                                                                @if($event['status' !== -1])
+                                                                @if($event['status'] !== -1)
                                                                     <a href="javascript: void(0);" data-id="{{ $id }}" class="btn subscribe-to-event btn-sm btn-link text-muted font-14 {{ in_array($id, $subscriptions) ? "hidden" : "" }}">
                                                                         <!-- <i class="mdi mdi-bell-ring mr-1"></i>  -->
                                                                         + Add to Personal Agenda
