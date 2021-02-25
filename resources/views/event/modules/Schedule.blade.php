@@ -128,12 +128,12 @@
                                                                 </div>
                                                                 <h5 class="mt-0 mb-1">{{ $event['name'] }}</h5>
                                                                 <p class="text-dark mt-2">{!! $event['description'] !!}</p>
-                                                                <a href="javascript: void(0);" class="area btn btn-sm btn-link text-muted font-14 " data-link="sessionroom/{{ $event['room']}}"> Visit {{ $event['room'] }}</a>
-
+                                                              
                                                                 @if($event['status'] === 1 || $event['status'] === 3)
                                                                     <span class="btn btn-sm btn-link text-muted font-14 ">
                                                                         <i class="mdi mdi-clock mr-1"></i>{{ $event['status'] === 1 ? "Ongoing" : "Starting soon" }}
                                                                     </span>
+                                                                    <a href="javascript: void(0);" class="area btn btn-sm btn-link text-muted font-14 " data-link="sessionroom/{{ $event['room']}}"> Join Session </a>
                                                                 @elseif($event['status'] === -1)
                                                                     <span class="btn btn-sm btn-link text-muted font-14 ">
                                                                         Session Ended

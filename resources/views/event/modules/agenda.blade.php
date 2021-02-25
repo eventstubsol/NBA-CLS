@@ -129,21 +129,23 @@
                                                                 </div>
                                                                 <h5 class="mt-0 mb-1">{{ $event['name'] }}</h5>
                                                                 <p class="text-dark mt-2">{!! $event['description'] !!}</p>
-                                                                @if(isset($event['type']))
-                                                                    @if($event['type'] === 'PRIVATE_SESSION')
-                                                                        <a href="{{ $event['zoom_url'] }}" class="btn btn-sm btn-link text-muted font-14 " target="_blank"> Visit {{ $event['room'] }}</a>
-                                                                    @else
-                                                                        <a href="javascript: void(0);" class="area btn btn-sm btn-link text-muted font-14 " data-link="sessionroom/{{ $event['room']}}"> Visit {{ $event['room'] }}</a>
-                                                                    @endif
-                                                                @endif
+                                                               
                                                                 @if($event['status'] === 1 || $event['status'] === 3)
                                                                     <span class="btn btn-sm btn-link text-muted font-14 ">
                                                                         <i class="mdi mdi-clock mr-1"></i>{{ $event['status'] === 1 ? "Ongoing" : "Starting soon" }}
                                                                     </span>
+                                                                    @if(isset($event['type']))
+                                                                        @if($event['type'] === 'PRIVATE_SESSION')
+                                                                            <a href="{{ $event['zoom_url'] }}" class="btn btn-sm btn-link text-muted font-14 " target="_blank"> Join Session </a>
+                                                                        @else
+                                                                            <a href="javascript: void(0);" class="area btn btn-sm btn-link text-muted font-14 " data-link="sessionroom/{{ $event['room']}}"> Join Session</a>
+                                                                        @endif
+                                                                    @endif
                                                                 @elseif($event['status'] === -1)
                                                                     <span class="btn btn-sm btn-link text-muted font-14 ">
                                                                         Session Ended
                                                                     </span>
+                                                                
                                                                 @endif
                                                                     <a href="javascript: void(0);" data-id="{{ $id }}" class="btn subscribe-to-event btn-sm btn-link text-muted font-14 {{ in_array($id, $subscriptions) ? "hidden" : "" }}">
                                                                         <!-- <i class="mdi mdi-bell-ring mr-1"></i>  -->

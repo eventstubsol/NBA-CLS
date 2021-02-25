@@ -267,14 +267,21 @@ class EditProfile extends Component{
                 {/* </div> */}
                 <h5 className="mb-3 text-uppercase bg-light p-2"><i className="mdi mdi-office-building mr-1"/> Company Info</h5>
                 <div className="row">
-                    {/* <div className="col-md-6">
+                     <div className="col-md-6">
                         <div className="form-group">
                             <label htmlFor="companyname">Company Name</label>
                             <input type="text" className="form-control" onChange={this.handleChange} id="companyname" name="company_name" value={company_name}
                                    placeholder="Enter company name"/>
                         </div>
                     </div>
-                    <div className="col-md-6">
+                     <div className="col-md-6">
+                        <div className="form-group">
+                            <label htmlFor="jobtitle">Job Title</label>
+                            <input type="text" className="form-control" onChange={this.handleChange} id="jobtitle" name="job_title" value={job_title}
+                                   placeholder="Enter Job Title"/>
+                        </div>
+                    </div>
+                    {/*<div className="col-md-6">
                         <div className="form-group">
                             <label htmlFor="industry">Industry</label>
                             <select id="industry" className="form-control" value={industry} onChange={this.handleChange} name="industry">
