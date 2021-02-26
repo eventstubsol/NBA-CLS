@@ -10,7 +10,7 @@
             @endforeach
             <div class="positioned  _df_button"
                  title="Guide"
-                 source="https://fra1.digitaloceanspaces.com/congress2021web/2021%20NBA%20CLS%20Attendee%20Guide.pdf"
+                 source="https://fra1.digitaloceanspaces.com/congress2021web/NBSCLS_ExecCommGridTitles.pdf"
                  style="{{ areaStyles([28, 14.7, 10.7, 22]) }}; background: transparent;cursor:pointer;"
             ></div>
             <a class="positioned" data-toggle="modal" data-target="#faqs-modal"
