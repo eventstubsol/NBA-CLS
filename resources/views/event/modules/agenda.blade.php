@@ -145,7 +145,11 @@
                                                                     <span class="btn btn-sm btn-link text-muted font-14 ">
                                                                         Session Ended
                                                                     </span>
-                                                                
+                                                                @elseif($event['status'] === -1 && $event['recording'])
+                                                                    <a class="video-play btn btn-sm btn-link text-muted font-14 area "
+                                                                    href="{{ $event['recording'] }}">
+                                                                        <i class="mdi mdi-video mr-1"></i> View Recording
+                                                                    </a>
                                                                 @endif
                                                                 @if($event['status'] !== -1)
                                                                     <a href="javascript: void(0);" data-id="{{ $id }}" class="btn subscribe-to-event btn-sm btn-link text-muted font-14 {{ in_array($id, $subscriptions) ? "hidden" : "" }}">
