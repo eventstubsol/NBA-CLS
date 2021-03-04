@@ -135,7 +135,7 @@
 {{--                <a href="{{ route("eventSession.dashboardArchive") }}">Polls Archive</a>--}}
 {{--            </li>--}}
 {{--            <li>--}}
-{{--                <a href="{{ route("eventSession.videoArchive") }}">Past Videos Archive</a>--}}
+                <a href="{{ route("eventSession.videoArchive") }}">Past Videos Archive</a>
 {{--            </li>--}}
 {{--        </ul>--}}
 {{--    </div>--}}
