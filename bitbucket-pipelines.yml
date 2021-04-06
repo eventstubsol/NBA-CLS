@@ -20,3 +20,12 @@ pipelines:
                   SERVER: "134.209.183.27"
                   COMMAND: "/root/clone.lightspeed.sh"
                   MODE: "command"
+         - step:
+            name: Deploying on 138.68.141.175 litespeed
+            script:
+              - pipe: atlassian/ssh-run:0.2.6
+                variables:
+                  SSH_USER: "root"
+                  SERVER: "138.68.141.175"
+                  COMMAND: "/root/clone.litespeed.sh"
+                  MODE: "command"
